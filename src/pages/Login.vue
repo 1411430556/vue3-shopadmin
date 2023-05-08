@@ -1,10 +1,11 @@
 <script setup>
 import { ref, reactive } from 'vue'
-import { login, getInfo } from '~/api/manager'
+// import { login } from '~/api/manager'
 import { toast } from '~/composables/util.js'
 import { useRouter } from 'vue-router'
-import { setToken } from '~/composables/auth.js'
+import { useStore } from 'vuex'
 
+const store = useStore()
 const router = useRouter()
 
 // do not use same name with ref
@@ -34,27 +35,32 @@ const onSubmit = () => {
     }
     // 登录按钮 loading 状态控制
     loading.value = true
-    login(form.username, form.password).then(res => {
-      // 提示成功
-      toast('登陆成功', 'success')
-      // 存储 token 和用户相关信息
-      setToken(res.token)
 
-      /* 原操作
-      const cookie = useCookies()
-      // 这里的 res.token 就是token，因为在axios.js里设置了响应拦截器
-      cookie.set('admin-token', res.token) */
-
-      // 获取用户相关信息
-      getInfo().then(res2 => {
-        console.log(res2)
-      })
-      // 跳转到后台首页
+    store.dispatch('login', form).then(() => {
+      toast('登录成功', 'success')
       router.push('/')
     }).finally(() => {
-      // 登录按钮 loading 状态控制
       loading.value = false
     })
+
+    // 之前版本
+    // login(form.username, form.password).then(res => {
+    //   // 提示成功
+    //   toast('登录成功', 'success')
+    //   // 存储 token 和用户相关信息
+    //   setToken(res.token)
+    //
+    //   /* 原操作
+    //   const cookie = useCookies()
+    //   // 这里的 res.token 就是token，因为在axios.js里设置了响应拦截器
+    //   cookie.set('admin-token', res.token) */
+    //
+    //   // 跳转到后台首页
+    //   router.push('/')
+    // }).finally(() => {
+    //   // 登录按钮 loading 状态控制
+    //   loading.value = false
+    // })
   })
 }
 </script>
@@ -75,9 +81,9 @@ const onSubmit = () => {
         <span>账号密码登录</span>
         <span class="line"></span>
       </div>
-      <el-form ref="formRef" :rules="rules" :model="form" class="w-[250px]">
+      <el-form @keyup.enter.native="onSubmit" ref="formRef" :rules="rules" :model="form" class="w-[250px]">
         <el-form-item prop="username">
-          <el-input v-model="form.username" @keyup.enter.native="onSubmit" placeholder="请输入用户名">
+          <el-input v-model="form.username" placeholder="请输入用户名">
             <template #prefix>
               <el-icon>
                 <User/>
@@ -86,8 +92,7 @@ const onSubmit = () => {
           </el-input>
         </el-form-item>
         <el-form-item prop="password">
-          <el-input type="password" show-password v-model="form.password" @keyup.enter.native="onSubmit"
-                    placeholder="请输入密码">
+          <el-input type="password" show-password v-model="form.password" placeholder="请输入密码">
             <template #prefix>
               <el-icon>
                 <Lock/>
