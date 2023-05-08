@@ -7,11 +7,17 @@ import Login from '~/pages/Login.vue'
 const routes = [
     {
         path: '/',
-        component: Index
+        component: Index,
+        meta: {
+            title: '后台首页'
+        }
     },
     {
         path: '/login',
-        component: Login
+        component: Login,
+        meta: {
+            title: '欢迎登录'
+        }
     },
     {
         path: '/:pathMatch(.*)*',

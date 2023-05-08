@@ -22,5 +22,7 @@ app.use(router)
 // windicss插件配置
 import 'virtual:windi.css'
 import './permission.js'
+// 全局 loading 进度条
+import 'nprogress/nprogress.css'
 
 app.mount('#app')
