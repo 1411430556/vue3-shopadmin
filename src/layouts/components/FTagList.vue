@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  $END$
+  <div>标签</div>
 </template>
 
 <style scoped>

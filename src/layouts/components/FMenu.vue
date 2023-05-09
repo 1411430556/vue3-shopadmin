@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  $END$
+  <div>侧边栏</div>
 </template>
 
 <style scoped>

@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { toast } from '~/composables/util.js'
 import { getToken } from '~/composables/auth.js'
+import store from './store'
 
 const service = axios.create({
   baseURL: '/api',
@@ -27,10 +28,14 @@ service.interceptors.response.use(function (response) {
   // response.data.data.token 得到的是token
   return response.data.data
 }, function (error) {
+  const msg = error.response.data.msg || '请求失败'
+  if (msg == '非法token，请先登录！') {
+    store.dispatch('logout').finally(() => location.reload())
+  }
   // 超出 2xx 范围的状态码都会触发该函数。
   // 对响应错误做点什么
   // 消息提示 ElNotification
-  toast(error.response.data.msg || '请求失败', 'error')
+  toast(msg, 'error')
   return Promise.reject(error)
 })
 export default service
