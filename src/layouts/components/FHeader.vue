@@ -14,8 +14,6 @@ const router = useRouter()
 const store = useStore()
 
 // 修改密码-抽屉弹出
-const showDrawer = ref(false)
-
 const formDrawerRef = ref(null)
 
 const form = reactive({
@@ -38,21 +36,21 @@ const rules = reactive({
 })
 
 const formRef = ref(null)
-// 登录按钮 loading 状态控制
-const loading = ref(false)
 
 const onSubmit = () => {
   formRef.value.validate((valid) => {
     if (!valid) {
       return false
     }
-    loading.value = true
-    updatePassword(form).then(res => {
+    // loading 状态打开
+    formDrawerRef.value.showLoading()
+    updatePassword(form).then(() => {
       toast('修改密码成功，请重新登录', 'success')
       store.dispatch('logout')
       router.push('/login')
     }).finally(() => {
-      loading.value = false
+      // loading 状态关闭
+      formDrawerRef.value.hideLoading()
     })
   })
 }
@@ -63,10 +61,10 @@ const handleCommand = (c) => {
     case 'rePassword':
       // showDrawer.value = true
       formDrawerRef.value.open()
-      break;
+      break
     case 'logout':
       handleLogout()
-      break;
+      break
   }
 }
 
@@ -74,7 +72,7 @@ const handleCommand = (c) => {
 const handleRefresh = () => location.reload()
 
 // 退出登录的逻辑
-function handleLogout() {
+function handleLogout () {
   showModal('是否退出登录？').then(res => {
     logOut().finally(() => {
       // 调用store状态管理里的logout函数移除 cookie 里的token,清除当前用户状态 vuex
@@ -93,20 +91,20 @@ function handleLogout() {
     <!--左侧-->
     <span class="logo">
       <el-icon class="mr-1">
-        <SwitchFilled />
+        <SwitchFilled/>
       </el-icon>
       <span class="cursor-default">叽里呱啦</span>
     </span>
     <el-tooltip effect="dark" content="折叠" placement="bottom">
       <!-- 折叠图标 -->
       <el-icon class="icon-btn">
-        <Fold />
+        <Fold/>
       </el-icon>
     </el-tooltip>
     <el-tooltip effect="dark" content="刷新" placement="bottom">
       <!-- 刷新图标 -->
       <el-icon class="icon-btn" @click="handleRefresh">
-        <Refresh />
+        <Refresh/>
       </el-icon>
     </el-tooltip>
 
@@ -115,8 +113,8 @@ function handleLogout() {
       <el-tooltip effect="dark" content="全屏切换" placement="bottom">
         <!-- 全屏图标 -->
         <el-icon class="icon-btn" @click="toggle">
-          <FullScreen v-if="!isFullscreen" />
-          <Aim v-else />
+          <FullScreen v-if="!isFullscreen"/>
+          <Aim v-else/>
         </el-icon>
 
       </el-tooltip>
@@ -125,10 +123,10 @@ function handleLogout() {
       <el-dropdown class="dropdown" @command="handleCommand">
         <span class="flex items-center text-light-50">
           <!--头像-->
-          <el-avatar class="mr-2" :size="25" :src="$store.state.user.avatar" />
+          <el-avatar class="mr-2" :size="25" :src="$store.state.user.avatar"/>
           {{ $store.state.user.username }}
           <el-icon class="el-icon--right">
-            <arrow-down />
+            <arrow-down/>
           </el-icon>
         </span>
         <template #dropdown>
@@ -142,8 +140,9 @@ function handleLogout() {
   </div>
 
   <!-- 修改密码 -->
-  <!-- <el-drawer v-model="showDrawer" title="修改密码" size="45%" :close-on-click-modal="false">
-    <el-form @keyup.enter.native="onSubmit" ref="formRef" :rules="rules" :model="form" label-width="80px" size="default">
+  <FormDrawer ref="formDrawerRef" title="修改密码" destroyOnClose @submit="onSubmit">
+    <el-form @keyup.enter.native="onSubmit" ref="formRef" :rules="rules" :model="form" label-width="80px"
+             size="default">
       <el-form-item prop="oldpassword" label="旧密码">
         <el-input v-model="form.oldpassword" placeholder="请输入旧密码"></el-input>
       </el-form-item>
@@ -153,15 +152,7 @@ function handleLogout() {
       <el-form-item prop="repassword" label="确认密码">
         <el-input type="password" show-password v-model="form.repassword" placeholder="请确认密码"></el-input>
       </el-form-item>
-      <el-form-item>
-        <el-button type="primary" @click="onSubmit" :loading="loading">提交
-        </el-button>
-      </el-form-item>
     </el-form>
-  </el-drawer> -->
-
-  <FormDrawer ref="formDrawerRef">
-   <!-- <div class="bg-rose-400" style="height: 2000px;"></div> -->
   </FormDrawer>
 
 </template>

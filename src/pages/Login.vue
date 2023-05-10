@@ -4,6 +4,7 @@ import { ref, reactive } from 'vue'
 import { toast } from '~/composables/util.js'
 import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
+import { ElLoading } from 'element-plus'
 
 const store = useStore()
 const router = useRouter()
