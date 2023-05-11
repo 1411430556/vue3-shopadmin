@@ -14,7 +14,7 @@ import FTagList from '~/layouts/components/FTagList.vue'
 
     <el-container>
       <!--侧边栏-->
-      <el-aside>
+      <el-aside :width="$store.state.isCollapse ? '64px' : '250px' ">
         <FMenu/>
       </el-aside>
 
@@ -28,5 +28,7 @@ import FTagList from '~/layouts/components/FTagList.vue'
 </template>
 
 <style scoped>
-
+.el-aside {
+  transition: all .4s;
+}
 </style>

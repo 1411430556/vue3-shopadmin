@@ -8,12 +8,18 @@ const store = createStore({
     return {
       // 用户信息
       user: {},
+      // 侧边栏状态
+      isCollapse: false,
     }
   },
   mutations: {
     // 记录用户实例
     SET_USERINFO (state, value) {
       state.user = value
+    },
+    // 控制展开和缩起侧边栏
+    HANDLE_ASIDE (state) {
+      state.isCollapse = !state.isCollapse
     },
   },
   actions: {
@@ -41,7 +47,7 @@ const store = createStore({
       removeToken()
       // 清除当前用户状态 vuex
       context.commit('SET_USERINFO', {})
-    }
+    },
   },
 })
 

@@ -3,7 +3,8 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import Index from '~/pages/Index.vue'
 import NotFound from '~/pages/404.vue'
 import Login from '~/pages/Login.vue'
-import Admin from '~/layouts/admin.vue'
+import Admin from '~/layouts/Admin.vue'
+import GoodList from '~/pages/goods/list.vue'
 
 const routes = [
   {
@@ -17,7 +18,15 @@ const routes = [
         meta: {
           title: '后台首页',
         },
-      }],
+      },
+      {
+        path: '/goods/list',
+        component: GoodList,
+        meta: {
+          title: '商品管理',
+        },
+      },
+    ],
   },
   {
     path: '/login',

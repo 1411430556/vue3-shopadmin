@@ -47,10 +47,11 @@ const handleRefresh = () => location.reload()
       </el-icon>
       <span class="cursor-default">叽里呱啦</span>
     </span>
-    <el-tooltip effect="dark" content="折叠" placement="bottom">
+    <el-tooltip effect="dark" content="折叠/展开" placement="bottom">
       <!-- 折叠图标 -->
-      <el-icon class="icon-btn">
-        <Fold/>
+      <el-icon class="icon-btn" @click="$store.commit('HANDLE_ASIDE')">
+        <Fold v-if="$store.state.isCollapse === false"/>
+        <Expand v-else/>
       </el-icon>
     </el-tooltip>
     <el-tooltip effect="dark" content="刷新" placement="bottom">
