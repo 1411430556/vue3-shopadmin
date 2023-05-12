@@ -43,7 +43,7 @@ const handleRefresh = () => location.reload()
     <!--左侧-->
     <span class="logo">
       <el-icon class="mr-1">
-        <SwitchFilled/>
+        <Cloudy />
       </el-icon>
       <span class="cursor-default">叽里呱啦</span>
     </span>

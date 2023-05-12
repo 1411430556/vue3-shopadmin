@@ -22,6 +22,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
+    "unplugin-auto-import": "^0.15.3",
+    "unplugin-vue-components": "^0.24.1",
     "vite": "^4.3.2",
     "vite-plugin-windicss": "^1.8.10",
     "windicss": "^3.5.6"

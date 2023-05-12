@@ -1,5 +1,5 @@
 // 权限验证相关
-import router from '~/router'
+import { router, addRoutes } from '~/router'
 import { getToken } from '~/composables/auth.js'
 import { showFullLoading, hideFullLoading, toast } from '~/composables/util.js'
 import store from '~/store/index.js'
@@ -20,12 +20,14 @@ router.beforeEach(async (to, from, next) => {
     return next({ path: from.path ? from.path : '/' })
   }
 
+  let hasNewRoutes = false
   // 如果用户登录了，自动获取用户信息并存储在 vuex 中
   if (token) {
-    await store.dispatch('getInfo')
+    let { menus } = await store.dispatch('getInfo')
+    // 动态添加路由
+    hasNewRoutes = addRoutes(menus)
   }
-
-  next()
+  hasNewRoutes ? next(to.fullPath) : next()
 })
 
 // 全局后置守卫

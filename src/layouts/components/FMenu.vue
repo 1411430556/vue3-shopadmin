@@ -1,42 +1,24 @@
 <script setup>
-import { useRouter } from 'vue-router'
-import { PartlyCloudy } from '@element-plus/icons-vue'
+// import { useRouter } from 'vue-router'
+import { useStore } from 'vuex'
+import { computed } from 'vue'
 
-const router = useRouter()
-const asideMenus = [
-  {
-    'name': '后台面板',
-    'icon': 'help',
-    'child': [
-      {
-        'name': '主控台',
-        'icon': 'home-filled',
-        'frontpath': '/',
-      }],
-  },
-  {
-    'name': '商城管理',
-    'icon': 'shopping-bag',
-    'child': [
-      {
-        'name': '商品管理',
-        'icon': 'shopping-cart-full',
-        'frontpath': '/goods/list',
-      }],
-  }]
+const store = useStore()
+// const router = useRouter()
+const asideMenus = computed(() => store.state.menus)
 
 // 点击菜单的路由跳转
-const handleSelect = (e) => {
-  router.push(e)
-}
+// const handleSelect = (e) => {
+//   router.push(e)
+// }
 </script>
 
 <template>
   <div class="f-menu">
     <el-menu
+        router
         :default-active="$route.path"
         class="border-0 el-menu-vertical-demo"
-        @select="handleSelect"
         unique-opened
         :collapse="$store.state.isCollapse"
     >
@@ -80,6 +62,10 @@ const handleSelect = (e) => {
   overflow-y: auto;
   overflow-x: hidden;
   @apply shadow-md fixed bg-light-50;
+}
+
+.f-menu::-webkit-scrollbar {
+  width: 0;
 }
 
 .el-menu-vertical-demo:not(.el-menu--collapse) {

@@ -10,6 +10,8 @@ const store = createStore({
       user: {},
       // 侧边栏状态
       isCollapse: false,
+      menus: [],
+      ruleNames: [],
     }
   },
   mutations: {
@@ -20,6 +22,12 @@ const store = createStore({
     // 控制展开和缩起侧边栏
     HANDLE_ASIDE (state) {
       state.isCollapse = !state.isCollapse
+    },
+    SET_MENUS (state, value) {
+      state.menus = value
+    },
+    SET_RULENAMES (state, value) {
+      state.ruleNames = value
     },
   },
   actions: {
@@ -37,6 +45,8 @@ const store = createStore({
       return new Promise((resolve, reject) => {
         getInfo().then(res => {
           context.commit('SET_USERINFO', res)
+          context.commit('SET_MENUS', res.menus)
+          context.commit('SET_RULENAMES', res.ruleNames)
           resolve(res)
         }).catch(err => reject(err))
       })
