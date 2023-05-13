@@ -1,20 +1,59 @@
 <script setup>
 import { ref } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter, onBeforeRouteUpdate } from 'vue-router'
+import { useCookies } from '@vueuse/integrations/useCookies'
 
 const route = useRoute()
+const router = useRouter()
+const cookie = useCookies()
+
 const activeTab = ref(route.path)
 const tabList = ref([
   {
     title: '后台首页',
     path: '/',
   },
-  {
-    title: '商城管理',
-    path: '/goods/list',
-  },
 ])
 
+// 初始化标签导航列表
+function initTabList () {
+  let tabs = cookie.get('tabList')
+  if (tabs) {
+    tabList.value = tabs
+  }
+}
+
+initTabList()
+
+// 添加标签 tabs 的方法
+function addTab (tab) {
+  if (tabList.value.findIndex(item => item.path == tab.path) == -1) {
+    tabList.value.push(tab)
+  }
+  // let noTab = tabList.value.findIndex(item => item.path == tab.path) == -1
+  // if (noTab) {
+  //   tabList.value.push(tab)
+  // }
+  cookie.set('tabList', tabList.value)
+}
+
+// onBeforeRouteUpdate 添加一个导航守卫，不论当前位置何时被更新都会触发。类似于 beforeRouteUpdate，但可以在任何组件中使用。当组件被卸载时，该守卫会被移除。
+onBeforeRouteUpdate((to) => {
+  activeTab.value = to.path
+  addTab({
+    title: to.meta.title,
+    path: to.path,
+  })
+})
+
+// 点击标签实现路由跳转
+const changeTab = (item) => {
+  // 这里的 item 就是你点击的标签的路径
+  activeTab.value = item
+  router.push(item)
+}
+
+// 删除标签的方法
 const removeTab = (targetName) => {
 
 }
@@ -22,9 +61,15 @@ const removeTab = (targetName) => {
 
 <template>
   <div class="f-tag-list" :style="{ left: $store.state.isCollapse ? '64px' : '250px' }">
-    <el-tabs v-model="activeTab" type="card" class="flex-1" @tab-remove="removeTab"
-             style="min-width: 100px;">
-      <el-tab-pane :closable="item.path !== '/'" v-for="item in tabList" :key="item.path" :label="item.title" :name="item.path">
+    <el-tabs
+        v-model="activeTab"
+        type="card"
+        class="flex-1"
+        @tab-remove="removeTab"
+        @tab-change="changeTab"
+        style="min-width: 100px;">
+      <el-tab-pane :closable="item.path !== '/'" v-for="item in tabList" :key="item.path" :label="item.title"
+                   :name="item.path">
 
       </el-tab-pane>
     </el-tabs>
@@ -49,6 +94,7 @@ const removeTab = (targetName) => {
       </el-dropdown>
     </span>
   </div>
+  <div style="height: 44px;"></div>
 </template>
 
 <style scoped>
@@ -67,6 +113,7 @@ const removeTab = (targetName) => {
 }
 
 ::v-deep(.el-tabs__header) {
+  border: 0 !important;
   margin: 0;
 }
 
