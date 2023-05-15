@@ -1,7 +1,7 @@
 <script setup>
 import FHeader from '~/layouts/components/FHeader.vue'
 import FMenu from '~/layouts/components/FMenu.vue'
-import FTagList from '~/layouts/components/FTagList.vue'
+import FTagList from '~/layouts/components/FTabList.vue'
 </script>
 
 <template>

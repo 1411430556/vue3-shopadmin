@@ -43,11 +43,11 @@ const handleRefresh = () => location.reload()
     <!--左侧-->
     <span class="logo">
       <el-icon class="mr-1">
-        <Cloudy />
+        <Cloudy/>
       </el-icon>
       <span class="cursor-default">叽里呱啦</span>
     </span>
-    <el-tooltip effect="dark" content="折叠/展开" placement="bottom">
+    <el-tooltip effect="dark" :content="$store.state.isCollapse === false ? '折叠' : '展开'" placement="bottom">
       <!-- 折叠图标 -->
       <el-icon class="icon-btn" @click="$store.commit('HANDLE_ASIDE')">
         <Fold v-if="$store.state.isCollapse === false"/>
