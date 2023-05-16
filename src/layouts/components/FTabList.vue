@@ -84,7 +84,7 @@ const {
   @apply to-gray-300;
 }
 
-/deep/ .el-tabs--card > .el-tabs__header .el-tabs__nav {
+::v-deep(.el-tabs--card > .el-tabs__header .el-tabs__nav) {
   border: 0 !important;
 }
 </style>
