@@ -22,7 +22,7 @@ getStatistics2().then((value) => {
 
 <template>
   <div>
-    <el-row :gutter="20">
+    <el-row :gutter="20" v-permission="['getStatistics1,GET']">
       <!-- 骨架屏 -->
       <template v-if="panels.length === 0">
         <el-col :span="6" v-for="i in 4" :key="i">
@@ -79,9 +79,9 @@ getStatistics2().then((value) => {
     <el-row :gutter="20" class="mt-5">
       <el-col :span="12">
         <!--echarts图表-->
-        <IndexChart/>
+        <IndexChart v-permission="['getStatistics3,GET']"/>
       </el-col>
-      <el-col :span="12">
+      <el-col :span="12" v-permission="['getStatistics2,GET']">
         <!--右下方卡片-->
         <IndexCard title="店铺及商品提示" tip="店铺及商品提示" :btns="goods"/>
         <IndexCard title="交易提示" tip="需要立即处理的交易订单" :btns="order" class="mt-2.5"/>

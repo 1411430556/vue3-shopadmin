@@ -12,8 +12,10 @@ echarts.use([GridComponent, BarChart, CanvasRenderer])
 let myChart = null
 onMounted(() => {
   let chartDom = document.getElementById('chart')
-  myChart = echarts.init(chartDom)
-  getData()
+  if (chartDom) {
+    myChart = echarts.init(chartDom)
+    getData()
+  }
 })
 // 设置图表自适应窗口大小变化
 window.addEventListener('resize', function () {
