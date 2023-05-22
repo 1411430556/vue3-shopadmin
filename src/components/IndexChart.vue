@@ -84,7 +84,7 @@ const options = [
   <el-card shadow="never">
     <template #header>
       <div class="flex justify-between">
-        <span class="text-sm leading-7">订单统计</span>
+        <span class="text-sm leading-7 cursor-default">订单统计</span>
         <div>
           <el-check-tag v-for="(item, index) in options" :key="index" :checked="current === item.value"
                         @click="handleChoose(item.value)"

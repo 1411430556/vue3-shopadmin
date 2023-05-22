@@ -2,12 +2,21 @@
 import CountTo from '~/components/CountTo.vue'
 import IndexNavs from '~/components/IndexNavs.vue'
 import IndexChart from '~/components/IndexChart.vue'
-import { getStatistics1 } from '~/api/index.js'
+import IndexCard from '~/components/IndexCard.vue'
+import { getStatistics1, getStatistics2 } from '~/api/index.js'
 import { ref } from 'vue'
 
 const panels = ref([])
 getStatistics1().then(res => {
   panels.value = res.panels
+})
+
+// 右下角数据
+const goods = ref([])
+const order = ref([])
+getStatistics2().then((value) => {
+  goods.value = value.goods
+  order.value = value.order
 })
 </script>
 
@@ -42,7 +51,7 @@ getStatistics1().then(res => {
 
       <!-- 真正内容 -->
       <el-col :span="6" v-for="(item, index) in panels" :key="index">
-        <el-card shadow="hover" class="border-0">
+        <el-card shadow="hover" class="border-0 cursor-default">
           <template #header>
             <div class="flex justify-between">
               <span class="text-sm">{{ item.title }}</span>
@@ -64,13 +73,19 @@ getStatistics1().then(res => {
       </el-col>
     </el-row>
 
+    <!--中间8个图标-->
     <IndexNavs/>
 
     <el-row :gutter="20" class="mt-5">
       <el-col :span="12">
+        <!--echarts图表-->
         <IndexChart/>
       </el-col>
-      <el-col :span="12"></el-col>
+      <el-col :span="12">
+        <!--右下方卡片-->
+        <IndexCard title="店铺及商品提示" tip="店铺及商品提示" :btns="goods"/>
+        <IndexCard title="交易提示" tip="需要立即处理的交易订单" :btns="order" class="mt-2.5"/>
+      </el-col>
     </el-row>
   </div>
 </template>
