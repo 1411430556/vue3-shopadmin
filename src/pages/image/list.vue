@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    商品列表
+    图库列表
   </div>
 </template>
 

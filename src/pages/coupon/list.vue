@@ -4,7 +4,8 @@
 
 <template>
   <div>
-    商品列表
+    优惠券列表
+
   </div>
 </template>
 

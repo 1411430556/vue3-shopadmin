@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    商品列表
+    公告列表
   </div>
 </template>
 

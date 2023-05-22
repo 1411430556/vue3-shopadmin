@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    商品列表
+    配置
   </div>
 </template>
 
