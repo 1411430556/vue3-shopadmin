@@ -1,23 +1,4 @@
 <!--抽屉组件的封装-->
-<template>
-  <el-drawer v-model="showDrawer"
-             :title="title"
-             :size="size"
-             :close-on-click-modal="false"
-             :destroy-on-close="destroyOnClose">
-    <div class="formDrawer">
-      <!-- 内容部分 -->
-      <div class="body">
-        <slot></slot>
-      </div>
-      <!-- 底部按钮 -->
-      <div class="actions">
-        <el-button type="primary" @click="submit" :loading="loading">{{ confirmText }}</el-button>
-        <el-button type="default" @click="close">取消</el-button>
-      </div>
-    </div>
-  </el-drawer>
-</template>
 <script setup>
 import { ref } from 'vue'
 
@@ -62,6 +43,26 @@ defineExpose({
   hideLoading,
 })
 </script>
+
+<template>
+  <el-drawer v-model="showDrawer"
+             :title="title"
+             :size="size"
+             :close-on-click-modal="false"
+             :destroy-on-close="destroyOnClose">
+    <div class="formDrawer">
+      <!-- 内容部分 -->
+      <div class="body">
+        <slot></slot>
+      </div>
+      <!-- 底部按钮 -->
+      <div class="actions">
+        <el-button type="primary" @click="submit" :loading="loading">{{ confirmText }}</el-button>
+        <el-button type="default" @click="close">取消</el-button>
+      </div>
+    </div>
+  </el-drawer>
+</template>
 
 <style scoped>
 .formDrawer {
