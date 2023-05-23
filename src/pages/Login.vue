@@ -70,8 +70,9 @@ const onSubmit = () => {
   <el-row class="login-container">
     <el-col :lg="16" :md="12" class="left">
       <div>
-        <div>欢迎光临</div>
-        <div>此站点为后台管理分销系统</div>
+        <!--<div>欢迎光临</div>-->
+        <!--<div>此站点为后台管理分销系统</div>-->
+        <img src="https://qiniu.fc-barcelona.cn/image/JNPF.gif" alt="">
       </div>
     </el-col>
 
