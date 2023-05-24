@@ -3,11 +3,17 @@ import ImageAside from '~/components/ImageAside.vue'
 import ImageMain from '~/components/ImageMain.vue'
 import { ref } from 'vue'
 
+// 优化重复点击图库分类，防止重复发送请求
+let image_class_id_ = ''
 const ImageAsideRef = ref(null)
 // 打开抽屉
 const handleOpenCreate = () => ImageAsideRef.value.handleCreate()
 const ImageMainRef = ref(null)
-const handleAsideChange = (image_class_id) => ImageMainRef.value.loadData(image_class_id)
+const handleAsideChange = (image_class_id) => {
+  if (image_class_id === image_class_id_) return
+  image_class_id_ = image_class_id
+  ImageMainRef.value.loadData(image_class_id)
+}
 
 // const windowHeight = window.innerHeight || document.body.clientHeight
 // const h = windowHeight - 64 - 44 - 40
