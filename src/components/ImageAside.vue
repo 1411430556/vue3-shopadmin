@@ -111,7 +111,6 @@ function handleChangeActiveID (image_class_id) {
 
 defineExpose({
   handleCreate,
-  activeID,
 })
 </script>
 
