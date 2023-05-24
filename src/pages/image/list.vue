@@ -6,9 +6,7 @@ import { ref } from 'vue'
 const ImageAsideRef = ref(null)
 // 打开抽屉
 const handleOpenCreate = () => ImageAsideRef.value.handleCreate()
-
 const ImageMainRef = ref(null)
-let a = false
 const handleAsideChange = (image_class_id) => ImageMainRef.value.loadData(image_class_id)
 
 // const windowHeight = window.innerHeight || document.body.clientHeight

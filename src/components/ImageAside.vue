@@ -100,7 +100,9 @@ const handleDelete = (id) => {
 
 // 选中图库分类ID
 const activeID = ref(0)
+
 const emits = defineEmits(['change'])
+
 // 切换图库分类
 function handleChangeActiveID (image_class_id) {
   activeID.value = image_class_id
@@ -109,6 +111,7 @@ function handleChangeActiveID (image_class_id) {
 
 defineExpose({
   handleCreate,
+  activeID,
 })
 </script>
 
