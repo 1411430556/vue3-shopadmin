@@ -13,3 +13,6 @@ export function updateImage (id, name) {
 export function deleteImage (ids) {
   return axios.post(`/admin/image/delete_all`, { ids })
 }
+
+// 上传图片地址
+export const uploadImageAction = '/api/admin/image/upload'

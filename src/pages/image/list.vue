@@ -15,6 +15,9 @@ const handleAsideChange = (image_class_id) => {
   ImageMainRef.value.loadData(image_class_id)
 }
 
+// 打开上传图片抽屉
+const handleOpenUpload = () => ImageMainRef.value.openUploadFile()
+
 // const windowHeight = window.innerHeight || document.body.clientHeight
 // const h = windowHeight - 64 - 44 - 40
 </script>
@@ -24,6 +27,7 @@ const handleAsideChange = (image_class_id) => {
   <el-container class="bg-white rounded" style="height: 985px;">
     <el-header class="image-header">
       <el-button type="primary" size="small" @click="handleOpenCreate">新增图片分类</el-button>
+      <el-button type="warning" size="small" @click="handleOpenUpload">上传图片</el-button>
     </el-header>
     <el-container>
       <!-- 左侧边栏 -->

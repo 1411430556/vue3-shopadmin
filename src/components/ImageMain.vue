@@ -1,7 +1,12 @@
 <script setup>
 import { getImageList, updateImage, deleteImage } from '~/api/image.js'
 import { showPrompt, toast } from '~/composables/util.js'
+import UploadFile from '~/components/UploadFile.vue'
 import { ref } from 'vue'
+
+// 上传图片
+const drawer = ref(false)
+const openUploadFile = () => drawer.value = true
 
 // 分页
 // 当前所在的页数
@@ -57,8 +62,12 @@ const handleDelete = (id) => {
   }).finally(() => loading.value = false)
 }
 
+// 上传成功后
+const handleUploadSuccess = () => getData(1)
+
 defineExpose({
   loadData,
+  openUploadFile,
 })
 </script>
 
@@ -91,6 +100,14 @@ defineExpose({
                      @current-change="getData"/>
     </div>
   </el-main>
+
+  <!--上传图片文件抽屉-->
+  <el-drawer
+      v-model="drawer"
+      title="上传图片"
+  >
+    <UploadFile :data="{image_class_id}" @success="handleUploadSuccess"/>
+  </el-drawer>
 </template>
 
 <style scoped>
