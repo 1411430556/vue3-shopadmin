@@ -28,7 +28,7 @@ getData()
 // 删除
 const handleDelete = (id) => {
   loading.value = true
-  deleteNotice(id).then((value) => {
+  deleteNotice(id).then(() => {
     toast('删除成功')
     getData()
   }).finally(() => loading.value = false)
