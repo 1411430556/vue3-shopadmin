@@ -52,7 +52,8 @@ const rules = {
       required: true,
       message: '图库分类名称不能为空',
       trigger: 'blur',
-    }],
+    },
+  ],
 }
 const formRef = ref(null)
 const handleSubmit = () => {
@@ -117,15 +118,14 @@ defineExpose({
 <template>
   <el-aside width="220px" class="image-aside" v-loading="loading" element-loading-text="Loading...">
     <div class="top">
-
       <AsideList :active="activeID === item.id" v-for="(item, index) in list" :key="index"
                  @edit="handleEdit(item)" @delete="handleDelete(item.id)" @click="handleChangeActiveID(item.id)">
         {{ item.name }}
       </AsideList>
-
     </div>
+
+    <!--分页器-->
     <div class="bottom">
-      <!--分页器-->
       <el-pagination background layout="prev, next" :total="total" :current-page="currentPage" :page-size="limit"
                      @current-change="getData"/>
     </div>
