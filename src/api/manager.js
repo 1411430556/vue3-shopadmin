@@ -22,3 +22,36 @@ export function logOut () {
 export function updatePassword (data) {
   return axios.post('/admin/updatepassword', data)
 }
+
+// 管理员列表
+export function getManagerList (page, query = {}) {
+  let q = []
+  for (let key in query) {
+    if (query[key]) {
+      q.push(`${key}=${encodeURIComponent(query[key])}`)
+    }
+  }
+  let r = q.join('&')
+  r = r ? ('?' + r) : ''
+  return axios.get(`/admin/manager/${page}${r}`)
+}
+
+// 修改管理员状态
+export function updateManagerStatus (id, status) {
+  return axios.post(`/admin/manager/${id}/update_status`, { status })
+}
+
+// 创建管理员
+export function createManager (data) {
+  return axios.post('/admin/manager', data)
+}
+
+// 修改管理员
+export function updateManager (id, data) {
+  return axios.post(`/admin/manager/${id}`, data)
+}
+
+// 删除管理员
+export function deleteManager (id) {
+  return axios.post(`/admin/manager/${id}/delete`)
+}

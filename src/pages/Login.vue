@@ -85,7 +85,7 @@ const onSubmit = () => {
       </div>
       <el-form @keyup.enter.native="onSubmit" ref="formRef" :rules="rules" :model="form" class="w-[250px]">
         <el-form-item prop="username">
-          <el-input v-model="form.username" placeholder="请输入用户名">
+          <el-input v-model.trim="form.username" placeholder="请输入用户名">
             <template #prefix>
               <el-icon>
                 <User />
@@ -94,7 +94,7 @@ const onSubmit = () => {
           </el-input>
         </el-form-item>
         <el-form-item prop="password">
-          <el-input type="password" show-password v-model="form.password" placeholder="请输入密码">
+          <el-input type="password" show-password v-model.trim="form.password" placeholder="请输入密码">
             <template #prefix>
               <el-icon>
                 <Lock />
