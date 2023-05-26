@@ -1,108 +1,56 @@
 <script setup>
 import { getNoticeList, createNotice, updateNotice, deleteNotice } from '~/api/notice.js'
 import FormDrawer from '~/components/FormDrawer.vue'
-import { computed, reactive, ref } from 'vue'
-import { toast } from '~/composables/util.js'
+import { useInitTable, userInitForm } from '~/composables/useCommon.js'
 
-// 表格数据
-const tableData = ref([])
-const loading = ref(false)
-// 分页
-const currentPage = ref(1)
-const total = ref(0)
-const limit = ref(10)
-
-// 获取数据
-function getData (numberOfPages = null) {
-  // 点击按钮也换当前显示的哪页
-  if (typeof numberOfPages === 'number') currentPage.value = numberOfPages
-  loading.value = true
-  getNoticeList(currentPage.value).then(value => {
-    tableData.value = value.list
-    total.value = value.totalCount
-  }).finally(() => loading.value = false)
-}
-
-getData()
-
-// 删除
-const handleDelete = (id) => {
-  loading.value = true
-  deleteNotice(id).then(() => {
-    toast('删除成功')
-    getData()
-  }).finally(() => loading.value = false)
-}
-
-// 新增公告列表，表单部分
-const formDrawerRef = ref(null)
-const formRef = ref(null)
-const form = reactive({
-  title: '',
-  content: '',
+const {
+  tableData,
+  loading,
+  currentPage,
+  total,
+  limit,
+  getData,
+  handleDelete,
+} = useInitTable({
+  getList: getNoticeList,
+  delete: deleteNotice,
 })
-// 表单验证规则
-const rules = {
-  title: [
-    {
-      required: true,
-      message: '公告标题不能为空',
-      trigger: 'blur',
-    },
-  ],
-  content: [
-    {
-      required: true,
-      message: '公告内容不能为空',
-      trigger: 'blur',
-    },
-  ],
-}
 
-// 判断抽屉打开后抽屉的标题是新增还是修改；点击修改会拿到一个ID，就为true，点击新增下面把ID设为0了，就是false
-const editID = ref(0)
-const drawerTitle = computed(() => editID.value ? '修改' : '新增')
-
-const handleSubmit = () => {
-  formRef.value.validate((valid) => {
-    if (!valid) return
-    formDrawerRef.value.showLoading()
-    const fun = editID.value ? updateNotice(editID.value, form) : createNotice(form)
-    fun.then(() => {
-      toast(drawerTitle.value + '成功')
-      // 修改刷新当前页，新增刷新第一页
-      getData(editID.value ? false : 1)
-      formDrawerRef.value.close()
-    }).finally(() => formDrawerRef.value.hideLoading())
-  })
-}
-
-// 重置表单
-function resetForm (row) {
-  if (formRef.value) formRef.value.clearValidate()
-  if (row) {
-    for (let key in form) {
-      form[key] = row[key]
-    }
-  }
-}
-
-// 新增
-const handleCreate = () => {
-  editID.value = 0
-  resetForm({
+const {
+  formDrawerRef,
+  formRef,
+  form,
+  rules,
+  drawerTitle,
+  handleSubmit,
+  handleCreate,
+  handleEdit,
+} = userInitForm({
+  form: {
     title: '',
     content: '',
-  })
-  formDrawerRef.value.open()
-}
-
-// 修改
-const handleEdit = (row) => {
-  editID.value = row.id
-  resetForm(row)
-  formDrawerRef.value.open()
-}
+  },
+  // 表单验证规则
+  rules: {
+    title: [
+      {
+        required: true,
+        message: '公告标题不能为空',
+        trigger: 'blur',
+      },
+    ],
+    content: [
+      {
+        required: true,
+        message: '公告内容不能为空',
+        trigger: 'blur',
+      },
+    ],
+  },
+  getData,
+  update: updateNotice,
+  create: createNotice,
+})
 </script>
 
 <template>

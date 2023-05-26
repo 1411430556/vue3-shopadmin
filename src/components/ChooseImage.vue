@@ -6,11 +6,8 @@ import { toast } from '~/composables/util'
 
 const dialogVisible = ref(false)
 
-const callbackFunction = ref(null)
-const open = (callback = null) => {
-  callbackFunction.value = callback
-  dialogVisible.value = true
-}
+// const callbackFunction = ref(null)
+const open = () => dialogVisible.value = true
 // 点击提交头像后关闭 dialog对话框
 const close = () => dialogVisible.value = false
 
@@ -24,15 +21,16 @@ const handleOpenUpload = () => ImageMainRef.value.openUploadFile()
 
 const props = defineProps({
   modelValue: [String, Array],
-  limit: {
-    type: Number,
-    default: 1,
-  },
-  preview: {
-    type: Boolean,
-    default: true,
-  },
+  // limit: {
+  //   type: Number,
+  //   default: 1,
+  // },
+  // preview: {
+  //   type: Boolean,
+  //   default: true,
+  // },
 })
+
 /*
  当 v-model 使用在一个组件上时，v-model 会被展开为如下的形式：
        <CustomInput
@@ -54,26 +52,13 @@ const handleChoose = (e) => {
 }
 
 const submit = () => {
-  let value = []
-  if (props.limit === 1) {
-    value = urls[0]
-  } else {
-    value = props.preview ? [...props.modelValue, ...urls] : [...urls]
-    if (value.length > props.limit) {
-      let limit = props.preview ? (props.limit - props.modelValue.length) : props.limit
-      return toast('最多还能选择' + limit + '张')
-    }
-  }
-  if (value && props.preview) {
-    emits('update:modelValue', value)
-  }
-  if (!props.preview && typeof callbackFunction.value === 'function') {
-    callbackFunction.value(value)
+  if (urls.length) {
+    emits('update:modelValue', urls[0])
   }
   close()
 }
 
-const removeImage = (url) => emits('update:modelValue', props.modelValue.filter(u => u !== url))
+// const removeImage = (url) => emits('update:modelValue', props.modelValue.filter(u => u !== url))
 
 defineExpose({
   open,
@@ -81,21 +66,11 @@ defineExpose({
 </script>
 
 <template>
-  <div v-if="modelValue && preview">
-    <el-image v-if="typeof modelValue == 'string'" :src="modelValue" fit="cover"
-              class="w-[100px] h-[100px] rounded border mr-2 mt-2.5"></el-image>
-    <div v-else class="flex flex-wrap">
-      <div class="relative mx-1 mb-2 w-[100px] h-[100px]" v-for="(url,index) in modelValue" :key="index">
-        <el-icon class="absolute right-[5px] top-[5px] cursor-pointer bg-white rounded-full" style="z-index: 10;"
-                 @click="removeImage(url)">
-          <CircleClose/>
-        </el-icon>
-        <el-image :src="url" fit="cover" class="w-[100px] h-[100px] rounded border mr-2"></el-image>
-      </div>
-    </div>
+  <div v-if="modelValue">
+    <el-image :src="modelValue" fit="cover" class="w-[100px] h-[100px] rounded border mr-2 mt-2.5"/>
   </div>
 
-  <div v-if="preview" class="choose-image-btn" @click="open">
+  <div class="choose-image-btn" @click="open">
     <el-icon :size="25" class="text-gray-500">
       <Plus/>
     </el-icon>
@@ -113,7 +88,7 @@ defineExpose({
       </el-header>
       <el-container>
         <ImageAside ref="ImageAsideRef" @change="handleAsideChange"/>
-        <ImageMain :limit="limit" openChoose ref="ImageMainRef" @choose="handleChoose"/>
+        <ImageMain openChoose ref="ImageMainRef" @choose="handleChoose"/>
       </el-container>
     </el-container>
 
