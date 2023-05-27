@@ -76,7 +76,7 @@ export function useInitTable (opt = {}) {
 }
 
 // 新增、修改
-export function userInitForm (opt = {}) {
+export function useInitForm (opt = {}) {
   // 新增管理员列表，表单部分
   const formDrawerRef = ref(null)
   const formRef = ref(null)
@@ -105,7 +105,7 @@ export function userInitForm (opt = {}) {
   }
 
 // 重置表单
-  function resetForm (row) {
+  function resetForm (row = false) {
     if (formRef.value) formRef.value.clearValidate()
     for (let key in opt.form) {
       form[key] = row[key]

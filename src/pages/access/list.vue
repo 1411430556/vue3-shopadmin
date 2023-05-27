@@ -1,7 +1,7 @@
 <script setup>
 import ListHeader from '~/components/ListHeader.vue'
 import { getRuleList, createRule, updateRule, updateRuleStatus, deleteRule } from '~/api/rule.js'
-import { useInitTable, userInitForm } from '~/composables/useCommon.js'
+import { useInitTable, useInitForm } from '~/composables/useCommon.js'
 import { ref } from 'vue'
 import FormDrawer from '~/components/FormDrawer.vue'
 import IconSelect from '~/components/IconSelect.vue'
@@ -35,7 +35,7 @@ const {
   handleSubmit,
   handleCreate,
   handleEdit,
-} = userInitForm({
+} = useInitForm({
   form: {
     rule_id: 0,
     menu: 0,

@@ -3,7 +3,7 @@ import { getManagerList, updateManagerStatus, createManager, updateManager, dele
 import FormDrawer from '~/components/FormDrawer.vue'
 import ChooseImage from '~/components/ChooseImage.vue'
 import ListHeader from '~/components/ListHeader.vue'
-import { useInitTable, userInitForm } from '~/composables/useCommon.js'
+import { useInitTable, useInitForm } from '~/composables/useCommon.js'
 import { ref } from 'vue'
 
 // 管理员类型列表
@@ -46,7 +46,7 @@ const {
   handleSubmit,
   handleCreate,
   handleEdit,
-} = userInitForm({
+} = useInitForm({
   form: {
     username: '',
     password: '',
