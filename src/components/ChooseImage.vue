@@ -2,7 +2,6 @@
 import { ref } from 'vue'
 import ImageAside from '~/components/ImageAside.vue'
 import ImageMain from '~/components/ImageMain.vue'
-import { toast } from '~/composables/util'
 
 const dialogVisible = ref(false)
 
