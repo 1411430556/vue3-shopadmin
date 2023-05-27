@@ -1,10 +1,8 @@
 <script setup>
-// import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
 import { computed } from 'vue'
 
 const store = useStore()
-// const router = useRouter()
 const asideMenus = computed(() => store.state.menus)
 
 // 点击菜单的路由跳转
