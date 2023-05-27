@@ -8,9 +8,9 @@ defineProps({
 
 const icons = ref(Object.keys(iconList))
 
-const emit = defineEmits(['update:modelValue'])
+const emits = defineEmits(['update:modelValue'])
 const handleChange = (icon) => {
-  emit('update:modelValue', icon)
+  emits('update:modelValue', icon)
 }
 </script>
 
@@ -26,7 +26,7 @@ const handleChange = (icon) => {
           :label="item"
           :value="item"
       >
-        <div class="flex items-center justify-between">
+        <div class="flex justify-between items-center">
           <el-icon>
             <component :is="item"/>
           </el-icon>

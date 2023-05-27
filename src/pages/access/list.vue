@@ -1,6 +1,6 @@
 <script setup>
 import ListHeader from '~/components/ListHeader.vue'
-import { getRuleList, createRule, updateRule } from '~/api/rule.js'
+import { getRuleList, createRule, updateRule, updateRuleStatus, deleteRule } from '~/api/rule.js'
 import { useInitTable, userInitForm } from '~/composables/useCommon.js'
 import { ref } from 'vue'
 import FormDrawer from '~/components/FormDrawer.vue'
@@ -13,6 +13,8 @@ const {
   loading,
   tableData,
   getData,
+  handleDelete,
+  handleStatusChange,
 } = useInitTable({
   getList: getRuleList,
   onGetListSuccess: (value) => {
@@ -20,6 +22,8 @@ const {
     tableData.value = value.list
     defaultExpandedKeys.value = value.list.map(item => item.id)
   },
+  updateStatus: updateRuleStatus,
+  delete: deleteRule,
 })
 
 const {
@@ -49,6 +53,13 @@ const {
   update: updateRule,
   create: createRule,
 })
+
+// 添加子分类
+const addChild = (id) => {
+  handleCreate()
+  form.rule_id = id
+  form.status = 1
+}
 </script>
 
 <template>
@@ -66,10 +77,21 @@ const {
           <span>{{ data.name }}</span>
           <!--右侧-->
           <div class="ml-auto">
-            <el-switch :model-value="data.status" :active-value="1" :inactive-value="0"/>
-            <el-button text type="primary" size="small" @click.stop="handleEdit(data)">修改</el-button>
-            <el-button text type="primary" size="small">增加</el-button>
-            <el-button text type="primary" size="small">删除</el-button>
+            <span @click.stop="()=>{}" class="mr-6">
+              <el-switch @change="handleStatusChange($event, data)" :model-value="data.status" :active-value="1"
+                         :inactive-value="0"/>
+            </span>
+            <el-button text type="primary" size="small" @click.stop="handleEdit(data)" class="mr-3">修改</el-button>
+            <el-button text type="primary" size="small" @click.stop="addChild(data.id)" class="mr-3">增加</el-button>
+            <el-popconfirm title="是否删除该记录？" confirm-button-text="确认" cancel-button-text="取消"
+                           @confirm="handleDelete(data.id)">
+              <template #reference>
+                <span @click.stop="()=>{}">
+                  <el-button text type="primary" size="small">删除</el-button>
+                </span>
+              </template>
+            </el-popconfirm>
+
           </div>
         </div>
       </template>
@@ -129,7 +151,7 @@ const {
   padding-right: 8px;
 }
 
-/deep/ .el-tree-node__content {
+:deep(.el-tree-node__content) {
   padding: 20px 0;
 }
 </style>
