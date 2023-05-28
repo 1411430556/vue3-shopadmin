@@ -24,3 +24,8 @@ export function deleteRole (id) {
 export function updateRoleStatus (id, status) {
   return axios.post(`/admin/role/${id}/update_status`, {status})
 }
+
+// 配置角色权限
+export function setRoleRules (id, rule_ids) {
+  return axios.post(`/admin/role/set_rules`, {id, rule_ids})
+}
