@@ -55,6 +55,7 @@ export function useInitTable (opt = {}) {
     row.statusLoading = true
     opt.updateStatus(row.id, status).then(() => {
       toast('修改状态成功')
+      getData()
       row.status = status
     }).finally(() => {
       row.statusLoading = false
@@ -71,7 +72,7 @@ export function useInitTable (opt = {}) {
   const multipleTableRef = ref(null)
   const handleMultiDelete = () => {
     loading.value = true
-    opt.delete(multiSelectionIDs.value).then(value => {
+    opt.delete(multiSelectionIDs.value).then(() => {
       toast('删除成功')
       // 清空选中
       if (multipleTableRef.value) {
@@ -94,7 +95,7 @@ export function useInitTable (opt = {}) {
     handleStatusChange,
     handleSelectionChange,
     multipleTableRef,
-    handleMultiDelete
+    handleMultiDelete,
   }
 }
 
@@ -115,9 +116,15 @@ export function useInitForm (opt = {}) {
     formRef.value.validate((valid) => {
       if (!valid) return
       formDrawerRef.value.showLoading()
+      let body
+      if (opt.beforeSubmit && typeof opt.beforeSubmit === 'function') {
+        body = opt.beforeSubmit({ ...form })
+      } else {
+        body = form
+      }
       const fun = editID.value
-        ? opt.update(editID.value, form)
-        : opt.create(form)
+        ? opt.update(editID.value, body)
+        : opt.create(body)
       fun.then(() => {
         toast(drawerTitle.value + '成功')
         // 修改刷新当前页，新增刷新第一页
