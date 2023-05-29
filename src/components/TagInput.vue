@@ -42,6 +42,7 @@ const handleInputConfirm = () => {
       closable
       :disable-transitions="false"
       @close="handleClose(tag)"
+      round
   >
     {{ tag }}
   </el-tag>
