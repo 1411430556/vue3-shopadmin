@@ -4,8 +4,6 @@ import { useInitTable, useInitForm } from '~/composables/useCommon.js'
 import FormDrawer from '~/components/FormDrawer.vue'
 import ListHeader from '~/components/ListHeader.vue'
 import TagInput from '~/components/TagInput.vue'
-import { ref } from 'vue'
-import { toast } from '~/composables/util.js'
 
 const {
   tableData,
@@ -16,6 +14,9 @@ const {
   getData,
   handleDelete,
   handleStatusChange,
+  handleSelectionChange,
+  multipleTableRef,
+  handleMultiDelete,
 } = useInitTable({
   getList: getSkusList,
   delete: deleteSkus,
@@ -59,26 +60,6 @@ const {
   update: updateSkus,
   create: createSkus,
 })
-
-// 多选框
-// 多选选中ID
-const multiSelectionIDs = ref([])
-const handleSelectionChange = (e) => {
-  multiSelectionIDs.value = e.map(item => item.id)
-}
-// 批量删除
-const multipleTableRef = ref(null)
-const handleMultiDelete = () => {
-  loading.value = true
-  deleteSkus(multiSelectionIDs.value).then(value => {
-    toast('删除成功')
-    // 清空选中
-    if (multipleTableRef.value) {
-      multipleTableRef.value.clearSelection()
-    }
-    getData()
-  }).finally(() => loading.value = false)
-}
 </script>
 
 <template>
@@ -87,7 +68,8 @@ const handleMultiDelete = () => {
     <ListHeader layout="create,delete,refresh" @create="handleCreate" @refresh="getData" @delete="handleMultiDelete"/>
 
     <!--表格-->
-    <el-table ref="multipleTableRef" :data="tableData" stripe style="width: 100%" @selection-change="handleSelectionChange"
+    <el-table ref="multipleTableRef" :data="tableData" stripe style="width: 100%"
+              @selection-change="handleSelectionChange"
               v-loading="loading">
       <el-table-column type="selection" width="55"/>
       <el-table-column prop="name" label="规格名称"/>
