@@ -5,6 +5,8 @@ import ChooseImage from '~/components/ChooseImage.vue'
 import ListHeader from '~/components/ListHeader.vue'
 import { useInitTable, useInitForm } from '~/composables/useCommon.js'
 import { ref } from 'vue'
+import Search from '~/components/Search.vue'
+import SearchItem from '~/components/SearchItem.vue'
 
 // 管理员类型列表
 const roles = ref([])
@@ -78,24 +80,13 @@ const {
 
 <template>
   <el-card shadow="never" class="border-0">
-
     <!--搜索-->
-    <el-form :model="searchForm" class="mb-3" size="small">
-      <el-row :gutter="20">
-        <el-col :span="8">
-          <el-form-item label="关键词">
-            <el-input v-model="searchForm.keyword" placeholder="管理员名称" clearable
-                      @keyup.enter.native="getData"></el-input>
-          </el-form-item>
-        </el-col>
-        <el-col :span="8" :offset="8">
-          <div class="flex justify-end items-center">
-            <el-button type="primary" @click="getData">搜索</el-button>
-            <el-button @click="resetSearchForm">重置</el-button>
-          </div>
-        </el-col>
-      </el-row>
-    </el-form>
+    <Search :model="searchForm" @search="getData" @reset="resetSearchForm">
+      <SearchItem label="关键词">
+        <el-input v-model="searchForm.keyword" placeholder="管理员名称" clearable
+                  @keyup.enter.native="getData"/>
+      </SearchItem>
+    </Search>
 
     <!--新增/刷新-->
     <ListHeader @create="handleCreate" @refresh="getData"/>

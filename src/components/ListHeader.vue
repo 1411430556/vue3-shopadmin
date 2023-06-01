@@ -5,7 +5,7 @@ defineEmits(['create', 'refresh', 'delete'])
 const props = defineProps({
   layout: {
     type: String,
-    default: 'create, refresh',
+    default: 'create,refresh',  // 不要加空格
   },
 })
 const btns = computed(() => props.layout.split(','))
@@ -15,12 +15,14 @@ const btns = computed(() => props.layout.split(','))
   <div class="flex justify-between items-center mb-4">
     <div>
       <el-button v-if="btns.includes('create')" type="primary" size="small" @click="$emit('create')">新增</el-button>
-      <el-popconfirm v-if="btns.includes('delete')" title="是否删除选中记录？" confirm-button-text="确认" cancel-button-text="取消"
+      <el-popconfirm v-if="btns.includes('delete')" title="是否删除选中记录？" confirm-button-text="确认"
+                     cancel-button-text="取消"
                      @confirm="$emit('delete')">
         <template #reference>
           <el-button type="danger" size="small">批量删除</el-button>
         </template>
       </el-popconfirm>
+      <slot/>
     </div>
     <el-tooltip
         v-if="btns.includes('refresh')"

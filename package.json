@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
+    "@tinymce/tinymce-vue": "^5.1.0",
     "@vueuse/core": "^10.1.2",
     "@vueuse/integrations": "^10.1.2",
     "axios": "^1.4.0",
@@ -17,6 +18,7 @@
     "element-plus": "^2.2.11",
     "gsap": "^3.11.5",
     "nprogress": "^0.2.0",
+    "tinymce": "^6.4.2",
     "universal-cookie": "^4.0.4",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6",

@@ -82,6 +82,19 @@ export function useInitTable (opt = {}) {
     }).finally(() => loading.value = false)
   }
 
+  // 批量修改状态
+  const handleMultiStatusChange = (status) => {
+    loading.value = true
+    opt.updateStatus(multiSelectionIDs.value, status).then(() => {
+      toast('修改状态成功')
+      // 清空选中
+      if (multipleTableRef.value) {
+        multipleTableRef.value.clearSelection()
+      }
+      getData()
+    }).finally(() => loading.value = false)
+  }
+
   return {
     searchForm,
     resetSearchForm,
@@ -96,6 +109,7 @@ export function useInitTable (opt = {}) {
     handleSelectionChange,
     multipleTableRef,
     handleMultiDelete,
+    handleMultiStatusChange,
   }
 }
 
