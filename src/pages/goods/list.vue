@@ -8,6 +8,7 @@ import Search from '~/components/Search.vue'
 import SearchItem from '~/components/SearchItem.vue'
 import Banners from '~/pages/goods/banners.vue'
 import Content from '~/pages/goods/content.vue'
+import Skus from '~/pages/goods/skus.vue'
 import { useInitTable, useInitForm } from '~/composables/useCommon.js'
 import { ref } from 'vue'
 
@@ -36,6 +37,7 @@ const {
     tableData.value = value.list.map(o => {
       o.bannersLoading = false
       o.contentLoading = false
+      o.skusLoading = false
       return o
     })
     total.value = value.totalCount
@@ -126,6 +128,10 @@ const handleSetGoodsBanners = (row) => bannersRef.value.open(row)
 // 设置商品详情
 const contentRef = ref(null)
 const handleSetGoodsContent = (row) => contentRef.value.open(row)
+
+// 更新商品规格
+const skusRef = ref(null)
+const handleSetGoodsSkus = (row) => skusRef.value.open(row)
 </script>
 
 <template>
@@ -204,7 +210,10 @@ const handleSetGoodsContent = (row) => contentRef.value.open(row)
           <template #default="scope">
             <div v-if="searchForm.tab !== 'delete'">
               <el-button class="px-1" type="primary" size="small" text @click="handleEdit(scope.row)">修改</el-button>
-              <el-button class="px-1" type="primary" size="small" text>商品规格</el-button>
+              <el-button class="px-1" type="primary" size="small" text
+                         @click="handleSetGoodsSkus(scope.row)"
+                         :loading="scope.row.skusLoading">商品规格
+              </el-button>
               <el-button class="px-1" :type="scope.row.goods_banner.length === 0 ? 'danger' : 'primary'" size="small"
                          text @click="handleSetGoodsBanners(scope.row)"
                          :loading="scope.row.bannersLoading">设置轮播图
@@ -289,6 +298,7 @@ const handleSetGoodsContent = (row) => contentRef.value.open(row)
 
     <Banners ref="bannersRef" @reload-data="getData"/>
     <Content ref="contentRef" @reload-data="getData"/>
+    <Skus ref="skusRef" @reload-data="getData"/>
   </div>
 </template>
 

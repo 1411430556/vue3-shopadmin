@@ -47,6 +47,7 @@ export function setGoodsBanner (id, data) {
   return axios.post(`/admin/goods/banners/${id}`, data)
 }
 
+// 更新商品规格
 export function updateGoodsSkus (id, data) {
   return axios.post(`/admin/goods/updateskus/${id}`, data)
 }
