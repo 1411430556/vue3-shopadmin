@@ -8,7 +8,7 @@ export function getGoodsList (page, query = {}) {
 
 // 批量上架/下架
 export function updateGoodsStatus (ids, status) {
-  return axios.post(`/admin/goods/changestatus`, {
+  return axios.post('/admin/goods/changestatus', {
     ids,
     status,
   })
@@ -16,7 +16,7 @@ export function updateGoodsStatus (ids, status) {
 
 // 创建商品
 export function createGoods (data) {
-  return axios.post(`/admin/goods`, data)
+  return axios.post('/admin/goods', data)
 }
 
 // 修改商品
@@ -26,15 +26,15 @@ export function updateGoods (id, data) {
 
 // 删除商品
 export function deleteGoods (ids) {
-  return axios.post(`/admin/goods/delete_all`, { ids })
+  return axios.post('/admin/goods/delete_all', { ids })
 }
 
 export function restoreGoods (ids) {
-  return axios.post(`/admin/goods/restore`, { ids })
+  return axios.post('/admin/goods/restore', { ids })
 }
 
 export function destroyGoods (ids) {
-  return axios.post(`/admin/goods/destroy`, { ids })
+  return axios.post('/admin/goods/destroy', { ids })
 }
 
 // 查看商品资料
@@ -52,10 +52,12 @@ export function updateGoodsSkus (id, data) {
   return axios.post(`/admin/goods/updateskus/${id}`, data)
 }
 
+// 添加规格
 export function createGoodsSkusCard (data) {
-  return axios.post(`/admin/goods_skus_card`, data)
+  return axios.post('/admin/goods_skus_card', data)
 }
 
+// 修改商品规格选项
 export function updateGoodsSkusCard (id, data) {
   return axios.post(`/admin/goods_skus_card/${id}`, data)
 }
@@ -65,11 +67,11 @@ export function deleteGoodsSkusCard (id) {
 }
 
 export function sortGoodsSkusCard (data) {
-  return axios.post(`/admin/goods_skus_card/sort`, data)
+  return axios.post('/admin/goods_skus_card/sort', data)
 }
 
 export function createGoodsSkusCardValue (data) {
-  return axios.post(`/admin/goods_skus_card_value`, data)
+  return axios.post('/admin/goods_skus_card_value', data)
 }
 
 export function updateGoodsSkusCardValue (id, data) {
