@@ -1,9 +1,12 @@
-import { ref } from 'vue'
+import { nextTick, ref } from 'vue'
 import {
   createGoodsSkusCard,
   updateGoodsSkusCard,
   deleteGoodsSkusCard,
   sortGoodsSkusCard,
+  createGoodsSkusCardValue,
+  updateGoodsSkusCardValue,
+  deleteGoodsSkusCardValue,
 } from '~/api/goods.js'
 import { useArrayMoveUp, useArrayMoveDown } from '~/composables/util.js'
 
@@ -78,6 +81,7 @@ export function handleDelete (item) {
 
 // 排序规格选项
 export const bodyLoading = ref(false)
+
 export function sortCard (action, index) {
   let oList = JSON.parse(JSON.stringify(sku_card_list.value))
   let func = action === 'up' ? useArrayMoveUp : useArrayMoveDown
@@ -89,7 +93,7 @@ export function sortCard (action, index) {
     }
   })
   bodyLoading.value = true
-  sortGoodsSkusCard({sortdata:sortData}).then(() => {
+  sortGoodsSkusCard({ sortdata: sortData }).then(() => {
     func(sku_card_list.value, index)
   }).finally(() => {
     bodyLoading.value = false
@@ -98,8 +102,72 @@ export function sortCard (action, index) {
 
 // 初始化规格的值
 export function initSkusCardItem (id) {
+  const loading = ref(false)
   const item = sku_card_list.value.find(o => o.id === id)
+  const inputValue = ref('')
+  const inputVisible = ref(false)
+  const InputRef = ref()
+  const handleClose = (tag) => {
+    loading.value = true
+    deleteGoodsSkusCardValue(tag.id).then(() => {
+      let i = item.goodsSkusCardValue.findIndex(o => o.id === tag.id)
+      if (i !== -1) {
+        item.goodsSkusCardValue.splice(i, 1)
+      }
+    }).finally(() => loading.value = false)
+  }
+  const showInput = () => {
+    inputVisible.value = true
+    nextTick(() => {
+      InputRef.value.input.focus()
+    })
+  }
+  const handleInputConfirm = () => {
+    if (!inputValue.value) {
+      inputVisible.value = false
+      return
+    }
+    loading.value = true
+    createGoodsSkusCardValue({
+      goods_skus_card_id: id,
+      name: item.name,
+      order: 50,
+      value: inputValue.value,
+    }).then(value => {
+      item.goodsSkusCardValue.push({
+        ...value,
+        text: value.value,
+      })
+    }).finally(() => {
+      inputVisible.value = false
+      inputValue.value = ''
+      loading.value = false
+    })
+  }
+
+  const handleChange = (value, tag) => {
+    loading.value = true
+    updateGoodsSkusCardValue(tag.id, {
+      goods_skus_card_id: id,
+      name: item.name,
+      order: tag.order,
+      value: value,
+    }).then(() => {
+      tag.value = value
+    }).catch(() => {
+      tag.text = tag.value
+    }).finally(() => loading.value = false)
+  }
+
   return {
     item,
+    inputValue,
+    inputVisible,
+    InputRef,
+    handleClose,
+    showInput,
+    handleInputConfirm,
+    loading,
+    handleChange,
   }
 }

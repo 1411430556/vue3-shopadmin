@@ -25,7 +25,7 @@ export function useInitTable (opt = {}) {
 
 // 获取数据
   function getData (numberOfPages = null) {
-    // 点击按钮也换当前显示的哪页
+    // 点击按钮切换当前显示的哪页
     if (typeof numberOfPages === 'number') currentPage.value = numberOfPages
     loading.value = true
     opt.getList(currentPage.value, searchForm).then(value => {
