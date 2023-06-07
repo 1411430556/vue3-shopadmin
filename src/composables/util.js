@@ -57,3 +57,20 @@ export function queryParams (query) {
   r = r ? ('?' + r) : ''
   return r
 }
+
+// 商品规格上移方法
+export function useArrayMoveUp (arr, index) {
+  swapArray(arr, index, index - 1)
+}
+
+// 商品规格下移方法
+export function useArrayMoveDown (arr, index) {
+  swapArray(arr, index, index + 1)
+}
+
+// index1:调换之前的位置，index2:调换之后的位置
+function swapArray (arr, index1, index2) {
+  arr[index1] = arr.splice(index2, 1, arr[index1])[0]
+  return arr
+}
+
