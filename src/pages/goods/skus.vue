@@ -1,10 +1,11 @@
 <script setup>
 import FormDrawer from '~/components/FormDrawer.vue'
 import SkuCard from '~/pages/goods/componets/SkuCard.vue'
+import SkuTable from '~/pages/goods/componets/SkuTable.vue'
 import { reactive, ref } from 'vue'
 import { readGoods, updateGoodsSkus } from '~/api/goods.js'
 import { toast } from '~/composables/util.js'
-import { goodsID, initSkuCardList } from '~/composables/useSku.js'
+import { goodsID, initSkuCardList, sku_list } from '~/composables/useSku.js'
 
 const formDrawerRef = ref(null)
 const form = reactive({
@@ -39,7 +40,14 @@ const open = (row) => {
 const emits = defineEmits(['reloadData'])
 const submit = () => {
   formDrawerRef.value.showLoading()
-  updateGoodsSkus(goodsID.value, form).then(() => {
+  let data = {
+    sku_type: form.sku_type,
+    sku_value: form.sku_value,
+  }
+  if (form.sku_type === 1) {
+    data.goodsSkus = sku_list.value
+  }
+  updateGoodsSkus(goodsID.value, data).then(() => {
     toast('设置商品规格成功')
     formDrawerRef.value.close()
     emits('reloadData')
@@ -90,6 +98,7 @@ defineExpose({
 
       <template v-else>
         <SkuCard/>
+        <SkuTable/>
       </template>
     </el-form>
   </FormDrawer>

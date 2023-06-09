@@ -1,4 +1,4 @@
-import { nextTick, ref } from 'vue'
+import { computed, nextTick, ref } from 'vue'
 import {
   createGoodsSkusCard,
   updateGoodsSkusCard,
@@ -7,14 +7,20 @@ import {
   createGoodsSkusCardValue,
   updateGoodsSkusCardValue,
   deleteGoodsSkusCardValue,
+  chooseAndSetGoodsSkusCard,
 } from '~/api/goods.js'
-import { useArrayMoveUp, useArrayMoveDown } from '~/composables/util.js'
+import {
+  useArrayMoveUp,
+  useArrayMoveDown,
+  cartesianProductOf,
+} from '~/composables/util.js'
 
 // 当前商品ID
 export const goodsID = ref(0)
 
 // 规格选项列表
 export const sku_card_list = ref([])
+export const sku_list = ref([])
 
 // 初始化规格选项列表
 export function initSkuCardList (d) {
@@ -27,6 +33,7 @@ export function initSkuCardList (d) {
     })
     return item
   })
+  sku_list.value = d.goodsSkus
 }
 
 // 添加规格选项
@@ -76,6 +83,7 @@ export function handleDelete (item) {
     if (i !== -1) {
       sku_card_list.value.splice(i, 1)
     }
+    getTableData()
   })
 }
 
@@ -95,8 +103,25 @@ export function sortCard (action, index) {
   bodyLoading.value = true
   sortGoodsSkusCard({ sortdata: sortData }).then(() => {
     func(sku_card_list.value, index)
+    getTableData()
   }).finally(() => {
     bodyLoading.value = false
+  })
+}
+
+// 选择设置规格
+export function handleChooseSetGoodsSkusCard (id, data) {
+  let item = sku_card_list.value.find(o => o.id === id)
+  item.loading = true
+  chooseAndSetGoodsSkusCard(id, data).then(value => {
+    item.name = item.text = value.goods_skus_card.name
+    item.goodsSkusCardValue = value.goods_skus_card_value.map(o => {
+      o.text = o.value || '属性值'
+      return o
+    })
+    getTableData()
+  }).finally(() => {
+    item.loading = false
   })
 }
 
@@ -114,6 +139,7 @@ export function initSkusCardItem (id) {
       if (i !== -1) {
         item.goodsSkusCardValue.splice(i, 1)
       }
+      getTableData()
     }).finally(() => loading.value = false)
   }
   const showInput = () => {
@@ -138,6 +164,7 @@ export function initSkusCardItem (id) {
         ...value,
         text: value.value,
       })
+      getTableData()
     }).finally(() => {
       inputVisible.value = false
       inputValue.value = ''
@@ -154,6 +181,7 @@ export function initSkusCardItem (id) {
       value: value,
     }).then(() => {
       tag.value = value
+      getTableData()
     }).catch(() => {
       tag.text = tag.value
     }).finally(() => loading.value = false)
@@ -170,4 +198,92 @@ export function initSkusCardItem (id) {
     loading,
     handleChange,
   }
+}
+
+// 初始化表格
+export function initSkuTable () {
+  const skuLabels = computed(
+    () => sku_card_list.value.filter(v => v.goodsSkusCardValue.length > 0))
+  // 获取表头
+  const tableThs = computed(() => {
+    let length = skuLabels.value.length
+    return [
+      {
+        name: '商品规格',
+        colspan: length,
+        width: '',
+        rowspan: length > 0 ? 1 : 2,
+      },
+      {
+        name: '销售价',
+        width: '100',
+        rowspan: 2,
+      },
+      {
+        name: '市场价',
+        width: '100',
+        rowspan: 2,
+      },
+      {
+        name: '成本价',
+        width: '100',
+        rowspan: 2,
+      },
+      {
+        name: '库存',
+        width: '100',
+        rowspan: 2,
+      },
+      {
+        name: '体积',
+        width: '100',
+        rowspan: 2,
+      },
+      {
+        name: '重量',
+        width: '100',
+        rowspan: 2,
+      },
+      {
+        name: '编码',
+        width: '100',
+        rowspan: 2,
+      },
+    ]
+  })
+  return {
+    skuLabels,
+    tableThs,
+    sku_list,
+  }
+}
+
+// 获取规格表格数据
+function getTableData () {
+  setTimeout(() => {
+    if (sku_card_list.value.length === 0) return []
+    let list = []
+    sku_card_list.value.forEach(o => {
+      if (o.goodsSkusCardValue && o.goodsSkusCardValue.length > 0) {
+        list.push(o.goodsSkusCardValue)
+      }
+    })
+    if (list.length === 0) return []
+    let arr = cartesianProductOf(...list)
+    sku_list.value = []
+    sku_list.value = arr.map(o => {
+      return {
+        code: '',
+        cprice: '0.00',
+        goods_id: goodsID.value,
+        image: '',
+        oprice: '0.00',
+        pprice: '0.00',
+        skus: o,
+        stock: 0,
+        volume: 0,
+        weight: 0,
+      }
+    })
+  }, 200)
 }

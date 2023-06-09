@@ -20,12 +20,16 @@ const {
     if (tableData.value.length > 0) handleChangeActiveID(tableData.value[0].id)
   },
 })
-const open = () => {
+
+const callbackFunction = ref(null)
+const open = (callback = null) => {
+  callbackFunction.value = callback
   getData(1)
   dialogVisible.value = true
 }
 const list = ref([])
 const form = reactive({
+  name: '',
   list: [],
 })
 
@@ -33,11 +37,17 @@ function handleChangeActiveID (id) {
   activeID.value = id
   list.value = []
   let item = tableData.value.find(o => o.id === id)
-  if (item) list.value = item.default.split(',')
+  if (item) {
+    list.value = item.default.split(',')
+    form.name = item.name
+  }
 }
 
 const submit = () => {
-
+  if (typeof callbackFunction.value === 'function') {
+    callbackFunction.value(form)
+  }
+  dialogVisible.value = false
 }
 
 defineExpose({

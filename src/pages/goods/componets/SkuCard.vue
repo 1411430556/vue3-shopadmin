@@ -9,12 +9,18 @@ import {
   handleDelete,
   sortCard,
   bodyLoading,
+  handleChooseSetGoodsSkusCard,
 } from '~/composables/useSku.js'
 import { ref } from 'vue'
 
 const ChooseSkuRef = ref(null)
 const handleChooseSku = (item) => {
-  ChooseSkuRef.value.open()
+  ChooseSkuRef.value.open((value) => {
+    handleChooseSetGoodsSkusCard(item.id, {
+      name: value.name,
+      value: value.list,
+    })
+  })
 }
 </script>
 
