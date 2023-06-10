@@ -270,20 +270,39 @@ function getTableData () {
     })
     if (list.length === 0) return []
     let arr = cartesianProductOf(...list)
+    // 获取之前的规格列表，将规格ID排序之后转化成字符串
+    let beforeSkuList = JSON.parse(JSON.stringify(sku_list.value)).map(o => {
+      if (!Array.isArray(o.skus)) {
+        o.skus = Object.keys(o.skus).map(k => o.skus[k])
+      }
+      o.skusId = o.skus.sort((a, b) => a.id - b.id).map(s => s.id).join(',')
+      return o
+    })
     sku_list.value = []
-    sku_list.value = arr.map(o => {
+    sku_list.value = arr.map(skus => {
+      let o = getBeforeSkuItem(JSON.parse(JSON.stringify(skus)), beforeSkuList)
       return {
-        code: '',
-        cprice: '0.00',
+        code: o?.code || '',
+        cprice: o?.cprice || '0.00',
         goods_id: goodsID.value,
-        image: '',
-        oprice: '0.00',
-        pprice: '0.00',
-        skus: o,
-        stock: 0,
-        volume: 0,
-        weight: 0,
+        image: o?.image || '',
+        oprice: o?.oprice || '0.00',
+        pprice: o?.pprice || '0.00',
+        skus,
+        stock: o?.stock || 0,
+        volume: o?.volume || 0,
+        weight: o?.weight || 0,
       }
     })
   }, 200)
+}
+
+function getBeforeSkuItem (skus, beforeSkuList) {
+  let skusId = skus.sort((a, b) => a.id - b.id).map(s => s.id).join(',')
+  return beforeSkuList.find(o => {
+    if (skus.length > o.skus.length) {
+      return skusId.indexOf(o.skusId) !== -1
+    }
+    return o.skusId.indexOf(skusId) !== -1
+  })
 }

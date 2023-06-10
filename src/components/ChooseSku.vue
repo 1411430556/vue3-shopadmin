@@ -66,7 +66,7 @@ defineExpose({
       <el-aside width="220px" class="image-aside">
         <div class="top">
 
-          <div class="sku-list" :class="{ 'active': (activeID === item.id) }" v-for="(item, index) in tableData"
+          <div class="sku-list" :class="{ 'active': activeID === item.id }" v-for="(item, index) in tableData"
                :key="index" @click="handleChangeActiveID(item.id)">
             {{ item.name }}
           </div>
@@ -129,7 +129,7 @@ defineExpose({
   @apply p-3 text-sm text-gray-600 flex items-center cursor-pointer;
 }
 
-.sku-list:hover, active {
+.sku-list:hover, .active {
   @apply bg-blue-50;
 }
 </style>

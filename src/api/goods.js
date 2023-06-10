@@ -29,10 +29,12 @@ export function deleteGoods (ids) {
   return axios.post('/admin/goods/delete_all', { ids })
 }
 
+// 批量恢复商品
 export function restoreGoods (ids) {
   return axios.post('/admin/goods/restore', { ids })
 }
 
+// 彻底删除商品
 export function destroyGoods (ids) {
   return axios.post('/admin/goods/destroy', { ids })
 }
