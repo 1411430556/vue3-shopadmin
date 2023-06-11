@@ -1,7 +1,7 @@
 <script setup>
 import FormDrawer from '~/components/FormDrawer.vue'
-import SkuCard from '~/pages/goods/componets/SkuCard.vue'
-import SkuTable from '~/pages/goods/componets/SkuTable.vue'
+import SkuCard from '~/pages/goods/components/SkuCard.vue'
+import SkuTable from '~/pages/goods/components/SkuTable.vue'
 import { reactive, ref } from 'vue'
 import { readGoods, updateGoodsSkus } from '~/api/goods.js'
 import { toast } from '~/composables/util.js'

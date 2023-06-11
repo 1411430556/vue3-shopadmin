@@ -1,5 +1,5 @@
 <script setup>
-import SkuCardItem from '~/pages/goods/componets/SkuCardItem.vue'
+import SkuCardItem from '~/pages/goods/components/SkuCardItem.vue'
 import ChooseSku from '~/components/ChooseSku.vue'
 import {
   sku_card_list,

@@ -31,9 +31,9 @@ const open = () => showDrawer.value = true
 // 关闭抽屉
 const close = () => showDrawer.value = false
 
-const emit = defineEmits(['submit'])
+const emits = defineEmits(['submit'])
 // 提交
-const submit = () => emit('submit')
+const submit = () => emits('submit')
 
 // 向父组件暴露以下方法
 defineExpose({

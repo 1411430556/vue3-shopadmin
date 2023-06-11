@@ -62,7 +62,7 @@ const asyncRoutes = [
     name: '/category/list',
     component: CategoryList,
     meta: {
-      title: '分类列表',
+      title: '分类管理',
     },
   },
   {
