@@ -20,9 +20,7 @@ const {
         @tab-change="changeTab"
         style="min-width: 100px;">
       <el-tab-pane :closable="item.path !== '/'" v-for="item in tabList" :key="item.path" :label="item.title"
-                   :name="item.path">
-
-      </el-tab-pane>
+                   :name="item.path"/>
     </el-tabs>
 
     <!--下拉按钮-->
