@@ -38,7 +38,7 @@ const onSubmit = () => {
     loading.value = true
 
     store.dispatch('login', form).then(() => {
-      toast('登录成功', 'success')
+      toast('登录成功')
       router.push('/')
     }).finally(() => {
       loading.value = false
@@ -47,7 +47,7 @@ const onSubmit = () => {
     // 之前版本
     // login(form.username, form.password).then(res => {
     //   // 提示成功
-    //   toast('登录成功', 'success')
+    //   toast('登录成功')
     //   // 存储 token 和用户相关信息
     //   setToken(res.token)
     //

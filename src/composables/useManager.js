@@ -39,7 +39,7 @@ export function useRepassword () {
       // loading 状态打开
       formDrawerRef.value.showLoading()
       updatePassword(form).then(() => {
-        toast('修改密码成功，请重新登录', 'success')
+        toast('修改密码成功，请重新登录')
         store.dispatch('logout')
         router.push('/login')
       }).finally(() => {
@@ -73,7 +73,7 @@ export function useLogout () {
         //跳转回登录页
         router.push('/login')
         // 提示退出登录成功
-        toast('已退出登录', 'success')
+        toast('已退出登录')
       })
     })
   }
