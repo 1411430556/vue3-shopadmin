@@ -112,7 +112,9 @@ const handleRefresh = () => location.reload()
 
 <style scoped>
 .f-header {
-  @apply flex items-center bg-indigo-700 text-light-50 fixed top-0 left-0 right-0;
+  @apply flex items-center text-light-50 fixed top-0 left-0 right-0;
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
   height: 64px;
   z-index: 999;
 }
@@ -130,7 +132,7 @@ const handleRefresh = () => location.reload()
 }
 
 .icon-btn:hover {
-  @apply bg-indigo-600;
+  background-color: #0093E9;
 }
 
 .f-header .dropdown {
