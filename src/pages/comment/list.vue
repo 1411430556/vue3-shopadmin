@@ -1,11 +1,13 @@
 <script setup>
 import { getGoodsCommentList, updateGoodsCommentStatus, reviewGoodsComment } from '~/api/goods_comment.js'
 import { useInitTable } from '~/composables/useCommon.js'
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 import Search from '~/components/Search.vue'
 import SearchItem from '~/components/SearchItem.vue'
 import { toast } from '~/composables/util.js'
+import moment from 'moment'
 
+const state = reactive({ tableData0: {} })
 const {
   searchForm,
   resetSearchForm,
@@ -23,11 +25,15 @@ const {
   },
   getList: getGoodsCommentList,
   onGetListSuccess: (value) => {
+    let data = {}
     tableData.value = value.list.map(o => {
-      o.statusLoading = false
-      o.textareaEdit = false
+      data['row' + o.id] = {
+        textareaEdit: false,
+        textarea: '',
+      }
       return o
     })
+    state.tableData0 = data
     total.value = value.totalCount
   },
   updateStatus: updateGoodsCommentStatus,
@@ -35,13 +41,14 @@ const {
 
 const textarea = ref('')
 const openTextarea = (row, data = '') => {
-  textarea.value = data
-  row.textareaEdit = true
+  state.tableData0['row' + row.id].textarea = data
+  state.tableData0['row' + row.id].textareaEdit = true
 }
 
 const review = (row) => {
-  if (textarea.value === '') return toast('回复内容不能为空', 'error')
-  reviewGoodsComment(row.id, textarea.value).then(() => {
+  let text = state.tableData0['row' + row.id].textarea
+  if (text === '') return toast('回复内容不能为空', 'error')
+  reviewGoodsComment(row.id, text).then(() => {
     row.textareaEdit = false
     toast('回复成功')
     getData()
@@ -67,9 +74,10 @@ const review = (row) => {
             <div class="flex-1">
               <h6 class="flex items-center">
                 {{ row.user.nickname || row.user.username }}
-                <small class="text-gray-400 ml-2">{{ row.review_time }}</small>
+                <!--<small class="text-gray-400 ml-2">{{ row.review_time }}</small>-->
+                <small class="text-gray-400 ml-2">{{ moment().add(-1, 'd').format('YYYY-MM-DD') }}</small>
                 <el-button size="small" class="ml-auto" @click="openTextarea(row)"
-                           v-if="!row.textareaEdit && !row.extra">回复
+                           v-if="!state.tableData0['row'+row.id].textareaEdit && !row.extra">回复
                 </el-button>
               </h6>
               {{ row.review.data }}
@@ -79,19 +87,23 @@ const review = (row) => {
               </div>
 
               <!--回复评论-->
-              <div class="mt-2" v-if="row.textareaEdit">
-                <el-input v-model="textarea" placeholder="请输入评价内容" type="textarea" :rows="2"/>
+              <div class="mt-2" v-if="state.tableData0['row'+row.id].textareaEdit">
+                <el-input v-model="state.tableData0['row'+row.id].textarea" placeholder="请输入评价内容" type="textarea"
+                          :rows="2"/>
                 <div class="py-2">
                   <el-button type="primary" size="small" @click="review(row)">回复</el-button>
-                  <el-button size="small" class="ml-2" @click="row.textareaEdit = false">取消</el-button>
+                  <el-button size="small" class="ml-2" @click="state.tableData0['row'+row.id].textareaEdit = false">
+                    取消
+                  </el-button>
                 </div>
               </div>
 
               <template v-else>
-                  <div class="mt-3 bg-gray-100 p-3 rounded" v-for="(item, index) in row.extra" :key="index">
+                <div class="mt-3 bg-gray-100 p-3 rounded" v-for="(item, index) in row.extra" :key="index">
                   <h6 class="flex font-bold">
                     客服
-                    <el-button type="info" size="small" class="ml-auto" @click="openTextarea(row, item.data)">修改</el-button>
+                    <el-button type="info" size="small" class="ml-auto" @click="openTextarea(row, item.data)">修改
+                    </el-button>
                   </h6>
                   <p>{{ item.data }}</p>
                 </div>

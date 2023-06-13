@@ -17,6 +17,7 @@
     "echarts": "^5.4.2",
     "element-plus": "^2.2.11",
     "gsap": "^3.11.5",
+    "moment": "^2.29.4",
     "nprogress": "^0.2.0",
     "tinymce": "^6.4.2",
     "universal-cookie": "^4.0.4",
