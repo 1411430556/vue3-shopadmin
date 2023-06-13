@@ -88,7 +88,7 @@ const review = (row) => {
 
               <!--回复评论-->
               <div class="mt-2" v-if="state.tableData0['row'+row.id].textareaEdit">
-                <el-input v-model="state.tableData0['row'+row.id].textarea" placeholder="请输入评价内容" type="textarea"
+                <el-input show-word-limit maxlength="100" v-model="state.tableData0['row'+row.id].textarea" placeholder="请输入评价内容" type="textarea"
                           :rows="2"/>
                 <div class="py-2">
                   <el-button type="primary" size="small" @click="review(row)">回复</el-button>

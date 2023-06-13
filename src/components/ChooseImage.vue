@@ -58,7 +58,7 @@ const submit = () => {
   if (props.limit === 1) {
     value = urls[0]
   } else {
-    value =props.preview ? [...props.modelValue, ...urls] : [...urls]
+    value = props.preview ? [...props.modelValue, ...urls] : [...urls]
     if (value.length > props.limit) {
       let limit = props.preview ? (props.limit - props.modelValue.length) : props.limit
       return toast('最多还能选择' + limit + '张')
@@ -108,8 +108,8 @@ defineExpose({
       title="选择图片"
       v-model="dialogVisible"
       width="80%"
-      top="5vh">
-
+      top="5vh"
+  >
     <el-container class="bg-white rounded" style="height:70vh;">
       <el-header class="image-header">
         <el-button type="primary" size="small" @click="handleOpenCreate">新增图片分类</el-button>
