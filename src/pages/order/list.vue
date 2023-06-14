@@ -2,11 +2,16 @@
 import {
   getOrderList,
   deleteOrder,
+  refundOrder,
 } from '~/api/order.js'
+import { showModal, showPrompt, toast } from '~/composables/util.js'
 import ListHeader from '~/components/ListHeader.vue'
 import Search from '~/components/Search.vue'
 import SearchItem from '~/components/SearchItem.vue'
+import ExportExcel from '~/pages/order/ExportExcel.vue'
+import InfoModal from '~/pages/order/InfoModal.vue'
 import { useInitTable } from '~/composables/useCommon.js'
+import { ref } from 'vue'
 
 const {
   searchForm,
@@ -21,7 +26,6 @@ const {
   handleSelectionChange,
   multipleTableRef,
   handleMultiDelete,
-  multiSelectionIDs,
 } = useInitTable({
   searchForm: {
     no: '',
@@ -71,6 +75,42 @@ const tabbars = [
     name: '退款中',
   },
 ]
+
+const ExportExcelRef = ref(null)
+const handleExportExcel = () => {
+  ExportExcelRef.value.open()
+}
+
+const InfoModalRef = ref(null)
+const info = ref(null)
+const openInfoModal = (row) => {
+  row.order_items = row.order_items.map(o => {
+    if (o.skus_type === 1 && o.goods_skus) {
+      let s = []
+      for (let k in o.goods_skus.skus) {
+        s.push(o.goods_skus.skus[k].value)
+      }
+      o.sku = s.join(',')
+    }
+    return o
+  })
+  info.value = row
+  InfoModalRef.value.open()
+}
+
+// 退款处理相关
+const handleRefund = (id, agree) => {
+  (agree ? showModal('是否同意该订单退款？') : showPrompt('请输入拒绝的理由')).then(({ value }) => {
+    let data = { agree }
+    if (!agree) {
+      data.disagree_reason = value
+    }
+    refundOrder(id, data).then(() => {
+      getData()
+      toast('操作成功')
+    })
+  })
+}
 </script>
 
 <template>
@@ -88,14 +128,34 @@ const tabbars = [
         </SearchItem>
         <template #show>
           <SearchItem label="收货人">
-            <el-input  v-model="searchForm.name"></el-input>
-
+            <el-input v-model="searchForm.name" placeholder="请输入收货人" clearable/>
+          </SearchItem>
+          <SearchItem label="手机号">
+            <el-input v-model="searchForm.phone" placeholder="请输入手机号" clearable/>
+          </SearchItem>
+          <SearchItem label="开始时间">
+            <el-date-picker
+                v-model="searchForm.starttime"
+                type="date"
+                placeholder="开始日期"
+                style="width: 90%;"
+                value-format="YYYY-MM-DD"
+            />
+          </SearchItem>
+          <SearchItem label="结束时间">
+            <el-date-picker
+                v-model="searchForm.endtime"
+                type="date"
+                placeholder="结束日期"
+                style="width: 90%;"
+                value-format="YYYY-MM-DD"
+            />
           </SearchItem>
         </template>
       </Search>
 
       <!--新增/刷新-->
-      <ListHeader layout="">
+      <ListHeader layout="refresh,download" @refresh="getData" @download="handleExportExcel">
         <el-button type="danger" size="small" @click="handleMultiDelete">批量删除</el-button>
       </ListHeader>
 
@@ -153,13 +213,15 @@ const tabbars = [
           </template>
         </el-table-column>
         <el-table-column label="操作" align="center">
-          <template #default="scope">
-            <el-button class="px-1" type="primary" size="small" text>订单详情</el-button>
+          <template #default="{row}">
+            <el-button class="px-1" type="primary" size="small" text @click="openInfoModal(row)">订单详情</el-button>
             <el-button v-if="searchForm.tab === 'noship'" class="px-1" type="primary" size="small" text>订单发货
             </el-button>
-            <el-button v-if="searchForm.tab === 'refunding'" class="px-1" type="primary" size="small" text>同意退款
+            <el-button v-if="searchForm.tab === 'refunding'" class="px-1" type="primary" size="small" text
+                       @click="handleRefund(row.id, 1)">同意退款
             </el-button>
-            <el-button v-if="searchForm.tab === 'refunding'" class="px-1" type="primary" size="small" text>拒绝退款
+            <el-button v-if="searchForm.tab === 'refunding'" class="px-1" type="primary" size="small" text
+                       @click="handleRefund(row.id, 0)">拒绝退款
             </el-button>
           </template>
         </el-table-column>
@@ -171,6 +233,9 @@ const tabbars = [
                        :page-size="limit" @current-change="getData"/>
       </div>
     </el-card>
+
+    <ExportExcel :tabs="tabbars" ref="ExportExcelRef"/>
+    <InfoModal ref="InfoModalRef" :info="info"/>
   </div>
 </template>
 

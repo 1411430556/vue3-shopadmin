@@ -14,7 +14,7 @@ export function deleteOrder (ids) {
   })
 }
 
-// 订单发货
+// 导出订单
 export function exportOrder (query = {}) {
   let r = queryParams(query)
   return axios.post(`/admin/order/excelexport${r}`, {}, {
@@ -22,10 +22,12 @@ export function exportOrder (query = {}) {
   })
 }
 
+// 物流信息
 export function getShipInfo (id) {
   return axios.get(`/admin/order/${id}/get_ship_info`)
 }
 
+// 同意、拒绝退款
 export function refundOrder (id, data) {
   return axios.post(`/admin/order/${id}/handle_refund`, data)
 }

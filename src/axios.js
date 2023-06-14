@@ -26,10 +26,12 @@ service.interceptors.response.use(function (response) {
   // 2xx 范围内的状态码都会触发该函数。
   // 对响应数据做点什么
   // response.data.data.token 得到的是token
-  return response.data.data
+  return response.request.responseType === 'blob'
+    ? response.data
+    : response.data.data
 }, function (error) {
   const msg = error.response.data.msg || '请求失败'
-  if (msg == '非法token，请先登录！') {
+  if (msg === '非法token，请先登录！') {
     store.dispatch('logout').finally(() => location.reload())
   }
   // 超出 2xx 范围的状态码都会触发该函数。
