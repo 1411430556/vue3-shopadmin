@@ -32,6 +32,7 @@ import FTabList from '~/layouts/components/FTabList.vue'
             </keep-alive>
           </transition>
         </router-view>
+        <!--这里放备案信息-->
       </el-main>
     </el-container>
   </el-container>

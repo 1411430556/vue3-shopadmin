@@ -113,8 +113,8 @@ const handleRefresh = () => location.reload()
 <style scoped>
 .f-header {
   @apply flex items-center text-light-50 fixed top-0 left-0 right-0;
-  background-color: #0093E9;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  /* background-color: #0093E9; */
+  background-color: #2a73d0;
   height: 64px;
   z-index: 999;
 }
