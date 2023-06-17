@@ -70,6 +70,7 @@ const {
     <!--表格-->
     <el-table ref="multipleTableRef" :data="tableData" stripe style="width: 100%"
               @selection-change="handleSelectionChange"
+              empty-text="无数据"
               v-loading="loading">
       <el-table-column type="selection" width="55"/>
       <el-table-column prop="name" label="规格名称"/>

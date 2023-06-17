@@ -45,7 +45,7 @@ const handleRefresh = () => location.reload()
       <el-icon class="mr-1">
         <Cloudy/>
       </el-icon>
-      <span class="cursor-default">叽里呱啦</span>
+      <span class="cursor-default">SHOP</span>
     </span>
     <el-tooltip effect="dark" :content="$store.state.isCollapse === false ? '折叠' : '展开'" placement="bottom">
       <!-- 折叠图标 -->

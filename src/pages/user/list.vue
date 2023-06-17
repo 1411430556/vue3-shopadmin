@@ -90,7 +90,7 @@ const {
     <!--新增/刷新-->
     <ListHeader @create="handleCreate" @refresh="getData"/>
 
-    <el-table :data="tableData" stripe style="width: 100%" v-loading="loading">
+    <el-table :data="tableData" stripe style="width: 100%" v-loading="loading" empty-text="无数据">
       <el-table-column label="会员" width="200">
         <template #default="{row}">
           <div class="flex items-center">

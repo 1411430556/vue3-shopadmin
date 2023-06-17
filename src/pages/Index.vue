@@ -28,7 +28,7 @@ getStatistics2().then((value) => {
         <el-col :span="6" v-for="i in 4" :key="i">
           <el-skeleton style="width: 100%" animated loading>
             <template #template>
-              <el-card shadow="hover" class="border-0">
+              <el-card shadow="never" class="border-0">
                 <template #header>
                   <div class="flex justify-between">
                     <el-skeleton-item variant="text" style="width: 50%"/>

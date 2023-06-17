@@ -54,7 +54,7 @@ defineExpose({
 
 <template>
   <FormDrawer ref="formDrawerRef" title="推荐商品" confirmText="关联" @submit="handleConnect">
-    <el-table :data="tableData" border stripe style="width: 100%;">
+    <el-table :data="tableData" border stripe style="width: 100%;" empty-text="无数据">
       <el-table-column prop="goods_id" label="ID" width="60"/>
       <el-table-column label="商品封面" width="180">
         <template #default="{row}">

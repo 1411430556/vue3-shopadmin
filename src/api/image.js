@@ -15,4 +15,4 @@ export function deleteImage (ids) {
 }
 
 // 上传图片地址
-export const uploadImageAction = '/api/admin/image/upload'
+export const uploadImageAction = import.meta.env.VITE_APP_BASE_API + '/api/admin/image/upload'

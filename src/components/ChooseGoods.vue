@@ -1,12 +1,11 @@
 <script setup>
 import { ref } from 'vue'
 import { useInitTable } from '~/composables/useCommon.js'
-import { deleteGoods, getGoodsList, updateGoodsStatus } from '~/api/goods.js'
+import { getGoodsList } from '~/api/goods.js'
 
 const dialogVisible = ref(false)
 
 const {
-  searchForm,
   tableData,
   loading,
   currentPage,
@@ -54,7 +53,7 @@ defineExpose({
 <template>
   <el-dialog title="商品选择" v-model="dialogVisible" width="80%" destroy-on-close>
     <el-table ref="multipleTableRef" @selection-change="handleSelectionChange"
-              :data="tableData" stripe style="width: 100%" v-loading="loading" height="300px">
+              :data="tableData" stripe style="width: 100%" v-loading="loading" height="300px" empty-text="无数据">
       <el-table-column type="selection" width="55"/>
       <el-table-column label="商品">
         <template #default="{row}">
