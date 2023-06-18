@@ -70,8 +70,6 @@ const onSubmit = () => {
   <el-row class="login-container">
     <el-col :lg="16" :md="12" class="left">
       <div>
-        <!--<div>欢迎光临</div>-->
-        <!--<div>此站点为后台管理分销系统</div>-->
         <img src="https://qiniu.fc-barcelona.cn/image/JNPF.gif" alt="">
       </div>
     </el-col>
@@ -83,6 +81,16 @@ const onSubmit = () => {
         <span>账号密码登录</span>
         <span class="line"></span>
       </div>
+      <el-popover
+          placement="top"
+          :width="200"
+          trigger="click"
+          content="账号：admin 密码：admin"
+      >
+        <template #reference>
+          <el-tag class="mb-3 cursor-pointer">点我</el-tag>
+        </template>
+      </el-popover>
       <el-form @keyup.enter.native="onSubmit" ref="formRef" :rules="rules" :model="form" class="w-[250px]">
         <el-form-item prop="username">
           <el-input v-model.trim="form.username" placeholder="请输入用户名">
@@ -149,7 +157,7 @@ const onSubmit = () => {
 
 @keyframes bgmove {
   0% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
 
   50% {
@@ -157,7 +165,7 @@ const onSubmit = () => {
   }
 
   100% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
 }
 
