@@ -1,8 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 // 引入Element-plus
-import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
+// import ElementPlus from 'element-plus'
+// import 'element-plus/dist/index.css'
 import { router } from './router'
 import store from './store'
 // 引入全局图标
@@ -13,7 +13,7 @@ const app = createApp(App)
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
 }
-app.use(ElementPlus)
+// app.use(ElementPlus)
 // 将 store 实例作为插件安装
 app.use(store)
 // 路由
