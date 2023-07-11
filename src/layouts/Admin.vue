@@ -33,6 +33,21 @@ import FTabList from '~/layouts/components/FTabList.vue'
           </transition>
         </router-view>
         <!--这里放备案信息-->
+        <div class="putOnRecords">
+          <svg class="icon record" aria-hidden="true">
+            <use xlink:href="#icon-beian"></use>
+          </svg>
+          <span class="num">
+            <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备2023006780号-1</a>
+          </span>
+        </div>
+        <div style="width:300px;margin:0 auto; padding:20px 0;">
+          <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51062302000198"
+             style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+            <img src="https://image.fc-barcelona.cn/%E5%A4%87%E6%A1%88%E5%9B%BE%E6%A0%87.png" style="float:left;" alt=""/>
+            <p style="float:left;height:20px;line-height:20px;margin: 0 0 0 5px; color:#939393;">川公网安备&nbsp;51062302000198号</p>
+          </a>
+        </div>
       </el-main>
     </el-container>
   </el-container>
@@ -78,5 +93,40 @@ import FTabList from '~/layouts/components/FTabList.vue'
 /* 进入动画延迟 */
 .fade-enter-active {
   transition-delay: .3s;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.25em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.putOnRecords {
+  position: relative;
+  text-align: center;
+  margin-top: 50px;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
+  z-index: 999;
+}
+
+.record {
+  display: inline-block;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.num {
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 15px;
+}
+
+.num a {
+  color: #f96c16;
 }
 </style>

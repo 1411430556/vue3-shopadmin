@@ -2,7 +2,7 @@
 import AsideList from '~/components/AsideList.vue'
 import FormDrawer from '~/components/FormDrawer.vue'
 import { getImageClassList, createImageClass, updateImageClass, deleteImageClass } from '~/api/image_class.js'
-import { computed, reactive, ref } from 'vue'
+import { computed, onMounted, reactive, ref } from 'vue'
 import { toast } from '~/composables/util.js'
 
 // 加载动画
