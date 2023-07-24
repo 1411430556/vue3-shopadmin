@@ -241,8 +241,8 @@ function useMultiAction (func, msg) {
         <el-table-column label="审核状态" width="120" align="center" v-if="searchForm.tab !== 'delete'">
           <template #default="{row}">
             <div class="flex flex-col" v-if="row.ischeck === 0">
-              <el-button type="success" size="small" plain>审核通过</el-button>
-              <el-button class="mt-2 !ml-0" type="danger" size="small" plain>审核拒绝</el-button>
+              <el-button type="success" size="small" plain class="cursor-not-allowed">审核通过</el-button>
+              <el-button class="mt-2 !ml-0 cursor-not-allowed" type="danger" size="small" plain>审核拒绝</el-button>
             </div>
             <span v-else>{{ row.ischeck === 1 ? '通过' : '拒绝' }}</span>
           </template>
