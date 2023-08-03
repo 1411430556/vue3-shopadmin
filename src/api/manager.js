@@ -1,7 +1,12 @@
 import axios from '~/axios'
 import { queryParams } from '~/composables/util.js'
 
-// 登录
+/**
+ * @description 登录
+ * @param username
+ * @param password
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
 export function login (username, password) {
   return axios.post('/admin/login', {
     username,
@@ -9,43 +14,76 @@ export function login (username, password) {
   })
 }
 
-// 获取管理员信息和权限菜单
+/**
+ * @description 获取管理员信息和权限菜单
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
 export function getInfo () {
   return axios.post('/admin/getinfo')
 }
 
-// 退出登录
+/**
+ * @description 退出登录
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
 export function logOut () {
   return axios.post('/admin/logout')
 }
 
-// 修改密码
+/**
+ * @description 修改密码
+ * @param data
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
 export function updatePassword (data) {
   return axios.post('/admin/updatepassword', data)
 }
 
-// 管理员列表
+/**
+ * @description 管理员列表
+ * @param page
+ * @param query
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
 export function getManagerList (page, query = {}) {
   let r = queryParams(query)
   return axios.get(`/admin/manager/${page}${r}`)
 }
 
-// 修改管理员状态
+/**
+ * @description 修改管理员状态
+ * @param id
+ * @param status
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
 export function updateManagerStatus (id, status) {
   return axios.post(`/admin/manager/${id}/update_status`, { status })
 }
 
-// 创建管理员
+/**
+ * @description 创建管理员
+ * @param data
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
 export function createManager (data) {
   return axios.post('/admin/manager', data)
 }
 
-// 修改管理员
+/**
+ * @description 修改管理员
+ * @param id
+ * @param data
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
 export function updateManager (id, data) {
   return axios.post(`/admin/manager/${id}`, data)
 }
 
-// 删除管理员
+/**
+ * @description 删除管理员
+ * @param id
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
 export function deleteManager (id) {
   return axios.post(`/admin/manager/${id}/delete`)
 }

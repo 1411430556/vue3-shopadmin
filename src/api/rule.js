@@ -1,26 +1,48 @@
 import axios from '~/axios.js'
 
-// 获取菜单权限列表
+/**
+ * @description 获取菜单权限列表
+ * @param page
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
 export function getRuleList (page) {
   return axios.get(`/admin/rule/${page}`)
 }
 
-// 增加菜单权限
+/**
+ * @description 增加菜单权限
+ * @param data
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
 export function createRule (data) {
   return axios.post('/admin/rule', data)
 }
 
-// 修改菜单权限
+/**
+ * @description 修改菜单权限
+ * @param id
+ * @param data
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
 export function updateRule (id, data) {
   return axios.post('/admin/rule/' + id, data)
 }
 
-// 修改菜单权限状态
+/**
+ * @description 修改菜单权限状态
+ * @param id
+ * @param status
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
 export function updateRuleStatus (id, status) {
   return axios.post(`/admin/rule/${id}/update_status`, {status})
 }
 
-// 删除菜单权限
+/**
+ * @description 删除菜单权限
+ * @param id
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
 export function deleteRule (id) {
   return axios.post(`/admin/rule/${id}/delete`)
 }

@@ -1,20 +1,33 @@
 import axios from '~/axios'
 import { queryParams } from '~/composables/util'
 
-// 获取订单列表
+/**
+ * @description 获取订单列表
+ * @param page
+ * @param query
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
 export function getOrderList (page, query = {}) {
   let r = queryParams(query)
   return axios.get(`/admin/order/${page}${r}`)
 }
 
-// 批量删除订单
+/**
+ * @description 批量删除订单
+ * @param ids
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
 export function deleteOrder (ids) {
   return axios.post('/admin/order/delete_all', {
     ids,
   })
 }
 
-// 导出订单
+/**
+ * @description 导出订单
+ * @param query
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
 export function exportOrder (query = {}) {
   let r = queryParams(query)
   return axios.post(`/admin/order/excelexport${r}`, {}, {
@@ -22,12 +35,21 @@ export function exportOrder (query = {}) {
   })
 }
 
-// 物流信息
+/**
+ * @description 物流信息
+ * @param id
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
 export function getShipInfo (id) {
   return axios.get(`/admin/order/${id}/get_ship_info`)
 }
 
-// 同意、拒绝退款
+/**
+ * @description 同意、拒绝退款
+ * @param id
+ * @param data
+ * @returns {Promise<axios.AxiosResponse<any>>}
+ */
 export function refundOrder (id, data) {
   return axios.post(`/admin/order/${id}/handle_refund`, data)
 }

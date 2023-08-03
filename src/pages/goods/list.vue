@@ -7,6 +7,7 @@ import {
   deleteGoods,
   restoreGoods,
   destroyGoods,
+  checkGoods,
 } from '~/api/goods.js'
 import { getCategoryList } from '~/api/category.js'
 import FormDrawer from '~/components/FormDrawer.vue'
@@ -19,7 +20,7 @@ import Content from '~/pages/goods/content.vue'
 import Skus from '~/pages/goods/skus.vue'
 import { useInitTable, useInitForm } from '~/composables/useCommon.js'
 import { ref } from 'vue'
-import { toast } from '~/composables/util.js'
+import { hideFullLoading, showFullLoading, toast } from '~/composables/util.js'
 
 const {
   searchForm,
@@ -74,7 +75,7 @@ const {
     unit: '件', //商品单位
     stock: 100, //总库存
     min_stock: 10, //库存预警
-    status: 1, //是否上架 0仓库1上架
+    status: 1, //是否上架 0仓库 1上架
     stock_display: 1, //库存显示 0隐藏1显示
     min_price: 0, //最低销售价
     min_oprice: 0, //最低原价
@@ -151,7 +152,7 @@ const handleDestroyGoods = () => useMultiAction(destroyGoods, '彻底删除')
 
 function useMultiAction (func, msg) {
   loading.value = true
-  func(multiSelectionIDs.value).then(res => {
+  func(multiSelectionIDs.value).then(() => {
     toast(msg + '成功')
     // 清空选中
     if (multipleTableRef.value) {
@@ -161,6 +162,15 @@ function useMultiAction (func, msg) {
   }).finally(() => {
     loading.value = false
   })
+}
+
+// 审核商品
+const handleCheckGoods = (row, ischeck) => {
+  showFullLoading()
+  checkGoods(row.id, ischeck).then(() => {
+    toast('操作成功')
+    getData()
+  }).finally(() => hideFullLoading())
 }
 </script>
 
@@ -241,8 +251,10 @@ function useMultiAction (func, msg) {
         <el-table-column label="审核状态" width="120" align="center" v-if="searchForm.tab !== 'delete'">
           <template #default="{row}">
             <div class="flex flex-col" v-if="row.ischeck === 0">
-              <el-button type="success" size="small" plain class="cursor-not-allowed">审核通过</el-button>
-              <el-button class="mt-2 !ml-0 cursor-not-allowed" type="danger" size="small" plain>审核拒绝</el-button>
+              <el-button type="success" size="small" plain @click="handleCheckGoods(row, 1)">审核通过</el-button>
+              <el-button class="mt-2 !ml-0" type="danger" size="small" plain @click="handleCheckGoods(row, 2)">
+                审核拒绝
+              </el-button>
             </div>
             <span v-else>{{ row.ischeck === 1 ? '通过' : '拒绝' }}</span>
           </template>

@@ -211,7 +211,7 @@ export function addRoutes (menus) {
   let hasNewRoutes = false
   const findAndAddRoutesByMenus = (arr) => {
     arr.forEach(e => {
-      let item = asyncRoutes.find(o => o.path == e.frontpath)
+      let item = asyncRoutes.find(o => o.path === e.frontpath)
       if (item && !router.hasRoute(item.path)) {
         router.addRoute('admin', item)
         hasNewRoutes = true
