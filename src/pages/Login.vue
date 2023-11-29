@@ -96,7 +96,7 @@ const onSubmit = () => {
           <el-input v-model.trim="form.username" placeholder="请输入用户名">
             <template #prefix>
               <el-icon>
-                <User />
+                <User/>
               </el-icon>
             </template>
           </el-input>
@@ -105,17 +105,23 @@ const onSubmit = () => {
           <el-input type="password" show-password v-model.trim="form.password" placeholder="请输入密码">
             <template #prefix>
               <el-icon>
-                <Lock />
+                <Lock/>
               </el-icon>
             </template>
           </el-input>
         </el-form-item>
         <el-form-item>
-          <el-button class="w-[250px] btn-grad" round color="#626aef" type="primary" @click="onSubmit" :loading="loading">
+          <el-button class="w-[250px] btn-grad" round color="#626aef" type="primary" @click="onSubmit"
+                     :loading="loading">
             登录
           </el-button>
         </el-form-item>
       </el-form>
+      <!--gitee仓库挂件-->
+      <a href='https://gitee.com/zx1411430556/vue3-shopadmin/stargazers' target="_blank"><img
+          src='https://gitee.com/zx1411430556/vue3-shopadmin/badge/star.svg?theme=dark' alt='star'></a>
+      <a href='https://gitee.com/zx1411430556/vue3-shopadmin' target="_blank"><img
+          src='https://gitee.com/zx1411430556/vue3-shopadmin/widgets/widget_6.svg' alt='Fork me on Gitee'></a>
     </el-col>
   </el-row>
 </template>
@@ -178,11 +184,11 @@ const onSubmit = () => {
   @apply bg-light-50 flex-col;
 }
 
-.left>div>div:first-child {
+.left > div > div:first-child {
   @apply font-bold text-5xl text-light-50 mb-4;
 }
 
-.left>div>div:nth-child(2) {
+.left > div > div:nth-child(2) {
   @apply text-gray-200 text-sm;
 }
 
