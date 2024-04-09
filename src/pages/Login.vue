@@ -70,7 +70,7 @@ const onSubmit = () => {
   <el-row class="login-container">
     <el-col :lg="16" :md="12" class="left">
       <div>
-        <img src="https://qiniu.fc-barcelona.cn/image/JNPF.gif" alt="">
+        <img src="http://43.136.216.54/view.php/c323aed6e695604258029a662f241f24.gif" alt="">
       </div>
     </el-col>
 
