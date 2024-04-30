@@ -6,4 +6,4 @@
 2. 运行 `npm run dev`
 3. 打包 `npm run build`
 
-:love_letter: [点我在线体验](http://shopadmin.fc-barcelona.cn)
+:love_letter: [点我在线体验](http://43.136.216.54:12666/)
