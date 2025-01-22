@@ -127,6 +127,20 @@ export function useInitForm (opt = {}) {
   const editID = ref(0)
   const drawerTitle = computed(() => editID.value ? '修改' : '新增')
 
+  /**
+   * 处理表单提交操作。
+   * 
+   * 该函数首先验证表单的有效性，如果无效则直接返回。
+   * 如果表单有效，则显示加载状态，并根据是否存在编辑 ID 来决定调用更新接口还是创建接口。
+   * 在接口调用成功后，显示成功提示，并根据操作类型刷新数据页面，最后关闭表单抽屉并隐藏加载状态。
+   * 
+   * @param {Object} formRef - 表单引用对象，用于表单验证。
+   * @param {Object} formDrawerRef - 表单抽屉引用对象，用于控制抽屉的显示、关闭和加载状态。
+   * @param {Object} opt - 配置对象，包含 beforeSubmit、update、create 和 getData 方法。
+   * @param {Object} form - 表单数据对象。
+   * @param {string | number} editID - 编辑项的 ID，如果存在则表示更新操作，否则为创建操作。
+   * @param {string} drawerTitle - 抽屉标题，用于成功提示信息。
+   */
   const handleSubmit = () => {
     formRef.value.validate((valid) => {
       if (!valid) return
