@@ -4,3 +4,7 @@
 1. 安装依赖 `npm install` 
 2. 运行 `npm run dev`
 3. 打包 `npm run build`
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=1411430556/vue3-shopadmin&type=Date)](https://star-history.com/#1411430556/vue3-shopadmin&Date)
