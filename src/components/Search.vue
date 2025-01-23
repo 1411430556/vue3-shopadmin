@@ -22,7 +22,7 @@ const hasShowSearch = ref(!!slots.show)
         <div class="flex justify-end items-center">
           <el-button type="primary" @click="$emit('search')">搜索</el-button>
           <el-button @click="$emit('reset')">重置</el-button>
-                                                            <!-- 下面直接换成 v-if="$slots.show" 也可以 -->
+          <!-- 下面直接换成 v-if="$slots.show" 也可以 -->
           <el-button type="primary" text @click="showSearch = !showSearch" v-if="hasShowSearch">
             {{ showSearch ? '收起' : '展开' }}
             <el-icon>

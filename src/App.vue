@@ -7,6 +7,12 @@
 </template>
 
 <style>
+/* 修改全局滚动条颜色为橙色 */
+::-webkit-scrollbar-thumb {
+  background: orange !important; /* 设置滚动条滑块颜色为橙色 */
+  cursor: pointer;
+  border-radius: 8px;
+}
 /* 设置全局背景颜色 */
 body {
   @apply bg-gray-100;
