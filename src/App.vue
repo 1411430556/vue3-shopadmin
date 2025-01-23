@@ -7,7 +7,7 @@
 </template>
 
 <style>
-/* 修改全局滚动条颜色为橙色 */
+/* 修改全局滚动条颜色为橙色 --使用腾讯云AI */
 ::-webkit-scrollbar-thumb {
   background: orange !important; /* 设置滚动条滑块颜色为橙色 */
   cursor: pointer;
