@@ -13,6 +13,7 @@
   cursor: pointer;
   border-radius: 8px;
 }
+
 /* 设置全局背景颜色 */
 body {
   @apply bg-gray-100;
