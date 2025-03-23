@@ -117,10 +117,12 @@ const onSubmit = () => {
         </el-form-item>
       </el-form>
       <!--gitee仓库挂件-->
-      <a href='https://gitee.com/zx1411430556/vue3-shopadmin/stargazers' target="_blank"><img
-          src='https://gitee.com/zx1411430556/vue3-shopadmin/badge/star.svg?theme=dark' alt='star'></a>
-      <a href='https://gitee.com/zx1411430556/vue3-shopadmin' target="_blank"><img
-          src='https://gitee.com/zx1411430556/vue3-shopadmin/widgets/widget_6.svg' alt='Fork me on Gitee'></a>
+      <a href='https://gitee.com/zx1411430556/vue3-shopadmin/stargazers' target="_blank">
+        <img src='https://gitee.com/zx1411430556/vue3-shopadmin/badge/star.svg?theme=dark' alt='star'>
+      </a>
+      <a href='https://gitee.com/zx1411430556/vue3-shopadmin' target="_blank">
+        <img src='https://gitee.com/zx1411430556/vue3-shopadmin/widgets/widget_6.svg' alt='Fork me on Gitee'>
+      </a>
     </el-col>
   </el-row>
 </template>
