@@ -91,7 +91,7 @@ const onSubmit = () => {
           <el-tag class="mb-3 cursor-pointer">点我</el-tag>
         </template>
       </el-popover>
-      <el-form @keyup.enter.native="onSubmit" ref="formRef" :rules="rules" :model="form" class="w-[250px]">
+      <el-form @keyup.enter="onSubmit" ref="formRef" :rules="rules" :model="form" class="w-[250px]">
         <el-form-item prop="username">
           <el-input v-model.trim="form.username" placeholder="请输入用户名">
             <template #prefix>
