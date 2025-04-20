@@ -15,7 +15,7 @@
 }
 
 /* 设置全局背景颜色 */
-body {z
+body {
   @apply bg-gray-100;
 }
 

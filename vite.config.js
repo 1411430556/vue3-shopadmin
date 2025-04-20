@@ -1,3 +1,4 @@
+import vitePluginsAutoI18n, { YoudaoTranslator } from 'vite-auto-i18n-plugin'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -22,7 +23,7 @@ export default defineConfig({
       '/api': {
         target: 'http://ceshi13.dishait.cn',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
+        rewrite: path => path.replace(/^\/api/, ''),
       },
     },
   },
@@ -37,6 +38,13 @@ export default defineConfig({
     }),
     CodeInspectorPlugin({
       bundler: 'vite',
+    }),
+    vitePluginsAutoI18n({
+      targetLangList: ['en', 'ko', 'ja'],
+      translator: new YoudaoTranslator({
+        appId: '6612167413defbe1',
+        appKey: 'sxe5oBv5ovnE7xiFkNNRNfADjFEZLKie',
+      }),
     }),
   ],
 })
