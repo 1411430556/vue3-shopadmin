@@ -1,0 +1,2810 @@
+{
+	"l2pgx3": {
+		"zh-cn": "请登录",
+		"en": "Please log in",
+		"ko": "로그인하십시오",
+		"ja": "登録をお願いします"
+	},
+	"aypby94": {
+		"zh-cn": "后台首页",
+		"en": "Background home page",
+		"ko": "배경 홈페이지",
+		"ja": "舞台裏のトップページです"
+	},
+	"b40lv04": {
+		"zh-cn": "商品列表",
+		"en": "Commodity list",
+		"ko": "상품 목록",
+		"ja": "商品リストです"
+	},
+	"av9sai4": {
+		"zh-cn": "分类管理",
+		"en": "Classified management",
+		"ko": "분류 관리",
+		"ja": "分類管理です"
+	},
+	"f6y6dw4": {
+		"zh-cn": "用户管理",
+		"en": "User management",
+		"ko": "사용자 관리",
+		"ja": "ユーザー管理です"
+	},
+	"hymtes4": {
+		"zh-cn": "订单列表",
+		"en": "Order list",
+		"ko": "주문서 리스트",
+		"ja": "註文リストです"
+	},
+	"hylhyc4": {
+		"zh-cn": "评价列表",
+		"en": "Evaluation list",
+		"ko": "평가 목록",
+		"ja": "評価リストです"
+	},
+	"bd9c924": {
+		"zh-cn": "图库列表",
+		"en": "Gallery list",
+		"ko": "그림 갤러리 목록",
+		"ja": "ギャラリーの一覧です"
+	},
+	"amgkjz4": {
+		"zh-cn": "公告列表",
+		"en": "List of announcements",
+		"ko": "공지 목록",
+		"ja": "公告の一覧です"
+	},
+	"pewx2": {
+		"zh-cn": "配置",
+		"en": "disposition",
+		"ko": "설정",
+		"ja": "配置します"
+	},
+	"xc2frz5": {
+		"zh-cn": "优惠券列表",
+		"en": "Coupon list",
+		"ko": "쿠폰 목록",
+		"ja": "クーポンの一覧です"
+	},
+	"15w0mw5": {
+		"zh-cn": "管理员管理",
+		"en": "Administrator management",
+		"ko": "관리자 관리",
+		"ja": "管理人が管理します"
+	},
+	"f1pmtx6": {
+		"zh-cn": "菜单权限管理",
+		"en": "Menu permission management",
+		"ko": "메뉴 권한 관리",
+		"ja": "メニュー権限管理です"
+	},
+	"hxhx7p4": {
+		"zh-cn": "角色管理",
+		"en": "Role management",
+		"ko": "역할 관리",
+		"ja": "役割管理です"
+	},
+	"hterul4": {
+		"zh-cn": "规格管理",
+		"en": "Specification management",
+		"ko": "규격 관리",
+		"ja": "仕様管理です"
+	},
+	"ac4j244": {
+		"zh-cn": "会员等级",
+		"en": "Membership level",
+		"ko": "회원 등급",
+		"ja": "会員レベルです。"
+	},
+	"d3nws94": {
+		"zh-cn": "支付设置",
+		"en": "Payment setup",
+		"ko": "페이먼트 설정",
+		"ja": "支払い設定です"
+	},
+	"ew6b1k4": {
+		"zh-cn": "物流设置",
+		"en": "Logistics setup",
+		"ko": "물류 설정",
+		"ja": "物流の設置です"
+	},
+	"fai42l5": {
+		"zh-cn": "分销员管理",
+		"en": "Distributor management",
+		"ko": "판매원 관리",
+		"ja": "流通業者が管理します"
+	},
+	"ayxvoq4": {
+		"zh-cn": "分销设置",
+		"en": "Distribution setup",
+		"ko": "분산 설정",
+		"ja": "流通設定です"
+	},
+	"a8niyy5": {
+		"zh-cn": "请先登录！",
+		"en": "Please log in first!",
+		"ko": "먼저 로그인해주세요!",
+		"ja": "まず登録をお願いします!"
+	},
+	"9ilxoh7": {
+		"zh-cn": "请勿重复登录！",
+		"en": "Do not log in twice!",
+		"ko": "중복 로그인하지 마십시오!",
+		"ja": "二重登録はご遠慮願います!"
+	},
+	"mxords9": {
+		"zh-cn": "-商城后台管理系统",
+		"en": "- Mall background management system",
+		"ko": "-쇼핑몰 백그라운드 관리 시스템",
+		"ja": "-バックオフィス管理システムです"
+	},
+	"stapr91b": {
+		"zh-cn": "需要配置权限，例如 v-permission=\"['getStatistics3,GET']\"",
+		"en": "Permissions need to be configured, for example, v-permission=\"['getStatistics3,GET']\"",
+		"ko": "v-permission=\"[getstatistics3, get']\"와 같은 권한이 필요하다",
+		"ja": "v-permission=\"['getStatistics3,GET']\"などの設定権限が必要です。"
+	},
+	"tynxe5": {
+		"zh-cn": "404提示",
+		"en": "404 Prompt",
+		"ko": "404 힌트",
+		"ja": "404ヒントです"
+	},
+	"dkzvkt9": {
+		"zh-cn": "你找的页面走丢了~",
+		"en": "The page you are looking for is missing",
+		"ko": "당신이 찾는 페이지는 잃어버렸어요",
+		"ja": "お探しのページがなくなってしまいました~"
+	},
+	"bb7ub54": {
+		"zh-cn": "回到首页",
+		"en": "Back to home page",
+		"ko": "홈 페이지로 가기",
+		"ja": "トップページに戻ります"
+	},
+	"e3xsmr4": {
+		"zh-cn": "欢迎回来",
+		"en": "Welcome back",
+		"ko": "귀국을 환영합니다",
+		"ja": "お帰りなさいませ"
+	},
+	"opxa4a6": {
+		"zh-cn": "账号密码登录",
+		"en": "Account password login",
+		"ko": "계정 비밀번호 로그인",
+		"ja": "パスワードを登録します"
+	},
+	"a2vi1e7": {
+		"zh-cn": "用户名不能为空",
+		"en": "The user name cannot be empty",
+		"ko": "사용자 이름은 비어 있을 수 없습니다",
+		"ja": "ユーザー名は空にできません。"
+	},
+	"pcjrt76": {
+		"zh-cn": "密码不能为空",
+		"en": "The password cannot be empty",
+		"ko": "암호가 비어 있을 수 없습니다",
+		"ja": "パスワードは空にできません。"
+	},
+	"fcewjt4": {
+		"zh-cn": "登录成功",
+		"en": "Login successful",
+		"ko": "로그인 성공",
+		"ja": "ログインできました"
+	},
+	"spros6h": {
+		"zh-cn": "账号：admin 密码：admin",
+		"en": "Account: admin Password: admin",
+		"ko": "계좌번호:admin 비밀번호:admin",
+		"ja": "アカウント:adminパスワード:adminです。"
+	},
+	"jpmg2": {
+		"zh-cn": "点我",
+		"en": "Click me",
+		"ko": "시나",
+		"ja": "註文します"
+	},
+	"7grhuz6": {
+		"zh-cn": "请输入用户名",
+		"en": "Please enter your username",
+		"ko": "사용자 이름을 입력하십시오",
+		"ja": "ユーザー名の入力をお願いします"
+	},
+	"2j9vj05": {
+		"zh-cn": "请输入密码",
+		"en": "Please enter password",
+		"ko": "비밀번호를 입력하십시오.",
+		"ja": "パスワードをお願いします"
+	},
+	"koca2": {
+		"zh-cn": "登录",
+		"en": "Log in",
+		"ko": "로그인",
+		"ja": "登録します"
+	},
+	"d45exv4": {
+		"zh-cn": "推荐商品",
+		"en": "Recommended goods",
+		"ko": "추천 상품",
+		"ja": "お勧め商品です"
+	},
+	"e5fv2": {
+		"zh-cn": "修改",
+		"en": "edit",
+		"ko": "수정",
+		"ja": "修正します"
+	},
+	"9rnf2o8": {
+		"zh-cn": "是否删除该记录？",
+		"en": "Do you want to delete this record?",
+		"ko": "이 기록을 삭제하시겠습니까?",
+		"ja": "記録を削除しますか?"
+	},
+	"l9122": {
+		"zh-cn": "确认",
+		"en": "verify",
+		"ko": "확인",
+		"ja": "確認します"
+	},
+	"ev022": {
+		"zh-cn": "取消",
+		"en": "Cancel",
+		"ko": "취소",
+		"ja": "取り消します"
+	},
+	"eslg2": {
+		"zh-cn": "删除",
+		"en": "delete",
+		"ko": "삭제",
+		"ja": "削除します"
+	},
+	"av333s4": {
+		"zh-cn": "分类名称",
+		"en": "Classification name",
+		"ko": "분류 명칭",
+		"ja": "分類名です"
+	},
+	"jd9pro7": {
+		"zh-cn": "店铺及商品提示",
+		"en": "Shop and product tips",
+		"ko": "점포 및 상품 안내",
+		"ja": "お店と商品のご案内です"
+	},
+	"acinix4": {
+		"zh-cn": "交易提示",
+		"en": "Trading tip",
+		"ko": "트레이드 프레이트",
+		"ja": "取引のヒントです"
+	},
+	"n2ixvpb": {
+		"zh-cn": "需要立即处理的交易订单",
+		"en": "Trading orders that require immediate processing",
+		"ko": "당장 처리해야 하는 거래 주문서",
+		"ja": "即時処理が必要な取引註文です"
+	},
+	"fm6z2": {
+		"zh-cn": "头像",
+		"en": "avatar",
+		"ko": "얼굴을",
+		"ja": "アイコン"
+	},
+	"u4qbeb7": {
+		"zh-cn": "请选择会员等级",
+		"en": "Please select a membership level",
+		"ko": "회원 등급을 선택해주세요",
+		"ja": "会員レベルの選択をお願いします。"
+	},
+	"cnmdu3": {
+		"zh-cn": "关键词",
+		"en": "keyword",
+		"ko": "핵심 단어",
+		"ja": "キーワードです"
+	},
+	"4mvo2mb": {
+		"zh-cn": "手机号/邮箱/会员昵称",
+		"en": "Mobile phone number/email address/member nickname",
+		"ko": "핸드폰 번호/메일/회원 닉네임",
+		"ja": "携帯番号/メールアドレス/会員のニックネームです。"
+	},
+	"fezfi3": {
+		"zh-cn": "无数据",
+		"en": "No data",
+		"ko": "무수한 증거",
+		"ja": "無数の根拠。"
+	},
+	"dx1a2": {
+		"zh-cn": "会员",
+		"en": "member",
+		"ko": "회원",
+		"ja": "会員です"
+	},
+	"fkig3z4": {
+		"zh-cn": "登陆注册",
+		"en": "Login registration",
+		"ko": "등록하다",
+		"ja": "登録します"
+	},
+	"cd0jny5": {
+		"zh-cn": "最后登录:",
+		"en": "Last login:",
+		"ko": "마지막으로 로그인:",
+		"ja": "最後に登録します:"
+	},
+	"acsmjc5": {
+		"zh-cn": "注册时间:",
+		"en": "Registration Time:",
+		"ko": "등록한 날짜:",
+		"ja": "登録期間です。"
+	},
+	"k1e32": {
+		"zh-cn": "状态",
+		"en": "status",
+		"ko": "상태",
+		"ja": "状態です"
+	},
+	"hkxb2": {
+		"zh-cn": "操作",
+		"en": "Controls",
+		"ko": "조작",
+		"ja": "操作します"
+	},
+	"dcuxcd4": {
+		"zh-cn": "暂无操作",
+		"en": "No operation",
+		"ko": "현재 작업 없음",
+		"ja": "まだ操作していません"
+	},
+	"hmxge3": {
+		"zh-cn": "用户名",
+		"en": "username",
+		"ko": "사용자 이름",
+		"ja": "ユーザー名です"
+	},
+	"g9ob2": {
+		"zh-cn": "密码",
+		"en": "cipher",
+		"ko": "암호",
+		"ja": "パスワードです"
+	},
+	"i1y32": {
+		"zh-cn": "昵称",
+		"en": "nickname",
+		"ko": "닉네임",
+		"ja": "ニックネームです"
+	},
+	"qprkho6": {
+		"zh-cn": "选择会员等级",
+		"en": "Select membership level",
+		"ko": "회원 등급 선택",
+		"ja": "会員レベルを選択します。"
+	},
+	"haa72": {
+		"zh-cn": "手机",
+		"en": "Cell phone",
+		"ko": "휴대폰",
+		"ja": "携帯電話です"
+	},
+	"padf2": {
+		"zh-cn": "邮箱",
+		"en": "mailbox",
+		"ko": "메일 박스",
+		"ja": "メールボックスです"
+	},
+	"hymdzq4": {
+		"zh-cn": "订单号:",
+		"en": "Order Number:",
+		"ko": "주문서 번호:",
+		"ja": "ご註文番号です。"
+	},
+	"vyu3bm5": {
+		"zh-cn": "下单时间:",
+		"en": "Order time:",
+		"ko": "주문주문시간:",
+		"ja": "註文時間はこちらです。"
+	},
+	"en402": {
+		"zh-cn": "全部",
+		"en": "All",
+		"ko": "전부",
+		"ja": "全部です"
+	},
+	"ehbda3": {
+		"zh-cn": "待支付",
+		"en": "To be paid",
+		"ko": "지불을 기다리다",
+		"ja": "支払い待ちです"
+	},
+	"eepbv3": {
+		"zh-cn": "待发货",
+		"en": "Goods waiting to be sent",
+		"ko": "발송 대기 화물",
+		"ja": "発送待ちです"
+	},
+	"ehnue3": {
+		"zh-cn": "待收货",
+		"en": "Wait to be received",
+		"ko": "수령을 기다리다",
+		"ja": "受取待ちです"
+	},
+	"e9d0j3": {
+		"zh-cn": "已收货",
+		"en": "received",
+		"ko": "이미 접수하다",
+		"ja": "受け取りました"
+	},
+	"e7hbq3": {
+		"zh-cn": "已完成",
+		"en": "completed",
+		"ko": "완료",
+		"ja": "完成しました"
+	},
+	"e61qk3": {
+		"zh-cn": "已关闭",
+		"en": "Target is closed.",
+		"ko": "닫힘",
+		"ja": "閉鎖されました"
+	},
+	"llz8v3": {
+		"zh-cn": "退款中",
+		"en": "Being refunded",
+		"ko": "환불 중",
+		"ja": "返金中です。"
+	},
+	"g82ujna": {
+		"zh-cn": "是否同意该订单退款？",
+		"en": "Do you agree to refund the order?",
+		"ko": "이 주문서 환불에 동의하십니까?",
+		"ja": "当該註文の返金に同意しますか?"
+	},
+	"2q8m7v8": {
+		"zh-cn": "请输入拒绝的理由",
+		"en": "Please enter the reason for refusal",
+		"ko": "거부 이유를 입력해 주세요",
+		"ja": "お断りの理由を入力願います。"
+	},
+	"d1spvi4": {
+		"zh-cn": "操作成功",
+		"en": "Successful operation",
+		"ko": "작업 성공",
+		"ja": "操作成功です"
+	},
+	"fi4h53": {
+		"zh-cn": "收货人",
+		"en": "consignee",
+		"ko": "수하인",
+		"ja": "受取人です"
+	},
+	"7iwau86": {
+		"zh-cn": "请输入收货人",
+		"en": "Please enter the consignee",
+		"ko": "수취인을 입력해 주세요",
+		"ja": "受取人入力をお願いします。"
+	},
+	"ewbd43": {
+		"zh-cn": "手机号",
+		"en": "Mobile phone number",
+		"ko": "핸드폰 번호",
+		"ja": "携帯電話番号です"
+	},
+	"7ji3y96": {
+		"zh-cn": "请输入手机号",
+		"en": "Please enter your phone number",
+		"ko": "핸드폰 번호를 입력하세요",
+		"ja": "携帯番号の入力をお願いします。"
+	},
+	"cd0k3t4": {
+		"zh-cn": "开始时间",
+		"en": "Start time",
+		"ko": "시작 시간",
+		"ja": "開始時間です"
+	},
+	"cd0ag54": {
+		"zh-cn": "开始日期",
+		"en": "Start date",
+		"ko": "시작 날짜",
+		"ja": "開始日です"
+	},
+	"gfi7qi4": {
+		"zh-cn": "结束时间",
+		"en": "End time",
+		"ko": "종료 시간",
+		"ja": "終了時間です"
+	},
+	"gfhy2u4": {
+		"zh-cn": "结束日期",
+		"en": "End date",
+		"ko": "종료 날짜",
+		"ja": "終了期日"
+	},
+	"hyu6l04": {
+		"zh-cn": "订单编号",
+		"en": "Order number",
+		"ko": "주문서 번호",
+		"ja": "註文番号です"
+	},
+	"d0w7cq4": {
+		"zh-cn": "批量删除",
+		"en": "Batch deletion",
+		"ko": "일괄 삭제",
+		"ja": "一括削除です"
+	},
+	"eywr2": {
+		"zh-cn": "商品",
+		"en": "product",
+		"ko": "상품",
+		"ja": "商品です"
+	},
+	"p3lfp46": {
+		"zh-cn": "商品已被删除",
+		"en": "The product has been removed",
+		"ko": "상품은 이미 삭제되었습니다",
+		"ja": "商品は削除されました。"
+	},
+	"c6ebkd4": {
+		"zh-cn": "实际付款",
+		"en": "Actual payment",
+		"ko": "실제 지불",
+		"ja": "実際に支払います"
+	},
+	"dufa2": {
+		"zh-cn": "买家",
+		"en": "buyer",
+		"ko": "구매자",
+		"ja": "買い手です"
+	},
+	"7t62vs6": {
+		"zh-cn": "(用户ID:",
+		"en": "(User ID:",
+		"ko": "(사용자 id:",
+		"ja": "(ユーザーID:です。"
+	},
+	"acl1ru4": {
+		"zh-cn": "交易状态",
+		"en": "Transaction status",
+		"ko": "거래 상태",
+		"ja": "取引状態です"
+	},
+	"wvdod35": {
+		"zh-cn": "付款状态:",
+		"en": "Payment status:",
+		"ko": "지불 상태:",
+		"ja": "支払い状況です:"
+	},
+	"cemv244": {
+		"zh-cn": "微信支付",
+		"en": "Wechat Pay",
+		"ko": "위챗 페이",
+		"ja": "微信ペイです"
+	},
+	"k88wub5": {
+		"zh-cn": "支付宝支付",
+		"en": "Alipay payment",
+		"ko": "알리페이 결제",
+		"ja": "アリペイ払いです"
+	},
+	"flmib3": {
+		"zh-cn": "未支付",
+		"en": "non-payment",
+		"ko": "미지급",
+		"ja": "未払いです"
+	},
+	"95gjvr5": {
+		"zh-cn": "发货状态:",
+		"en": "Delivery status:",
+		"ko": "배송 상태:",
+		"ja": "出荷状態です。"
+	},
+	"e6ei03": {
+		"zh-cn": "已发货",
+		"en": "shipped",
+		"ko": "발송이 완료되다",
+		"ja": "出荷済みです"
+	},
+	"fj0gw3": {
+		"zh-cn": "未发货",
+		"en": "unshipped",
+		"ko": "발송 미달",
+		"ja": "未出荷です"
+	},
+	"c64rlu5": {
+		"zh-cn": "收货状态:",
+		"en": "Receiving status:",
+		"ko": "수신 상태:",
+		"ja": "受け取り状態です:"
+	},
+	"flyzf3": {
+		"zh-cn": "未收货",
+		"en": "Not receive the goods",
+		"ko": "미수품",
+		"ja": "未受け取りです"
+	},
+	"hywfki4": {
+		"zh-cn": "订单详情",
+		"en": "Order details",
+		"ko": "주문서 상세정보",
+		"ja": "ご註文の詳細です"
+	},
+	"hyn4x54": {
+		"zh-cn": "订单发货",
+		"en": "Order delivery",
+		"ko": "주문 발송",
+		"ja": "註文出荷します"
+	},
+	"b0jd354": {
+		"zh-cn": "同意退款",
+		"en": "Agree to refund",
+		"ko": "환불에 동의하다",
+		"ja": "返金に同意します"
+	},
+	"czzf7t4": {
+		"zh-cn": "拒绝退款",
+		"en": "Refusal of refund",
+		"ko": "환불을 거절하다",
+		"ja": "返金はお断りします"
+	},
+	"fli1": {
+		"zh-cn": "件",
+		"en": "a",
+		"ko": "건",
+		"ja": "はい"
+	},
+	"yzlo9c6": {
+		"zh-cn": "角色不能为空",
+		"en": "The role cannot be empty",
+		"ko": "역할이 비어 있으면 안 된다",
+		"ja": "役を空けることはできません"
+	},
+	"dxb9y3": {
+		"zh-cn": "审核中",
+		"en": "Under review",
+		"ko": "심사 중",
+		"ja": "審査中です"
+	},
+	"cf6ex3": {
+		"zh-cn": "出售中",
+		"en": "On sale",
+		"ko": "매각 중",
+		"ja": "売り出し中です"
+	},
+	"e57r13": {
+		"zh-cn": "已下架",
+		"en": "No longer available",
+		"ko": "진열대에서 이미 내렸다.",
+		"ja": "撤去されました"
+	},
+	"cbjoef4": {
+		"zh-cn": "库存预警",
+		"en": "Inventory warning",
+		"ko": "재고 경보",
+		"ja": "在庫警告です"
+	},
+	"d7xs13": {
+		"zh-cn": "回收站",
+		"en": "Recycle bin",
+		"ko": "휴지통",
+		"ja": "ごみ箱です"
+	},
+	"gvsb2": {
+		"zh-cn": "恢复",
+		"en": "recover",
+		"ko": "회복",
+		"ja": "回復します"
+	},
+	"cfsz7i4": {
+		"zh-cn": "彻底删除",
+		"en": "Clean out",
+		"ko": "완전히 삭제하기",
+		"ja": "徹底的に削除します"
+	},
+	"h4sv2": {
+		"zh-cn": "成功",
+		"en": "Successful",
+		"ko": "성공",
+		"ja": "成功です"
+	},
+	"b40j3k4": {
+		"zh-cn": "商品分类",
+		"en": "Commodity classification",
+		"ko": "상품 분류",
+		"ja": "商品分類です"
+	},
+	"uwmbfr7": {
+		"zh-cn": "请选择商品分类",
+		"en": "Please select a product category",
+		"ko": "상품 분류 선택해주세요",
+		"ja": "商品分類をお願いします。"
+	},
+	"b40v0e4": {
+		"zh-cn": "商品名称",
+		"en": "Trade name",
+		"ko": "상품명",
+		"ja": "商品名です"
+	},
+	"cj3hie4": {
+		"zh-cn": "恢复商品",
+		"en": "Recovered goods",
+		"ko": "회복 상품",
+		"ja": "回復商品です"
+	},
+	"qo6h2xb": {
+		"zh-cn": "是否要彻底删除该商品？",
+		"en": "Do you want to delete this product completely?",
+		"ko": "이 상품을 완전히 삭제하시겠습니까?",
+		"ja": "商品を完全に削除すべきでしょうか?"
+	},
+	"ducs2": {
+		"zh-cn": "上架",
+		"en": "listing",
+		"ko": "시렁",
+		"ja": "店頭に出します"
+	},
+	"dudn2": {
+		"zh-cn": "下架",
+		"en": "delist",
+		"ko": "다음 대",
+		"ja": "撤去します"
+	},
+	"clokl3": {
+		"zh-cn": "分类:",
+		"en": "Categories:",
+		"ko": "분류:",
+		"ja": "分類します:"
+	},
+	"fiqb53": {
+		"zh-cn": "未分配",
+		"en": "undistributed",
+		"ko": "할당되지 않음",
+		"ja": "未割り当てです"
+	},
+	"lpkhnn5": {
+		"zh-cn": "创建时间:",
+		"en": "Created time:",
+		"ko": "만든 시간:",
+		"ja": "作成時間です:"
+	},
+	"c6qgs64": {
+		"zh-cn": "实际销量",
+		"en": "Actual sales",
+		"ko": "실제 판매량",
+		"ja": "実売台数です"
+	},
+	"b45xmu4": {
+		"zh-cn": "商品状态",
+		"en": "Commodity status",
+		"ko": "상품 상태",
+		"ja": "商品の状態です"
+	},
+	"dxcw2": {
+		"zh-cn": "仓库",
+		"en": "Stash",
+		"ko": "창고",
+		"ja": "倉庫です"
+	},
+	"bzvg8y4": {
+		"zh-cn": "审核状态",
+		"en": "Audit status",
+		"ko": "상태 확인",
+		"ja": "状態をチェックします"
+	},
+	"c00pno4": {
+		"zh-cn": "审核通过",
+		"en": "Pass the examination",
+		"ko": "심사를 통과하다",
+		"ja": "審査が通ります。"
+	},
+	"bzsx1e4": {
+		"zh-cn": "审核拒绝",
+		"en": "Audit rejection",
+		"ko": "심사 거절",
+		"ja": "拒否を審査します"
+	},
+	"past2": {
+		"zh-cn": "通过",
+		"en": "pass",
+		"ko": "통과",
+		"ja": "通過します"
+	},
+	"hi6j2": {
+		"zh-cn": "拒绝",
+		"en": "Turn down",
+		"ko": "거부",
+		"ja": "お断りします"
+	},
+	"ek0bk3": {
+		"zh-cn": "总库存",
+		"en": "Total inventory",
+		"ko": "총재고",
+		"ja": "総在庫"
+	},
+	"b49wfn4": {
+		"zh-cn": "商品规格",
+		"en": "Commodity specification",
+		"ko": "상품 규격",
+		"ja": "商品仕様です"
+	},
+	"56sq6p5": {
+		"zh-cn": "设置轮播图",
+		"en": "Set the wheel chart",
+		"ko": "라운드 캐스트 그림 설정",
+		"ja": "輪キャストマップを設定します"
+	},
+	"b4a80q4": {
+		"zh-cn": "商品详情",
+		"en": "Product details",
+		"ko": "상품상세정보",
+		"ja": "商品詳細です"
+	},
+	"9zo5468": {
+		"zh-cn": "是否删除该商品？",
+		"en": "Do you want to delete this item?",
+		"ko": "이 상품을 삭제하시겠습니까?",
+		"ja": "当該商品を削除しますか?"
+	},
+	"spj1zch": {
+		"zh-cn": "请输入商品名称，不能超过60个字符",
+		"en": "Please enter the product name, not more than 60 characters",
+		"ko": "상품명을 60자 이내로 입력하십시오",
+		"ja": "商品名を60文字以内で入力してくださいます。"
+	},
+	"gha92": {
+		"zh-cn": "封面",
+		"en": "cover",
+		"ko": "표지",
+		"ja": "表紙です"
+	},
+	"z0hcy68": {
+		"zh-cn": "选择所属商品分类",
+		"en": "Select your product category",
+		"ko": "속한 상품 분류를 선택하십시오",
+		"ja": "商品分類を選択します。"
+	},
+	"b43nuk4": {
+		"zh-cn": "商品描述",
+		"en": "Product description",
+		"ko": "상품 설명",
+		"ja": "商品説明です"
+	},
+	"v8oq5k7": {
+		"zh-cn": "选填，商品卖点",
+		"en": "Optional, product selling point",
+		"ko": "상품 판매 포인트 선택",
+		"ja": "エントリー、セールスポイントです"
+	},
+	"ely02": {
+		"zh-cn": "单位",
+		"en": "unit",
+		"ko": "단위",
+		"ja": "単位です"
+	},
+	"2jbj9b5": {
+		"zh-cn": "请输入单位",
+		"en": "Please enter the unit",
+		"ko": "장치를 입력하십시오",
+		"ja": "単位を入力願います。"
+	},
+	"dbpphz4": {
+		"zh-cn": "最低售价",
+		"en": "Minimum selling price",
+		"ko": "최저 판매 가격",
+		"ja": "最低価格です"
+	},
+	"g1v1": {
+		"zh-cn": "元",
+		"en": "yuan",
+		"ko": "위안",
+		"ja": "元です"
+	},
+	"dbpfye4": {
+		"zh-cn": "最低原价",
+		"en": "Lowest original price",
+		"ko": "최저 원가",
+		"ja": "最低原価です"
+	},
+	"cbb0yp4": {
+		"zh-cn": "库存显示",
+		"en": "Inventory display",
+		"ko": "재고 표시",
+		"ja": "在庫表示です"
+	},
+	"qce72": {
+		"zh-cn": "隐藏",
+		"en": "Hidden",
+		"ko": "숨기기",
+		"ja": "隠します"
+	},
+	"i20s2": {
+		"zh-cn": "显示",
+		"en": "reveal",
+		"ko": "보이기",
+		"ja": "表示します"
+	},
+	"d8opvn4": {
+		"zh-cn": "是否上架",
+		"en": "Shelf or not",
+		"ko": "판매 여부",
+		"ja": "店頭に並びますか"
+	},
+	"d40e9z4": {
+		"zh-cn": "放入仓库",
+		"en": "Put into storage",
+		"ko": "창고에 넣다",
+		"ja": "倉庫に入れます"
+	},
+	"fu5vxw4": {
+		"zh-cn": "立即上架",
+		"en": "Ready for sale",
+		"ko": "즉시 진열대에 오르다.",
+		"ja": "すぐに店頭に出します"
+	},
+	"v4eiok6": {
+		"zh-cn": "新增图片分类",
+		"en": "New picture categories",
+		"ko": "그림 클래스 추가",
+		"ja": "画像の分類を追加します"
+	},
+	"a6d3a74": {
+		"zh-cn": "上传图片",
+		"en": "Upload pictures",
+		"ko": "그림 업로드",
+		"ja": "画像をアップロードします"
+	},
+	"298h0h8": {
+		"zh-cn": "公告标题不能为空",
+		"en": "The bulletin title cannot be empty",
+		"ko": "게시물 제목이 비어 있으면 안 됩니다",
+		"ja": "公告タイトルを空にすることはできません"
+	},
+	"evpjnm8": {
+		"zh-cn": "公告内容不能为空",
+		"en": "Bulletin content cannot be empty",
+		"ko": "공고의 내용을 텅 비게 해서는 안 된다",
+		"ja": "掲示内容を空にすることはできません。"
+	},
+	"amke334": {
+		"zh-cn": "公告标题",
+		"en": "Announcement title",
+		"ko": "공지 제목",
+		"ja": "公告の見出しです"
+	},
+	"ayuphs4": {
+		"zh-cn": "发布时间",
+		"en": "Release time",
+		"ko": "배포 시간",
+		"ja": "発表時間です"
+	},
+	"a08j3d8": {
+		"zh-cn": "是否删除该公告？",
+		"en": "Do you want to delete the bulletin?",
+		"ko": "이 공고를 삭제해야 하는가?",
+		"ja": "この公告を削除しますか?"
+	},
+	"amg88i4": {
+		"zh-cn": "公告内容",
+		"en": "Announcement content",
+		"ko": "공시 내용",
+		"ja": "告知内容です"
+	},
+	"h6ijcd8": {
+		"zh-cn": "回复内容不能为空",
+		"en": "The reply content cannot be empty",
+		"ko": "답장 내용이 비어 있으면 안 됩니다",
+		"ja": "返信内容を空欄にしてはいけません。"
+	},
+	"bby7cu4": {
+		"zh-cn": "回复成功",
+		"en": "Reply successfully",
+		"ko": "답장 성공",
+		"ja": "返信成功です"
+	},
+	"b44fe44": {
+		"zh-cn": "商品标题",
+		"en": "Commodity title",
+		"ko": "상품 제목",
+		"ja": "商品タイトルです"
+	},
+	"f9in2": {
+		"zh-cn": "回复",
+		"en": "recover",
+		"ko": "답장",
+		"ja": "お返事します"
+	},
+	"fkhv807": {
+		"zh-cn": "请输入评价内容",
+		"en": "Please enter your comments",
+		"ko": "평가 내용을 입력하십시오",
+		"ja": "評価内容を入力願います。"
+	},
+	"g5gr2": {
+		"zh-cn": "客服",
+		"en": "Customer service",
+		"ko": "콜",
+		"ja": "お客様サービスです"
+	},
+	"hykwip4": {
+		"zh-cn": "评价信息",
+		"en": "Evaluation information",
+		"ko": "평가 정보",
+		"ja": "評価情報です"
+	},
+	"hmgwb3": {
+		"zh-cn": "用户:",
+		"en": "User:",
+		"ko": "사용자:",
+		"ja": "利用者:ですね。"
+	},
+	"hyoyb54": {
+		"zh-cn": "评价时间",
+		"en": "Evaluation time",
+		"ko": "평가 시간",
+		"ja": "評価時間です"
+	},
+	"ai8d7e4": {
+		"zh-cn": "修改成功",
+		"en": "Modified successfully",
+		"ko": "성공적으로 수정했습니다",
+		"ja": "修正成功です"
+	},
+	"a99njt5": {
+		"zh-cn": "注册与访问",
+		"en": "Registration and access",
+		"ko": "등록 및 접근",
+		"ja": "登録とアクセスです"
+	},
+	"j5ymuo8": {
+		"zh-cn": "是否允许注册会员",
+		"en": "Whether to allow registered members",
+		"ko": "회원 가입을 허가할지 여부",
+		"ja": "会員登録を許可しますか"
+	},
+	"eod62": {
+		"zh-cn": "关闭",
+		"en": "Off",
+		"ko": "닫기",
+		"ja": "閉鎖します"
+	},
+	"gmcv2": {
+		"zh-cn": "开启",
+		"en": "On",
+		"ko": "열",
+		"ja": "開きます"
+	},
+	"e31pn84": {
+		"zh-cn": "注册类型",
+		"en": "Registration type",
+		"ko": "등록 형식",
+		"ja": "登録タイプです"
+	},
+	"diq7f44": {
+		"zh-cn": "普通注册",
+		"en": "General registration",
+		"ko": "보통등록",
+		"ja": "一般登録です"
+	},
+	"ctyh4j4": {
+		"zh-cn": "手机注册",
+		"en": "Mobile phone registration",
+		"ko": "핸드폰 등록",
+		"ja": "携帯電話の登録です"
+	},
+	"scr9ox6": {
+		"zh-cn": "密码最小长度",
+		"en": "Minimum password length",
+		"ko": "비밀번호 최소 길이",
+		"ja": "暗号の最小長さです"
+	},
+	"1fhnvq7": {
+		"zh-cn": "强制密码复杂度",
+		"en": "Mandatory password complexity",
+		"ko": "강제 암호 복잡도",
+		"ja": "強制暗号化です"
+	},
+	"hr6v2": {
+		"zh-cn": "数字",
+		"en": "figure",
+		"ko": "숫자",
+		"ja": "数字です"
+	},
+	"byehxc4": {
+		"zh-cn": "小写字母",
+		"en": "Lowercase letter",
+		"ko": "소문자",
+		"ja": "小文字です"
+	},
+	"bl7foo4": {
+		"zh-cn": "大写字母",
+		"en": "Capital letter",
+		"ko": "대문자",
+		"ja": "大文字です"
+	},
+	"leoh2": {
+		"zh-cn": "符号",
+		"en": "symbol",
+		"ko": "기호",
+		"ja": "記号です"
+	},
+	"a6m4w64": {
+		"zh-cn": "上传设置",
+		"en": "Upload Settings",
+		"ko": "업로드 설정",
+		"ja": "アップロード設定です"
+	},
+	"8430fc6": {
+		"zh-cn": "默认上传方式",
+		"en": "Default upload method",
+		"ko": "기본 업로드 방법",
+		"ja": "デフォルトのアップロード方法です"
+	},
+	"c6m95k4": {
+		"zh-cn": "对象存储",
+		"en": "Object storage",
+		"ko": "객체 메모리",
+		"ja": "オブジェクトストレージです"
+	},
+	"g2ieko4": {
+		"zh-cn": "空间域名",
+		"en": "Spatial domain name",
+		"ko": "공간 도메인",
+		"ja": "ドメインネームです"
+	},
+	"vduybjl": {
+		"zh-cn": "请补全http:// 或 https://",
+		"en": "Please complete http:// or https://",
+		"ko": "https://또는 https://를 완성해 달라",
+		"ja": "http://またはhttps://をお願いします。"
+	},
+	"11n88p5": {
+		"zh-cn": "API安全",
+		"en": "API security",
+		"ko": "api 보안",
+		"ja": "APIセキュリティです"
+	},
+	"77x72l9": {
+		"zh-cn": "是否开启API安全",
+		"en": "Whether to enable API security",
+		"ko": "api를 켜는지 여부입니다",
+		"ja": "APIをオンにすると安全です"
+	},
+	"xxoezpp": {
+		"zh-cn": "api安全功能开启之后调用前端api需要传输签名串",
+		"en": "When the api security function is enabled, the front-end api needs to transmit signature strings",
+		"ko": "api 보안 기능이 켜진 후 프론트엔드 api를 호출하려면 서명 문자열을 전송해야 합니다",
+		"ja": "apiセキュリティ機能をオンにしてフロントエンドapiを呼び出すと署名列を転送する必要があります。"
+	},
+	"ljgt2": {
+		"zh-cn": "秘钥",
+		"en": "Secret key",
+		"ko": "비밀 키",
+		"ja": "秘密の鍵です"
+	},
+	"lflom51u": {
+		"zh-cn": "秘钥设置关系系统中api调用传输签名串的编码规则，以及会员token解析，请慎重设置，注意设置之后对应会员要求重新登录获取token",
+		"en": "The encoding rules of the api call transmission signature string in the system and the token resolution of the member should be set with caution. Note that the corresponding member requires to log in again to obtain the token after the setting",
+		"ko": "비밀키 설정 관계 시스템에서 api 호출 전송 서명 문자열 인코딩 규칙 및 회원 토큰 해석. 신중하게 설정해 주세요. 설정 후 회원에게 토큰을 가져오기 위해 다시 로그인해야 합니다",
+		"ja": "秘密鍵設定関系システムの中でapi呼び出し転送署名列の符号化規則及びメンバーシップトークン解析、慎重に設定してください。設定後、メンバーシップ要求に応じて再度ログインしてトークンを取得します。"
+	},
+	"e32z2": {
+		"zh-cn": "保存",
+		"en": "save",
+		"ko": "저장",
+		"ja": "保存します"
+	},
+	"mqxwd3": {
+		"zh-cn": "领取中",
+		"en": "Claiming",
+		"ko": "수령 중",
+		"ja": "受領中です"
+	},
+	"fkmt13": {
+		"zh-cn": "未开始",
+		"en": "Not yet started",
+		"ko": "아직 시작하지 않음",
+		"ja": "始まりません"
+	},
+	"edie63": {
+		"zh-cn": "已结束",
+		"en": "Already ended",
+		"ko": "끝났음",
+		"ja": "終わりました"
+	},
+	"e73jd3": {
+		"zh-cn": "已失效",
+		"en": "Became invalid",
+		"ko": "효력을 잃다",
+		"ja": "失効しています"
+	},
+	"xc26ml5": {
+		"zh-cn": "优惠券名称",
+		"en": "Coupon name",
+		"ko": "쿠폰 이름",
+		"ja": "クーポン名です"
+	},
+	"dzgo2": {
+		"zh-cn": "优惠",
+		"en": "favorable",
+		"ko": "할인",
+		"ja": "割引です"
+	},
+	"jb4e2": {
+		"zh-cn": "满减",
+		"en": "Max out",
+		"ko": "가득 줄",
+		"ja": "満減です"
+	},
+	"hb632": {
+		"zh-cn": "折扣",
+		"en": "discount",
+		"ko": "할인",
+		"ja": "割引です"
+	},
+	"jh41": {
+		"zh-cn": "折",
+		"en": "fold",
+		"ko": "꺽",
+		"ja": "折ります"
+	},
+	"azwq0c4": {
+		"zh-cn": "发放数量",
+		"en": "Quantity issued",
+		"ko": "발급 수량",
+		"ja": "配布数です"
+	},
+	"e5jaz3": {
+		"zh-cn": "已使用",
+		"en": "Have been used",
+		"ko": "사용됨",
+		"ja": "使用済みです"
+	},
+	"qcefdz9": {
+		"zh-cn": "是否删除该优惠券？",
+		"en": "Do you want to delete this coupon?",
+		"ko": "이 쿠폰을 삭제하시겠습니까?",
+		"ja": "当該クーポンを削除しますか?"
+	},
+	"duz4p7a": {
+		"zh-cn": "是否让该优惠券失效？",
+		"en": "Do you want to void this coupon?",
+		"ko": "이 쿠폰의 효력을 정지시킬까요?",
+		"ja": "クーポンを無効にしていませんか?"
+	},
+	"fq5z2": {
+		"zh-cn": "失效",
+		"en": "Lose effectiveness",
+		"ko": "효력이",
+		"ja": "失効します"
+	},
+	"lnjk2": {
+		"zh-cn": "类型",
+		"en": "type",
+		"ko": "유형",
+		"ja": "タイプです"
+	},
+	"q6u22": {
+		"zh-cn": "面值",
+		"en": "Face value",
+		"ko": "액면 가격",
+		"ja": "額面です"
+	},
+	"cxy1g3": {
+		"zh-cn": "发行量",
+		"en": "circulation",
+		"ko": "발행량",
+		"ja": "発行部数です"
+	},
+	"jl656k6": {
+		"zh-cn": "最低使用价格",
+		"en": "Minimum use price",
+		"ko": "최저사용가격",
+		"ja": "最低利用価格です"
+	},
+	"hge52": {
+		"zh-cn": "排序",
+		"en": "sort",
+		"ko": "정렬",
+		"ja": "順序付けです"
+	},
+	"e4l2kr4": {
+		"zh-cn": "活动时间",
+		"en": "Active time",
+		"ko": "활동 시간",
+		"ja": "活動時間です"
+	},
+	"po31": {
+		"zh-cn": "至",
+		"en": "to",
+		"ko": "~",
+		"ja": "至ります"
+	},
+	"hrlt2": {
+		"zh-cn": "描述",
+		"en": "Description",
+		"ko": "설명",
+		"ja": "記述します"
+	},
+	"le4p27": {
+		"zh-cn": "优惠券使用描述",
+		"en": "Coupon usage description",
+		"ko": "쿠폰 사용 설명",
+		"ja": "クーポン取扱説明書です"
+	},
+	"mvw92": {
+		"zh-cn": "菜单",
+		"en": "menu",
+		"ko": "메뉴",
+		"ja": "メニューです"
+	},
+	"ie0d2": {
+		"zh-cn": "权限",
+		"en": "Limits of authority",
+		"ko": "권한",
+		"ja": "権限です"
+	},
+	"fiyq2": {
+		"zh-cn": "增加",
+		"en": "augment",
+		"ko": "늘",
+		"ja": "増加します"
+	},
+	"adj5w64": {
+		"zh-cn": "上级菜单",
+		"en": "Parent menu",
+		"ko": "상위 메뉴",
+		"ja": "上級メニュー"
+	},
+	"u64y8d7": {
+		"zh-cn": "请选择上级菜单",
+		"en": "Please select the upper menu",
+		"ko": "상위 메뉴를 선택하세요",
+		"ja": "上級メニューをお願いします。"
+	},
+	"svp5m35": {
+		"zh-cn": "菜单/规则",
+		"en": "Menu/Rules",
+		"ko": "메뉴/규칙",
+		"ja": "メニュー/ルールです"
+	},
+	"nvth2": {
+		"zh-cn": "规则",
+		"en": "rule",
+		"ko": "규칙",
+		"ja": "ルールです"
+	},
+	"eyrn2": {
+		"zh-cn": "名称",
+		"en": "name",
+		"ko": "이름",
+		"ja": "名前です"
+	},
+	"gzct4y4": {
+		"zh-cn": "菜单图标",
+		"en": "Menu icon",
+		"ko": "메뉴 아이콘",
+		"ja": "メニューのアイコンです"
+	},
+	"awe31g4": {
+		"zh-cn": "前端路由",
+		"en": "Front-end routing",
+		"ko": "프론트엔드 라우팅",
+		"ja": "フロントエンド・ルーティング"
+	},
+	"b4bvp24": {
+		"zh-cn": "后端规则",
+		"en": "Back-end rule",
+		"ko": "백엔드 규칙",
+		"ja": "バックエンドのルールです"
+	},
+	"i3vmxt4": {
+		"zh-cn": "请求方式",
+		"en": "Request mode",
+		"ko": "요청 방식",
+		"ja": "請求方法です"
+	},
+	"x4mmp47": {
+		"zh-cn": "请选择请求方式",
+		"en": "Please select a request method",
+		"ko": "요청 방식을 선택해주세요",
+		"ja": "請求方法の選択をお願いします。"
+	},
+	"15pbg65": {
+		"zh-cn": "管理员名称",
+		"en": "Administrator name",
+		"ko": "관리자 이름",
+		"ja": "管理者名です"
+	},
+	"io38z3": {
+		"zh-cn": "管理员",
+		"en": "Administrator",
+		"ko": "관리원",
+		"ja": "管理人です"
+	},
+	"tv0gh75": {
+		"zh-cn": "所属管理员",
+		"en": "Owning administrator",
+		"ko": "소속 관리자",
+		"ja": "所属管理人"
+	},
+	"knda169": {
+		"zh-cn": "是否删除该管理员？",
+		"en": "Do you want to delete the administrator?",
+		"ko": "이 관리자를 삭제하시겠습니까?",
+		"ja": "管理者を削除しますか?"
+	},
+	"csbdku4": {
+		"zh-cn": "所属角色",
+		"en": "role",
+		"ko": "소속배역",
+		"ja": "所属しています"
+	},
+	"t5yf0e6": {
+		"zh-cn": "选择所属角色",
+		"en": "Select a role",
+		"ko": "역할 선택",
+		"ja": "所属キャラクターを選びます"
+	},
+	"xnzawj8": {
+		"zh-cn": "角色名称不能为空",
+		"en": "The role name cannot be empty",
+		"ko": "역할 이름은 비워 둘 수 없습니다",
+		"ja": "役名を空にしてはいけません"
+	},
+	"iuw9hs4": {
+		"zh-cn": "配置成功",
+		"en": "Configuration successful",
+		"ko": "설정이 성공하였습니다.",
+		"ja": "配置成功です"
+	},
+	"hxb80z4": {
+		"zh-cn": "角色名称",
+		"en": "Role name",
+		"ko": "역할 이름",
+		"ja": "役名です"
+	},
+	"hxe0v54": {
+		"zh-cn": "角色描述",
+		"en": "Role description",
+		"ko": "역할 설명",
+		"ja": "キャラクター描写です"
+	},
+	"iuxipa4": {
+		"zh-cn": "配置权限",
+		"en": "Configure permissions",
+		"ko": "권한 설정",
+		"ja": "配置権限です"
+	},
+	"9rrai38": {
+		"zh-cn": "是否删除该角色？",
+		"en": "Do you want to delete the role?",
+		"ko": "역할을 삭제하시겠습니까?",
+		"ja": "キャラクターを削除しますか?"
+	},
+	"dnlejy4": {
+		"zh-cn": "权限配置",
+		"en": "Permission configuration",
+		"ko": "권한 설정",
+		"ja": "権限配置です"
+	},
+	"aboiim5": {
+		"zh-cn": "累计消费满",
+		"en": "Accumulated consumptions",
+		"ko": "누계소비만",
+		"ja": "累計消費額がいっぱいです"
+	},
+	"i7oo0hq": {
+		"zh-cn": "设置会员等级所需要的累计消费必须大于等于0,单位：元",
+		"en": "The cumulative consumption required to set the membership level must be greater than or equal to 0, unit: yuan",
+		"ko": "회원등급을 설정하는데 필요한 루계소비는 반드시 0보다 커야 한다. 단위:원",
+		"ja": "会員ランクの設定に必要な累積消費額は0以上でなければなりません。"
+	},
+	"ab52v45": {
+		"zh-cn": "累计次数满",
+		"en": "Cumulative count full",
+		"ko": "누적 횟수가 차다",
+		"ja": "累積回数がいっぱいです。"
+	},
+	"7oxivnp": {
+		"zh-cn": "设置会员等级所需要的购买量必须大于等于0,单位：笔",
+		"en": "The purchase amount required to set the membership level must be greater than or equal to 0, in pens",
+		"ko": "회원 등급을 설정하기 위해 필요한 구매량은 0보다 커야 합니다. 단위:펜",
+		"ja": "会員ランクを設定するために必要な購入量は0以上である必要があります。"
+	},
+	"7zgmp013": {
+		"zh-cn": "折扣率单位为百分比，如输入90，表示该会员等级的用户可以以商品原价的90%购买",
+		"en": "The discount rate is expressed as a percentage. If 90 is entered, it means that the user of the membership level can purchase at 90% of the original price of the product",
+		"ko": "할인율 단위는 백분율로 90을 입력하면 해당 회원 등급 고객이 상품 정가의 90%를 받고 구입할 수 있다는 뜻이다",
+		"ja": "割引率の単位はパーセンテージで、90と入力した場合、この会員ランクのユーザーは、商品価格の90%で購入することができます。"
+	},
+	"cx5y7la": {
+		"zh-cn": "会员等级名称不能为空",
+		"en": "The member level name cannot be empty",
+		"ko": "회원 등급 이름은 비워 둘 수 없습니다",
+		"ja": "会員ランク名は空欄にできません。"
+	},
+	"9mxf4g6": {
+		"zh-cn": "折扣率(%)",
+		"en": "Discount rate (%)",
+		"ko": "할인율 (%)",
+		"ja": "割引率(%)です。"
+	},
+	"g2suo64": {
+		"zh-cn": "等级序号",
+		"en": "Rank number",
+		"ko": "등급 번호",
+		"ja": "等級番号です"
+	},
+	"g2r9tt4": {
+		"zh-cn": "等级名称",
+		"en": "Grade name",
+		"ko": "등급 이름",
+		"ja": "グレード名です"
+	},
+	"g2uo6g4": {
+		"zh-cn": "等级权重",
+		"en": "Rank weight",
+		"ko": "등급 가중치",
+		"ja": "重みづけです"
+	},
+	"b16k1h4": {
+		"zh-cn": "升级条件",
+		"en": "Escalation condition",
+		"ko": "승급 조건",
+		"ja": "昇格条件です"
+	},
+	"gdeglf4": {
+		"zh-cn": "累计消费",
+		"en": "Cumulative consumption",
+		"ko": "누계 소비",
+		"ja": "累積消費"
+	},
+	"gddu0x4": {
+		"zh-cn": "累计次数",
+		"en": "Cumulative frequency",
+		"ko": "누적 횟수",
+		"ja": "累積回数"
+	},
+	"ob81": {
+		"zh-cn": "笔",
+		"en": "pen",
+		"ko": "펜",
+		"ja": "ペンです"
+	},
+	"hel51nl": {
+		"zh-cn": "例如：apiclient_cert.pem",
+		"en": "For example, apiclient_cert.pem",
+		"ko": "예를 들어, apiclient_cert.pem",
+		"ja": "例:apiclient_cert.pemです"
+	},
+	"ad4a24k": {
+		"zh-cn": "例如：apiclient_key.pem",
+		"en": "For example, apiclient_key.pem",
+		"ko": "예를 들어:apiclient_key.pem",
+		"ja": "例:apiclient_ kee.pemです"
+	},
+	"rnthymb": {
+		"zh-cn": "该系统支持即时到账接口",
+		"en": "The system supports instant to account interface",
+		"ko": "이 시스템은 실시간 수신 인터페이스를 지원한다",
+		"ja": "このシステムは、即時入金インターフェースをサポートします。"
+	},
+	"8c1lgwg": {
+		"zh-cn": "该系统支持微信网页支付和扫码支付",
+		"en": "The system supports wechat web payment and scanning code payment",
+		"ko": "이 시스템은 위챗 웹 페이지와 스캔코드 결제를 지원한다",
+		"ja": "wechatのweb決済やコード決済に対応しています。"
+	},
+	"y2ido3b": {
+		"zh-cn": "****已配置****",
+		"en": "**** **** has been configured",
+		"ko": "***이 설정되었습니다",
+		"ja": "****配置しました****"
+	},
+	"d3h9kv4": {
+		"zh-cn": "支付方式",
+		"en": "Payment method",
+		"ko": "지불 방식",
+		"ja": "支払い方法です"
+	},
+	"iagnyk4": {
+		"zh-cn": "购物设置",
+		"en": "Shopping Settings",
+		"ko": "구매 설정",
+		"ja": "ショッピング設定です"
+	},
+	"9pq9p65": {
+		"zh-cn": "未支付订单",
+		"en": "Unpaid order",
+		"ko": "미지급주문서",
+		"ja": "未払い註文です"
+	},
+	"wnwq0d7": {
+		"zh-cn": "分钟后自动关闭",
+		"en": "It turns off automatically after a minute",
+		"ko": "분 후 자동으로 꺼집니다",
+		"ja": "分後に自動的にオフになります"
+	},
+	"bb2s7tp": {
+		"zh-cn": "订单下单未付款，n分钟后自动关闭，设置0不自动关闭",
+		"en": "If the order is not paid, it will be automatically closed after n minutes. Setting 0 will not automatically close",
+		"ko": "주문서 지불이 완료되지 않은 경우, n 분 후 자동으로 종료되며, 0을 설정하면 자동으로 종료되지 않습니다",
+		"ja": "註文未払いの場合、n分後に自働的にオフになり、0を設定します自働的にオフになりません"
+	},
+	"nc104b5": {
+		"zh-cn": "已发货订单",
+		"en": "Shipped order",
+		"ko": "발송 주문서",
+		"ja": "出荷済み註文です"
+	},
+	"ctpthy8": {
+		"zh-cn": "天后自动确认收货",
+		"en": "Automatically confirm receipt after days",
+		"ko": "일 후 자동으로 수령이 확인됩니다",
+		"ja": "ティンハウ自動受取確認です"
+	},
+	"2id0ibs": {
+		"zh-cn": "如果在期间未确认收货，系统自动完成收货，设置0不自动收货",
+		"en": "If you do not confirm the receipt of the goods during the period, the system automatically completes the receipt of the goods. Set 0 to not automatically receive the goods",
+		"ko": "기간 중에 수령이 확인되지 않으면 시스템에서 자동으로 수령이 완료되며, 설정 0은 자동으로 수령이 되지 않습니다",
+		"ja": "もし期間中に受け取りを確認していない場合、システムは自働的に受け取りを完了し、0を設定して自働的に受け取りません。"
+	},
+	"o4tfjd5": {
+		"zh-cn": "已完成订单",
+		"en": "Completed order",
+		"ko": "주문 완료",
+		"ja": "註文完了しました"
+	},
+	"de19d58": {
+		"zh-cn": "天内允许申请售后",
+		"en": "Application for after-sales is allowed within days",
+		"ko": "일내 as 신청을 허가하다",
+		"ja": "日中のアフターサービス申請を許可します。"
+	},
+	"f9yr34w": {
+		"zh-cn": "订单完成后 ，用户在n天内可以发起售后申请，设置0不允许申请售后",
+		"en": "After the order is completed, the user can initiate an after-sales application within n days. Setting 0 does not allow the after-sales application",
+		"ko": "주문 완료 후, 사용자는 n 일 이내에 판매 후 신청을 시작할 수 있으며, 0을 설정하면 판매 후 신청을 허용하지 않습니다",
+		"ja": "註文完了後、ユーザーはn日以内にアフター申し込みを開始することができます。0を設定してアフター申し込みを許可しません。"
+	},
+	"4ibllk9": {
+		"zh-cn": "公众号 APPID",
+		"en": "Public number APPID",
+		"ko": "공식 계정은 appid",
+		"ja": "公式アカウントAPPIDです"
+	},
+	"q9hbqn9": {
+		"zh-cn": "小程序 APPID",
+		"en": "Small program APPID",
+		"ko": "애플릿 appid",
+		"ja": "APPIDというウィジェットです"
+	},
+	"e79rk3a": {
+		"zh-cn": "小程序 secret",
+		"en": "Small program secret",
+		"ko": "시크릿 애플릿",
+		"ja": "secretというウィジェットです"
+	},
+	"cyt7q3": {
+		"zh-cn": "商户号",
+		"en": "Merchant number",
+		"ko": "상점 번호",
+		"ja": "商人番号です"
+	},
+	"w1oo796": {
+		"zh-cn": "API 密钥",
+		"en": "API key",
+		"ko": "api 키",
+		"ja": "APIキーです"
+	},
+	"ikyf834": {
+		"zh-cn": "还未配置",
+		"en": "Not configured",
+		"ko": "설정되지 않음",
+		"ja": "未配備です"
+	},
+	"ek7w3c4": {
+		"zh-cn": "点击上传",
+		"en": "Click to upload",
+		"ko": "클릭하여 업로드하기",
+		"ja": "アップロードをクリックします"
+	},
+	"hvnle38": {
+		"zh-cn": "规格名称不能为空",
+		"en": "The specification name cannot be empty",
+		"ko": "규격 이름은 비어 있을 수 없습니다",
+		"ja": "仕様名は空ではいけません。"
+	},
+	"a3uzis7": {
+		"zh-cn": "规格值不能为空",
+		"en": "The specification value cannot be empty",
+		"ko": "규격 값은 비어 있으면 안 됩니다",
+		"ja": "規格値は空ではいけません。"
+	},
+	"ht82nv4": {
+		"zh-cn": "规格名称",
+		"en": "Specification name",
+		"ko": "규격 명칭",
+		"ja": "規格名です"
+	},
+	"kols43": {
+		"zh-cn": "规格值",
+		"en": "Specification value",
+		"ko": "규격치",
+		"ja": "規格値です"
+	},
+	"9rw1dv8": {
+		"zh-cn": "是否删除该规格？",
+		"en": "Do you want to delete the specification?",
+		"ko": "사양을 삭제하시겠습니까?",
+		"ja": "この仕様を削除しますか?"
+	},
+	"dhmibi4": {
+		"zh-cn": "时间选择",
+		"en": "Time selection",
+		"ko": "시간 선택",
+		"ja": "時間の選択です"
+	},
+	"dw2n2": {
+		"zh-cn": "今天",
+		"en": "today",
+		"ko": "오늘",
+		"ja": "今日です"
+	},
+	"hv5t2": {
+		"zh-cn": "昨天",
+		"en": "yesterday",
+		"ko": "어제",
+		"ja": "昨日です"
+	},
+	"dkrhb74": {
+		"zh-cn": "最近7天",
+		"en": "Last 7 days",
+		"ko": "최근 7일간",
+		"ja": "ここ7日間です"
+	},
+	"f6qmm54": {
+		"zh-cn": "用户信息",
+		"en": "User information",
+		"ko": "사용자 정보",
+		"ja": "ユーザー情報です"
+	},
+	"hnv8r3": {
+		"zh-cn": "用户：",
+		"en": "User:",
+		"ko": "사용자:",
+		"ja": "利用者:ですね。"
+	},
+	"fl2qn3": {
+		"zh-cn": "昵称：",
+		"en": "Nickname:",
+		"ko": "닉네임:",
+		"ja": "ニックネーム:です。"
+	},
+	"dlc5c3": {
+		"zh-cn": "姓名：",
+		"en": "Name:",
+		"ko": "이름:",
+		"ja": "名前です。"
+	},
+	"hv7wy3": {
+		"zh-cn": "电话：",
+		"en": "Phone:",
+		"ko": "전화:",
+		"ja": "電話です。"
+	},
+	"xitzwl6": {
+		"zh-cn": "推广用户数量",
+		"en": "Number of promotional users",
+		"ko": "가입자 수를 확대하다",
+		"ja": "ユーザー数を増やすことです"
+	},
+	"hyq5qq4": {
+		"zh-cn": "订单数量",
+		"en": "Order quantity",
+		"ko": "주문 수량",
+		"ja": "註文数です"
+	},
+	"hyxqu74": {
+		"zh-cn": "订单金额",
+		"en": "Order amount",
+		"ko": "주문 금액",
+		"ja": "ご註文金額です"
+	},
+	"i7omsf4": {
+		"zh-cn": "账户佣金",
+		"en": "Account commission",
+		"ko": "어카운트 커미션",
+		"ja": "口座手数料です"
+	},
+	"p8yx1a5": {
+		"zh-cn": "已提现金额",
+		"en": "Amount withdrawn",
+		"ko": "현금 인출 금액",
+		"ja": "キャッシュバックされました金額"
+	},
+	"d2odhr4": {
+		"zh-cn": "提现次数",
+		"en": "Number of withdrawals",
+		"ko": "현금 인출 횟수",
+		"ja": "キャッシュバック回数です"
+	},
+	"9qiolm5": {
+		"zh-cn": "未提现金额",
+		"en": "Unwithdrawn amount",
+		"ko": "미인출 금액",
+		"ja": "キャッシュレス金額"
+	},
+	"f1znn3": {
+		"zh-cn": "推广人",
+		"en": "promoter",
+		"ko": "프로모터",
+		"ja": "プロモーターです"
+	},
+	"cz0iru4": {
+		"zh-cn": "推广订单",
+		"en": "Promotion order",
+		"ko": "주문 확대",
+		"ja": "受注を促進します"
+	},
+	"d3d67y4": {
+		"zh-cn": "提示内容",
+		"en": "Prompt content",
+		"ko": "제시 내용",
+		"ja": "内容を提示します"
+	},
+	"qqo4t27": {
+		"zh-cn": "物流查询key",
+		"en": "Logistics query key",
+		"ko": "물류검색 key",
+		"ja": "物流検索keyです"
+	},
+	"mbbs4vj": {
+		"zh-cn": "用于查询物流信息，接口申请（仅供参考）",
+		"en": "For querying logistics information, interface application (for reference only)",
+		"ko": "물류정보 조회, 인터페이스 신청 (참고만 가능)",
+		"ja": "物流情報の照会、インターフェース申請に使用します(参考までに)"
+	},
+	"blre5y4": {
+		"zh-cn": "基础设置",
+		"en": "Basic setup",
+		"ko": "기본 설정",
+		"ja": "基本的な設定です"
+	},
+	"ihdjnj4": {
+		"zh-cn": "返佣设置",
+		"en": "Rebate setting",
+		"ko": "수수료 반환 설정",
+		"ja": "バック設定です"
+	},
+	"gin4pg4": {
+		"zh-cn": "结算设置",
+		"en": "Clearing setup",
+		"ko": "클리어링 설정",
+		"ja": "決済設定です"
+	},
+	"ayodg34": {
+		"zh-cn": "分销启用",
+		"en": "Distribution enablement",
+		"ko": "분산 판매 개시",
+		"ja": "流通開始です"
+	},
+	"lb5z2": {
+		"zh-cn": "禁用",
+		"en": "forbidden",
+		"ko": "사용 안 함",
+		"ja": "無効です"
+	},
+	"7lp3ntr": {
+		"zh-cn": "关闭分销功能后不会再产生新的分销佣金，商城端分销入口。",
+		"en": "After the distribution function is turned off, no new distribution commission will be generated.",
+		"ko": "판매기능을 닫은후 새로운 판매수수료, 쇼핑몰 끝부분의 판매입구가 생기지 않는다.",
+		"ja": "ディストリビューション機能をオフにすると、新たなディストリビューションコミッションは発生しません。"
+	},
+	"f6y24q5": {
+		"zh-cn": "分销海报图",
+		"en": "Distribution poster",
+		"ko": "소매판매 포스터",
+		"ja": "配布ポスターです"
+	},
+	"nomu256": {
+		"zh-cn": "一级返佣比例",
+		"en": "First level rebate ratio",
+		"ko": "일급 수수료 반환 비율",
+		"ja": "レベル1の割合です"
+	},
+	"8y4bau11": {
+		"zh-cn": "订单交易成功后给上级返佣的比例0 - 100,例:5 = 反订单金额的5%",
+		"en": "The percentage of rebate to the superior after the successful order transaction is 0-100, for example :5 = 5% of the counter order amount",
+		"ko": "주문 거래 성공 후 상사에게 수수료를 주는 비율 0-100, 예:5 = 반대주문 금액의 5%",
+		"ja": "註文取引が成功した後に上司に戻る割合0 - 100、例:5 =逆註文金額の5%です。"
+	},
+	"ixtva96": {
+		"zh-cn": "二级返佣比例",
+		"en": "Secondary rebate ratio",
+		"ko": "2차 수수료 수수료 비율",
+		"ja": "二次送金率です"
+	},
+	"gz9d5e4": {
+		"zh-cn": "自购返佣",
+		"en": "Purchase and rebate",
+		"ko": "직접 구입하고 수수료를 돌려주다",
+		"ja": "自分で買って帰ります"
+	},
+	"k6n1": {
+		"zh-cn": "是",
+		"en": "is",
+		"ko": "은",
+		"ja": "そうです"
+	},
+	"gme1": {
+		"zh-cn": "否",
+		"en": "no",
+		"ko": "아니 오",
+		"ja": "いいえ"
+	},
+	"zfpqtt1k": {
+		"zh-cn": "是否开启自购返佣（开启：分销员自己购买商品，享受一级返佣，上级享受二级返佣; 关闭：分销员自己购买商品没有返佣）",
+		"en": "Whether to open the self-purchase rebate (open: the distributor buys the goods himself, enjoy a rebate, the superior enjoys a rebate; Closed: The distributor has no commission for his own purchases)",
+		"ko": "자체구매반수수료 (판매원 자신이 상품을 구매할 경우 1 급반수수료를 향수하며 상급은 2 급반수수료를 향수한다.페쇄:판매원이 직접 상품을 구매하면 수수료를 받지 않는다.)",
+		"ja": "自購を開くかどうか(開きます:流通員は自分で商品を購入して、1級を享受して、上級は享受します2級を返します;閉鎖:販売員は自分で商品を購入していません。"
+	},
+	"gigtsy4": {
+		"zh-cn": "结算时间",
+		"en": "Settlement time",
+		"ko": "결산 시간",
+		"ja": "決済時間です"
+	},
+	"be1b2h5": {
+		"zh-cn": "订单完成后",
+		"en": "After the order is completed",
+		"ko": "주문 완료 후",
+		"ja": "註文が完了します。"
+	},
+	"hm11": {
+		"zh-cn": "天",
+		"en": "day",
+		"ko": "일",
+		"ja": "天です"
+	},
+	"r1tq92n": {
+		"zh-cn": "预估佣金结算后无法进行回收，请谨慎设置结算天数",
+		"en": "The estimated commission cannot be recovered after settlement. Please set the settlement days with caution",
+		"ko": "예상 수수료 결제 후 회수할 수 없으므로, 결제일수를 신중하게 설정하여 주시기 바랍니다",
+		"ja": "手数料決済後は回収できない見込みですので、決済日数は慎重に設定してください"
+	},
+	"oy643q6": {
+		"zh-cn": "佣金到账方式",
+		"en": "Commission to account",
+		"ko": "커미션 입금 방식",
+		"ja": "コミッション振り込み方式"
+	},
+	"cqtshf4": {
+		"zh-cn": "手动到账",
+		"en": "Manual transfer",
+		"ko": "수동 입금",
+		"ja": "手動で入金します。"
+	},
+	"84h2u87": {
+		"zh-cn": "自动到微信零钱",
+		"en": "Automatic change to wechat",
+		"ko": "위챗 잔돈이 자동으로 온다",
+		"ja": "微信の小銭が自動的に届きます"
+	},
+	"e2ztvq11": {
+		"zh-cn": "佣金到账方式支持线下转账和微信零钱自动转账，手动转账更安全，自动转账更方便",
+		"en": "Commission to account mode supports offline transfer and wechat automatic change transfer, manual transfer is safer, automatic transfer is more convenient",
+		"ko": "커미션이체방식은 오프라인이체와 위챗잔돈자동이체를 지원하므로 수동이체가 더욱 안전하고 자동이체가 더욱 편리하다",
+		"ja": "コミッション入金方式はオフライン送金と微信の小銭自動送金に対応しており、手動送金のほうが安全で、自動送金のほうが便利です。"
+	},
+	"h8aw2": {
+		"zh-cn": "折叠",
+		"en": "fold",
+		"ko": "접기",
+		"ja": "たたみます"
+	},
+	"g85n2": {
+		"zh-cn": "展开",
+		"en": "unfold",
+		"ko": "벌",
+		"ja": "展開します"
+	},
+	"ejix2": {
+		"zh-cn": "刷新",
+		"en": "Refresh",
+		"ko": "새로 고침",
+		"ja": "リフレッシュします"
+	},
+	"ank38i4": {
+		"zh-cn": "全屏切换",
+		"en": "Full screen switch",
+		"ko": "전체 화면 전환",
+		"ja": "全画面切り替えです"
+	},
+	"ai7i2u4": {
+		"zh-cn": "修改密码",
+		"en": "Change password",
+		"ko": "비밀번호 변경",
+		"ja": "パスワードを変更します"
+	},
+	"iifi5w4": {
+		"zh-cn": "退出登录",
+		"en": "Log out",
+		"ko": "로그아웃",
+		"ja": "ログアウトします"
+	},
+	"fdlia3": {
+		"zh-cn": "旧密码",
+		"en": "Old password",
+		"ko": "이전 비밀번호",
+		"ja": "古いパスワードです"
+	},
+	"7j0tt36": {
+		"zh-cn": "请输入旧密码",
+		"en": "Please enter your old password",
+		"ko": "이전 비밀번호를 입력하십시오",
+		"ja": "古いパスワードをお願いします。"
+	},
+	"fcgq33": {
+		"zh-cn": "新密码",
+		"en": "New password",
+		"ko": "새 비밀번호",
+		"ja": "新しいパスワードです"
+	},
+	"7j1yla6": {
+		"zh-cn": "请输入新密码",
+		"en": "Please enter your new password",
+		"ko": "새 비밀번호를 입력하십시오",
+		"ja": "新しいパスワードをお願いします。"
+	},
+	"frqaup4": {
+		"zh-cn": "确认密码",
+		"en": "Confirm password",
+		"ko": "비밀번호 확인",
+		"ja": "パスワードを確認します"
+	},
+	"57u0485": {
+		"zh-cn": "请确认密码",
+		"en": "Please confirm the password",
+		"ko": "비밀번호 확인",
+		"ja": "パスワードの確認をお願いします。"
+	},
+	"aw6sdj4": {
+		"zh-cn": "关闭其它",
+		"en": "Close other",
+		"ko": "기타 닫기",
+		"ja": "その他は閉鎖します"
+	},
+	"av9m564": {
+		"zh-cn": "全部关闭",
+		"en": "Close all",
+		"ko": "모두 닫기",
+		"ja": "すべて閉鎖します"
+	},
+	"hs6m2": {
+		"zh-cn": "新增",
+		"en": "new",
+		"ko": "신규 증가",
+		"ja": "新たに増えます"
+	},
+	"a3el2d9": {
+		"zh-cn": "是否删除选中记录？",
+		"en": "Do you want to delete the selected record?",
+		"ko": "선택된 기록을 삭제하시겠습니까?",
+		"ja": "選択記録を削除しますか?"
+	},
+	"asp0rb4": {
+		"zh-cn": "刷新数据",
+		"en": "Refresh data",
+		"ko": "데이터 새로 고침",
+		"ja": "データを更新します"
+	},
+	"by61a44": {
+		"zh-cn": "导出数据",
+		"en": "Derived data",
+		"ko": "데이터 내보내기",
+		"ja": "データを導出します"
+	},
+	"heqc2": {
+		"zh-cn": "提交",
+		"en": "submit",
+		"ko": "제출",
+		"ja": "提出します"
+	},
+	"azeh8z4": {
+		"zh-cn": "删除成功",
+		"en": "Successfully deleted",
+		"ko": "성공적으로 삭제했습니다.",
+		"ja": "削除成功です"
+	},
+	"at3ogg4": {
+		"zh-cn": "关联成功",
+		"en": "Association success",
+		"ko": "관련 성공",
+		"ja": "成功しました"
+	},
+	"ek3l2": {
+		"zh-cn": "关联",
+		"en": "relevance",
+		"ko": "관련",
+		"ja": "関連します"
+	},
+	"b42dj04": {
+		"zh-cn": "商品封面",
+		"en": "Product cover",
+		"ko": "상품 커버",
+		"ja": "商品の表紙です"
+	},
+	"d1t8vo4": {
+		"zh-cn": "操作按钮",
+		"en": "Operation button",
+		"ko": "조작 단추",
+		"ja": "操作ボタンです"
+	},
+	"chdt2d6": {
+		"zh-cn": "修改状态成功",
+		"en": "Succeeded in modifying the status",
+		"ko": "상태를 성공적으로 수정했습니다.",
+		"ja": "状態修正成功です"
+	},
+	"kgsv2": {
+		"zh-cn": "用户",
+		"en": "user",
+		"ko": "사용자",
+		"ja": "ユーザーです"
+	},
+	"o7hv2": {
+		"zh-cn": "订单",
+		"en": "Order for goods",
+		"ko": "주문서",
+		"ja": "註文します"
+	},
+	"o7g32": {
+		"zh-cn": "评价",
+		"en": "evaluate",
+		"ko": "평가",
+		"ja": "評価します"
+	},
+	"fbdh2": {
+		"zh-cn": "图库",
+		"en": "Map storage",
+		"ko": "그림 갤러리",
+		"ja": "ギャラリーです"
+	},
+	"eb8e2": {
+		"zh-cn": "公告",
+		"en": "announcement",
+		"ko": "공고",
+		"ja": "公告します"
+	},
+	"c1zlc3": {
+		"zh-cn": "优惠券",
+		"en": "coupon",
+		"ko": "쿠폰",
+		"ja": "クーポン券です"
+	},
+	"hyug9h4": {
+		"zh-cn": "订单统计",
+		"en": "Order statistics",
+		"ko": "주문 통계",
+		"ja": "受注統計です"
+	},
+	"i5ffdq4": {
+		"zh-cn": "近1个月",
+		"en": "Nearly a month",
+		"ko": "근 한 달",
+		"ja": "1か月近くです"
+	},
+	"l2u3s3": {
+		"zh-cn": "近1周",
+		"en": "Nearly 1 week",
+		"ko": "근 1주일",
+		"ja": "1週間近くです"
+	},
+	"5w1y5i5": {
+		"zh-cn": "近24小时",
+		"en": "Nearly 24 hours",
+		"ko": "거의 24시간",
+		"ja": "24時間近くです"
+	},
+	"4yq29t6": {
+		"zh-cn": "最多还能选择",
+		"en": "At best, you can choose",
+		"ko": "많아야 고를 수 있다",
+		"ja": "せいぜい選べます"
+	},
+	"isg1": {
+		"zh-cn": "张",
+		"en": "zhang",
+		"ko": "장",
+		"ja": "張"
+	},
+	"ikxafd4": {
+		"zh-cn": "选择图片",
+		"en": "Select picture",
+		"ko": "그림 선택",
+		"ja": "画像を選択します"
+	},
+	"kzjg2": {
+		"zh-cn": "确定",
+		"en": "OK",
+		"ko": "확정",
+		"ja": "確定です"
+	},
+	"hpqe2": {
+		"zh-cn": "搜索",
+		"en": "search",
+		"ko": "검색",
+		"ja": "検索します"
+	},
+	"phz52": {
+		"zh-cn": "重置",
+		"en": "reset",
+		"ko": "초기화",
+		"ja": "リセットします"
+	},
+	"hzpd2": {
+		"zh-cn": "收起",
+		"en": "Pack up",
+		"ko": "접",
+		"ja": "しまいます"
+	},
+	"eai1mq7": {
+		"zh-cn": "设置轮播图成功",
+		"en": "Setting the wheel chart succeeded. Procedure",
+		"ko": "라운드 캐스트 그림 설정이 성공했습니다",
+		"ja": "キャスティングマップの設定成功です"
+	},
+	"lhwin3": {
+		"zh-cn": "轮播图",
+		"en": "Carousel map",
+		"ko": "라운드 캐스트",
+		"ja": "ローテーションキャスト図です"
+	},
+	"io13ym8": {
+		"zh-cn": "设置商品规格成功",
+		"en": "Set the product specification successfully",
+		"ko": "상품 규격을 성공적으로 설정하였습니다",
+		"ja": "商品仕様設定成功です"
+	},
+	"q6njfh6": {
+		"zh-cn": "设置商品规格",
+		"en": "Set product specifications",
+		"ko": "상품 규격을 설정하다",
+		"ja": "商品仕様を設定します。"
+	},
+	"hterfs4": {
+		"zh-cn": "规格类型",
+		"en": "Specification type",
+		"ko": "규격 타입",
+		"ja": "仕様タイプです"
+	},
+	"cvevh3": {
+		"zh-cn": "单规格",
+		"en": "Single gauge",
+		"ko": "단일 규격",
+		"ja": "シングルサイズです"
+	},
+	"dpu363": {
+		"zh-cn": "多规格",
+		"en": "multi-specification",
+		"ko": "멀티 스펙",
+		"ja": "多規格です"
+	},
+	"c80of14": {
+		"zh-cn": "市场价格",
+		"en": "Market price",
+		"ko": "시장 가격",
+		"ja": "市場価格です"
+	},
+	"j5f1774": {
+		"zh-cn": "销售价格",
+		"en": "Selling price",
+		"ko": "판매 가격",
+		"ja": "販売価格です"
+	},
+	"csrjnl4": {
+		"zh-cn": "成本价格",
+		"en": "Cost price",
+		"ko": "원가",
+		"ja": "原価価格です"
+	},
+	"b4bhul4": {
+		"zh-cn": "商品重量",
+		"en": "Commodity weight",
+		"ko": "상품 중량",
+		"ja": "商品の重さです"
+	},
+	"eens2": {
+		"zh-cn": "公斤",
+		"en": "kilogram",
+		"ko": "킬로그램",
+		"ja": "キロです"
+	},
+	"b4022f4": {
+		"zh-cn": "商品体积",
+		"en": "Commodity volume",
+		"ko": "상품 부피",
+		"ja": "商品の体積です"
+	},
+	"ihgx13": {
+		"zh-cn": "立方米",
+		"en": "Cubic meter",
+		"ko": "입방미터",
+		"ja": "立方メートルです"
+	},
+	"b5n89w4": {
+		"zh-cn": "发货信息",
+		"en": "Shipping information",
+		"ko": "발송 정보",
+		"ja": "出荷情報です"
+	},
+	"b400fd4": {
+		"zh-cn": "商品信息",
+		"en": "Commodity information",
+		"ko": "상품 정보",
+		"ja": "商品情報です"
+	},
+	"dcmkv34": {
+		"zh-cn": "收货信息",
+		"en": "Receiving information",
+		"ko": "수신 정보",
+		"ja": "受け取り情報です"
+	},
+	"ily63w4": {
+		"zh-cn": "退款信息",
+		"en": "Refund information",
+		"ko": "환불 정보",
+		"ja": "返金情報です"
+	},
+	"ft2aw3": {
+		"zh-cn": "未退款",
+		"en": "No refund",
+		"ko": "환불되지 않음",
+		"ja": "返金されません。"
+	},
+	"9hukl38": {
+		"zh-cn": "已申请，等待审核",
+		"en": "Application pending review",
+		"ko": "이미 신청하여 심사를 기다리고 있다",
+		"ja": "申請済みで審査待ちです"
+	},
+	"im16q54": {
+		"zh-cn": "退款成功",
+		"en": "Refund successful",
+		"ko": "환불이 완료되었습니다",
+		"ja": "返金成功です"
+	},
+	"ilzzyq4": {
+		"zh-cn": "退款失败",
+		"en": "Refund failure",
+		"ko": "환불 실패",
+		"ja": "返金失敗しました"
+	},
+	"kuwys3": {
+		"zh-cn": "订单号",
+		"en": "Order number",
+		"ko": "주문서 번호",
+		"ja": "註文番号です"
+	},
+	"ae7ae44": {
+		"zh-cn": "付款方式",
+		"en": "Payment method",
+		"ko": "지불 방식",
+		"ja": "支払い方式"
+	},
+	"ae7mp04": {
+		"zh-cn": "付款时间",
+		"en": "Time of payment",
+		"ko": "지불 시간",
+		"ja": "支払い時間です"
+	},
+	"ar84e54": {
+		"zh-cn": "创建时间",
+		"en": "Creation time",
+		"ko": "만든 시간",
+		"ja": "作成時間です"
+	},
+	"evw5c44": {
+		"zh-cn": "物流公司",
+		"en": "Logistics company",
+		"ko": "물류 회사",
+		"ja": "物流会社です"
+	},
+	"lgydu3": {
+		"zh-cn": "运单号",
+		"en": "HWB number",
+		"ko": "운송장 번호",
+		"ja": "運送番号です"
+	},
+	"dlqlvi4": {
+		"zh-cn": "查看物流",
+		"en": "View logistics",
+		"ko": "물류 확인",
+		"ja": "物流を調べます"
+	},
+	"b5ra2c4": {
+		"zh-cn": "发货时间",
+		"en": "Delivery time",
+		"ko": "발송 시간",
+		"ja": "出荷時期です"
+	},
+	"eqw2r3": {
+		"zh-cn": "成交价",
+		"en": "Closing price",
+		"ko": "거래가격",
+		"ja": "呼値です"
+	},
+	"gphnfh4": {
+		"zh-cn": "联系方式",
+		"en": "Contact information",
+		"ko": "연락처",
+		"ja": "連絡先です"
+	},
+	"dcnrsx4": {
+		"zh-cn": "收货地址",
+		"en": "Delivery address",
+		"ko": "배송 주소",
+		"ja": "お受取先です"
+	},
+	"im4fjd4": {
+		"zh-cn": "退款理由",
+		"en": "Reason for refund",
+		"ko": "환불 사유",
+		"ja": "返金理由です"
+	},
+	"iffu5j8": {
+		"zh-cn": "设置商品详情成功",
+		"en": "Setting item details succeeded",
+		"ko": "상품 정보를 설정했습니다",
+		"ja": "商品詳細の設定成功しました"
+	},
+	"q6n7ue6": {
+		"zh-cn": "设置商品详情",
+		"en": "Set product details",
+		"ko": "상품 정보 설정",
+		"ja": "商品詳細を設定します。"
+	},
+	"lrmwt3": {
+		"zh-cn": "重命名",
+		"en": "rename",
+		"ko": "이름 바꾸기",
+		"ja": "名前を変えます"
+	},
+	"ciuf4f6": {
+		"zh-cn": "最多只能选中",
+		"en": "At most select",
+		"ko": "선택만 가능",
+		"ja": "せいぜい選ぶことしかできません"
+	},
+	"9za22c8": {
+		"zh-cn": "是否删除该图片？",
+		"en": "Do you want to delete the picture?",
+		"ko": "이 그림을 삭제하시겠습니까?",
+		"ja": "画像を削除しますか?"
+	},
+	"t1177x8": {
+		"zh-cn": "订单类型不能为空",
+		"en": "The order type cannot be empty",
+		"ko": "주문 형식은 비어 있을 수 없습니다",
+		"ja": "註文タイプを空にすることはできません。"
+	},
+	"bycfzl4": {
+		"zh-cn": "导出订单",
+		"en": "Export order",
+		"ko": "주문서 내보내기",
+		"ja": "註文を導出します。"
+	},
+	"hytrc34": {
+		"zh-cn": "订单类型",
+		"en": "Order type",
+		"ko": "주문서 종류",
+		"ja": "註文タイプです"
+	},
+	"l72nr3": {
+		"zh-cn": "请选择",
+		"en": "Please select",
+		"ko": "선택하십시오",
+		"ja": "選択をお願いします"
+	},
+	"dhk87j4": {
+		"zh-cn": "时间范围",
+		"en": "Time frame",
+		"ko": "시간 범위",
+		"ja": "時間範囲です"
+	},
+	"g3ge2": {
+		"zh-cn": "导出",
+		"en": "derive",
+		"ko": "내보 내기",
+		"ja": "導出します"
+	},
+	"6wlntpa": {
+		"zh-cn": "图库分类名称不能为空",
+		"en": "The gallery category name cannot be empty",
+		"ko": "갤러리 분류명은 비어 있을 수 없습니다",
+		"ja": "ギャラリーの分類名は空にしてはいけません"
+	},
+	"2en2kg5": {
+		"zh-cn": "请选择图标",
+		"en": "Please select icon",
+		"ko": "아이콘을 선택하십시오",
+		"ja": "アイコンを選択します。"
+	},
+	"14q06a5": {
+		"zh-cn": "+ 添加值",
+		"en": "+ Add value",
+		"ko": "+ 추가 값",
+		"ja": "+追加値です"
+	},
+	"oa4s7g5": {
+		"zh-cn": "推广人列表",
+		"en": "List of promoters",
+		"ko": "프로시저 리스트",
+		"ja": "プロモーター一覧です"
+	},
+	"yqht1h6": {
+		"zh-cn": "推广订单列表",
+		"en": "Promotion order list",
+		"ko": "프로모션 주문 리스트",
+		"ja": "受注リストを普及させます"
+	},
+	"f6y5z34": {
+		"zh-cn": "用户类型",
+		"en": "User type",
+		"ko": "사용자 형식",
+		"ja": "ユーザータイプです"
+	},
+	"ad7d1a4": {
+		"zh-cn": "一级推广",
+		"en": "Primary extension",
+		"ko": "일급 보급",
+		"ja": "一次普及です"
+	},
+	"afor764": {
+		"zh-cn": "二级推广",
+		"en": "Secondary extension",
+		"ko": "2 급 보급",
+		"ja": "二次普及です"
+	},
+	"f24553": {
+		"zh-cn": "推广数",
+		"en": "Generalization number",
+		"ko": "보급수",
+		"ja": "一般化数です"
+	},
+	"o17lui5": {
+		"zh-cn": "推广订单数",
+		"en": "Promotional order number",
+		"ko": "주문량을 확대하다",
+		"ja": "註文数を広めることです"
+	},
+	"gdqvl34": {
+		"zh-cn": "绑定时间",
+		"en": "Binding time",
+		"ko": "바인딩 시간",
+		"ja": "バインディングタイム"
+	},
+	"9utd729": {
+		"zh-cn": "用户名|昵称|手机",
+		"en": "User name | nickname | mobile phone",
+		"ko": "휴대전화 사용자 이름 닉네임 | |",
+		"ja": "携帯ユーザー名爱称| |"
+	},
+	"c5xh737": {
+		"zh-cn": "该用户已被删除",
+		"en": "The user has been deleted",
+		"ko": "이 사용자는 이미 삭제되었다",
+		"ja": "当該ユーザーは削除されました"
+	},
+	"i5z22": {
+		"zh-cn": "时间",
+		"en": "time",
+		"ko": "시간",
+		"ja": "時間です"
+	},
+	"iheptn4": {
+		"zh-cn": "返佣金额",
+		"en": "Commission rebate",
+		"ko": "수수료반환액",
+		"ja": "還元口銭額"
+	},
+	"i3trb34": {
+		"zh-cn": "请求失败",
+		"en": "Request failed",
+		"ko": "요청 실패",
+		"ja": "失敗をお願いします"
+	},
+	"pg1ft8d": {
+		"zh-cn": "非法token，请先登录！",
+		"en": "Illegal token, please login first!",
+		"ko": "불법 토큰, 먼저 로그인하세요!",
+		"ja": "不正なトークン、先にログインしてください!"
+	},
+	"5ey1u67": {
+		"zh-cn": "旧密码不能为空",
+		"en": "The old password cannot be empty",
+		"ko": "이전 암호는 비어 있을 수 없습니다",
+		"ja": "古いパスワードは空にすることはできません。"
+	},
+	"vcj2dh7": {
+		"zh-cn": "新密码不能为空",
+		"en": "The new password cannot be empty",
+		"ko": "새 암호는 비어 있을 수 없습니다",
+		"ja": "新しいパスワードは空にできません。"
+	},
+	"vau9z58": {
+		"zh-cn": "确认密码不能为空",
+		"en": "Confirm that the password cannot be empty",
+		"ko": "비밀번호가 비어 있으면 안 됩니다",
+		"ja": "パスワードが空にならないことを確認します。"
+	},
+	"wkl37nc": {
+		"zh-cn": "修改密码成功，请重新登录",
+		"en": "The password is changed successfully. Please log in again",
+		"ko": "비밀번호 변경에 성공했습니다. 다시 로그인하십시오",
+		"ja": "パスワードの変更に成功しましたので、再ログインしてください"
+	},
+	"8ce1ro7": {
+		"zh-cn": "是否退出登录？",
+		"en": "Do you want to log out?",
+		"ko": "로그아웃하시겠습니까?",
+		"ja": "ログアウトしますか?"
+	},
+	"uoj6p25": {
+		"zh-cn": "已退出登录",
+		"en": "Logged out",
+		"ko": "로그아웃됨",
+		"ja": "ログアウトしました"
+	},
+	"b4axrv4": {
+		"zh-cn": "商品选择",
+		"en": "Commodity selection",
+		"ko": "상품 선택",
+		"ja": "商品の選択です"
+	},
+	"x8u9qv5": {
+		"zh-cn": "价格(元)",
+		"en": "Price (Yuan)",
+		"ko": "가격 (위안)",
+		"ja": "価格(元)です。"
+	},
+	"htig084": {
+		"zh-cn": "规格选项",
+		"en": "Specification options",
+		"ko": "규격 옵션",
+		"ja": "仕様オプション"
+	},
+	"9qqrvf8": {
+		"zh-cn": "是否删除该选项？",
+		"en": "Do you want to delete this option?",
+		"ko": "이 옵션을 삭제하시겠습니까?",
+		"ja": "削除しますか?"
+	},
+	"e85ccd4": {
+		"zh-cn": "添加规格",
+		"en": "Add specification",
+		"ko": "규격 추가",
+		"ja": "仕様を追加します。"
+	},
+	"hthkrs4": {
+		"zh-cn": "规格设置",
+		"en": "Specification setting",
+		"ko": "규격 설정",
+		"ja": "仕様設定です"
+	},
+	"dzufn3": {
+		"zh-cn": "属性值",
+		"en": "Attribute value",
+		"ko": "속성 값",
+		"ja": "属性値です"
+	},
+	"m8lft3": {
+		"zh-cn": "销售价",
+		"en": "Selling price",
+		"ko": "판매가격",
+		"ja": "販売価格です"
+	},
+	"e6yyn3": {
+		"zh-cn": "市场价",
+		"en": "Market price",
+		"ko": "시장 가격",
+		"ja": "市場価格です"
+	},
+	"ev2aj3": {
+		"zh-cn": "成本价",
+		"en": "Cost price",
+		"ko": "원가",
+		"ja": "原価です"
+	},
+	"gl5x2": {
+		"zh-cn": "库存",
+		"en": "inventory",
+		"ko": "재고",
+		"ja": "在庫です"
+	},
+	"e5to2": {
+		"zh-cn": "体积",
+		"en": "volume",
+		"ko": "부피 가",
+		"ja": "体積です"
+	},
+	"pllu2": {
+		"zh-cn": "重量",
+		"en": "weight",
+		"ko": "무게",
+		"ja": "重さです"
+	},
+	"m9wr2": {
+		"zh-cn": "编码",
+		"en": "encoding",
+		"ko": "인 코딩",
+		"ja": "コード化です"
+	},
+	"evvycm4": {
+		"zh-cn": "物流信息",
+		"en": "Logistics information",
+		"ko": "물류 정보",
+		"ja": "物流情報です"
+	},
+	"za09me5": {
+		"zh-cn": "物流公司:",
+		"en": "Logistics Company:",
+		"ko": "물류 회사:",
+		"ja": "物流会社です:"
+	},
+	"zaac745": {
+		"zh-cn": "物流单号:",
+		"en": "Logistics number:",
+		"ko": "물류 송장 번호:",
+		"ja": "配送番号です。"
+	},
+	"45gfo488": {
+		"zh-cn": "微软雅黑=Microsoft YaHei,Helvetica Neue,PingFang SC,sans-serif;苹果苹方 = PingFang SC, Microsoft YaHei, sans- serif; 宋体 = simsun, serif; 仿宋体 =  FangSong, serif; 黑体 = SimHei, sans - serif; Arial = arial, helvetica, sans - serif;Arial Black = arial black, avant garde;Book Antiqua = book antiqua, palatino;",
+		"en": "Microsoft YaHei,Helvetica Neue,PingFang SC,sans-serif; Apple = PingFang SC, Microsoft YaHei, sans-serif; Song typeface = simsun, serif; FangSong = FangSong, serif; Bold = SimHei, sans-serif; Arial = arial, helvetica, sans - serif; Arial Black = arial black, avant garde; Book Antiqua = book antiqua, palatino;",
+		"ko": "helvetica neue, pingfang sc,sans-serif, microsoft yahei, microsoft yahei, helvetica neue, pingfang sc,sans-serif;pingfang sc, microsoft yahei, sans-serif;serif, simsun, serif;serif, fangsong;고딕체 = simhei, sans-serif;arial = arial, helvetica, sans-serif;arial black = arial black, avant garde;책 antiqua = book antiqua, palatino.",
+		"ja": "Microsoft YaHei,Helvetica Neue,PingFang SC,sans-serif;リンゴピン= PingFang SC、Microsoft YaHei、sans-serifです。明朝体= simsun, serifです。擬明体= FangSong, serif;です。ゴシック= SimHei, sans-serifです。Arial = Arial、helvetica、sans-serifです。Arial Black = Arial Black, avant garde;Book Antiqua = Book Antiqua, palatinoです"
+	},
+	"cxlgyk4": {
+		"zh-cn": "插入图片",
+		"en": "Insert picture",
+		"ko": "그림 삽입",
+		"ja": "画像を挿入します。"
+	},
+	"9zyisg8": {
+		"zh-cn": "是否删除该分类？",
+		"en": "Do you want to delete the category?",
+		"ko": "분류를 삭제하시겠습니까?",
+		"ja": "分類を削除しますか?"
+	},
+	"hd6r5d7": {
+		"zh-cn": "将文件拖到此处",
+		"en": "Drag the file here",
+		"ko": "서류를 여기로 끌어 놓으세요",
+		"ja": "書類をここまで引っ張ってきます"
+	},
+	"xf4ke2n": {
+		"zh-cn": "只能上传jpg/png文件，且不超过500kb",
+		"en": "Only jpg/png files with a maximum size of 500kb can be uploaded",
+		"ko": "500kb 이하의 jpg/png 파일만 업로드 가능합니다",
+		"ja": "jpg/pngファイルのみ、500kbまでアップロードできます。"
+	},
+	"a6dm224": {
+		"zh-cn": "上传失败",
+		"en": "Upload failure",
+		"ko": "업로드 실패",
+		"ja": "アップロード失敗しました"
+	},
+	"ltvak3": {
+		"zh-cn": "选项值",
+		"en": "Option value",
+		"ko": "옵션 값",
+		"ja": "オプション値です"
+	},
+	"lvkmky7": {
+		"zh-cn": "+ 添加选项值",
+		"en": "+ Add option values",
+		"ko": "옵션 값을 추가한다",
+		"ja": "+オプション値を追加します"
+	},
+	"hti5fc4": {
+		"zh-cn": "规格选择",
+		"en": "Specification selection",
+		"ko": "규격 선택",
+		"ja": "仕様選択です"
+	}
+}
