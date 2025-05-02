@@ -9,7 +9,7 @@
 <style>
 /* 修改全局滚动条颜色为浅粉色 --使用腾讯云AI */
 ::-webkit-scrollbar-thumb {
-  background: #E0C3FC !important; /* 设置滚动条滑块颜色为橙色 */
+  background: #E0C3FC !important; /* 设置滚动条滑块颜色为浅粉色 */
   cursor: pointer;
   border-radius: 8px;
 }
