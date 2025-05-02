@@ -30,7 +30,7 @@ import permission from '~/directives/permission.js'
 app.use(permission)
 
 // 切换语言
-localStorage.setItem('lang', 'ja')
+// localStorage.setItem('lang', 'zh')
 // 重新加载页面使语言切换生效
 // window.location.reload()
 

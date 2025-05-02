@@ -45,6 +45,13 @@
         'en': (globalThis && globalThis.lang && globalThis.lang.en) ? globalThis.lang.en : globalThis._getJSONKey('en', langJSON),
 'ko': (globalThis && globalThis.lang && globalThis.lang.ko) ? globalThis.lang.ko : globalThis._getJSONKey('ko', langJSON),
 'ja': (globalThis && globalThis.lang && globalThis.lang.ja) ? globalThis.lang.ja : globalThis._getJSONKey('ja', langJSON),
+'ru': (globalThis && globalThis.lang && globalThis.lang.ru) ? globalThis.lang.ru : globalThis._getJSONKey('ru', langJSON),
+'fr': (globalThis && globalThis.lang && globalThis.lang.fr) ? globalThis.lang.fr : globalThis._getJSONKey('fr', langJSON),
+'de': (globalThis && globalThis.lang && globalThis.lang.de) ? globalThis.lang.de : globalThis._getJSONKey('de', langJSON),
+'es': (globalThis && globalThis.lang && globalThis.lang.es) ? globalThis.lang.es : globalThis._getJSONKey('es', langJSON),
+'pt': (globalThis && globalThis.lang && globalThis.lang.pt) ? globalThis.lang.pt : globalThis._getJSONKey('pt', langJSON),
+'it': (globalThis && globalThis.lang && globalThis.lang.it) ? globalThis.lang.it : globalThis._getJSONKey('it', langJSON),
+'th': (globalThis && globalThis.lang && globalThis.lang.th) ? globalThis.lang.th : globalThis._getJSONKey('th', langJSON),
 'zhcn': (globalThis && globalThis.lang && globalThis.lang.zhcn) ? globalThis.lang.zhcn : globalThis._getJSONKey('zh-cn', langJSON)
     };
     // 存储语言是否存在

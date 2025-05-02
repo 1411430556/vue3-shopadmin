@@ -5,7 +5,6 @@
 <template>
   <router-view></router-view>
 </template>
-
 <style>
 /* 修改全局滚动条颜色为浅粉色 --使用腾讯云AI */
 ::-webkit-scrollbar-thumb {
