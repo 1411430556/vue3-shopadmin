@@ -38,7 +38,7 @@ export default defineConfig({
     }),
     CodeInspectorPlugin({
       bundler: 'vite',
-      // editor: 'trae',
+      editor: 'trae',
     }),
     vitePluginsAutoI18n({
       targetLangList: ['en', 'ko', 'ja', 'ru', 'fr', 'de', 'es', 'pt', 'it', 'th'],
