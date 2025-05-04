@@ -43,8 +43,8 @@ export default defineConfig({
     vitePluginsAutoI18n({
       targetLangList: ['en', 'ko', 'ja', 'ru', 'fr', 'de', 'es', 'pt', 'it', 'th'],
       translator: new YoudaoTranslator({
-        appId: '6612167413defbe1',
-        appKey: 'sxe5oBv5ovnE7xiFkNNRNfADjFEZLKie',
+        appId: process.env.VITE_YOUDAO_APP_ID,
+        appKey: process.env.VITE_YOUDAO_APP_KEY,
       }),
     }),
   ],
