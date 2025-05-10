@@ -34,7 +34,7 @@ const routes = [
     path: '/login',
     component: Login,
     meta: {
-      title: '请登录呀',
+      title: '请登录',
     },
   },
   {
