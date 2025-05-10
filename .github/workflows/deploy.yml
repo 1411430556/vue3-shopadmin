@@ -19,14 +19,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Create .env file
-        run: |
-          echo "VUE_APP_YOUDAO_ID=$YOUDAO_ID" > .env
-          echo "VUE_APP_YOUDAO_KEY=$YOUDAO_KEY" >> .env
-        env:
-          YOUDAO_ID: ${{ secrets.VITE_YOUDAO_APP_ID }}
-          YOUDAO_KEY: ${{ secrets.VITE_YOUDAO_APP_KEY }}
-
       - name: Build Vue project
         run: npm run build # 假设你的构建命令是 npm run build
 
