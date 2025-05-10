@@ -2,7 +2,7 @@ name: Deploy Vue Project
 
 on:
   push:
-    branches: [ main ] # 触发分支，根据你的分支名称调整
+    branches: [ master ] # 触发分支，根据你的分支名称调整
 
 jobs:
   deploy:
