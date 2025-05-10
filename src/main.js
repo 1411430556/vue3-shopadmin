@@ -1,4 +1,4 @@
-import '../lang/index.js'
+// import '../lang/index.js'
 import { createApp } from 'vue'
 import App from './App.vue'
 // 引入Element-plus

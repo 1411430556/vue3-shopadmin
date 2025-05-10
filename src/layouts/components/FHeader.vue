@@ -27,7 +27,7 @@
     }
   }
 
-  // 刷新逻辑
+  /* // 刷新逻辑
   const handleRefresh = () => location.reload()
 
   // 切换语言(排除下列文字的翻译)
@@ -45,58 +45,58 @@
 
   const changeLanguageChinese = () => {
     localStorage.setItem('lang', 'zh')
-    location.reload()
+    handleRefresh()
   }
 
   const changeLanguageEnglish = () => {
     localStorage.setItem('lang', 'en')
-    location.reload()
+    handleRefresh()
   }
 
   const changeLanguageJapanese = () => {
     localStorage.setItem('lang', 'ja')
-    location.reload()
+    handleRefresh()
   }
 
   const changeLanguageKorean = () => {
     localStorage.setItem('lang', 'ko')
-    location.reload()
+    handleRefresh()
   }
 
   const changeLanguageRussian = () => {
     localStorage.setItem('lang', 'ru')
-    location.reload()
+    handleRefresh()
   }
 
   const changeLanguageFrench = () => {
     localStorage.setItem('lang', 'fr')
-    location.reload()
+    handleRefresh()
   }
 
   const changeLanguageGerman = () => {
     localStorage.setItem('lang', 'de')
-    location.reload()
+    handleRefresh()
   }
 
   const changeLanguageSpanish = () => {
     localStorage.setItem('lang', 'es')
-    location.reload()
+    handleRefresh()
   }
 
   const changeLanguagePortuguese = () => {
     localStorage.setItem('lang', 'pt')
-    location.reload()
+    handleRefresh()
   }
 
   const changeLanguageItalian = () => {
     localStorage.setItem('lang', 'it')
-    location.reload()
+    handleRefresh()
   }
 
   const changeLanguageThai = () => {
     localStorage.setItem('lang', 'th')
-    location.reload()
-  }
+    handleRefresh()
+  } */
 </script>
 
 <template>
@@ -126,8 +126,8 @@
       </el-icon>
     </el-tooltip>
 
-    <!--语言切换  -->
-    <el-dropdown>
+    <!-- 语言切换 -->
+    <!-- <el-dropdown>
       <span class="el-dropdown-link">
         切换语言
         <el-icon class="el-icon--right">
@@ -149,7 +149,7 @@
           <el-dropdown-item @click="changeLanguageThai()">{{ Thai }}</el-dropdown-item>
         </el-dropdown-menu>
       </template>
-    </el-dropdown>
+    </el-dropdown> -->
 
     <!--右侧-->
     <div class="ml-auto flex items-center">

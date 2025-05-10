@@ -1,4 +1,4 @@
-import vitePluginsAutoI18n, { YoudaoTranslator } from 'vite-auto-i18n-plugin'
+// import vitePluginsAutoI18n, { YoudaoTranslator } from 'vite-auto-i18n-plugin'
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -43,13 +43,13 @@ export default defineConfig(({ mode }) => {
         bundler: 'vite',
         editor: 'trae',
       }),
-      vitePluginsAutoI18n({
+      /* vitePluginsAutoI18n({
         targetLangList: ['en', 'ko', 'ja', 'ru', 'fr', 'de', 'es', 'pt', 'it', 'th'],
         translator: new YoudaoTranslator({
           appId: env.VITE_YOUDAO_APP_ID,
           appKey: env.VITE_YOUDAO_APP_KEY,
         }),
-      }),
+      }), */
     ],
   }
 })
