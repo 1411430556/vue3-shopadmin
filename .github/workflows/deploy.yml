@@ -1,0 +1,47 @@
+name: Deploy Vue Project
+
+on:
+  push:
+    branches: [ main ] # 触发分支，根据你的分支名称调整
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20 # 使用你项目所需的 Node.js 版本
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Create .env file
+        run: |
+          echo "VUE_APP_YOUDAO_ID=$YOUDAO_ID" > .env
+          echo "VUE_APP_YOUDAO_KEY=$YOUDAO_KEY" >> .env
+        env:
+          YOUDAO_ID: ${{ secrets.YOUDAO_ID }}
+          YOUDAO_KEY: ${{ secrets.YOUDAO_KEY }}
+
+      - name: Build Vue project
+        run: npm run build # 假设你的构建命令是 npm run build
+
+      - name: Deploy to server via SSH
+        env:
+          SERVER_IP: ${{ secrets.SERVER_IP }}
+          SERVER_USER: ${{ secrets.SERVER_USER }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: |
+          # 配置 SSH 密钥
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          echo -e "Host *\n\tStrictHostKeyChecking no" > ~/.ssh/config
+
+          # 上传构建文件到服务器（使用 scp，可替换为 rsync）
+          scp -r ./dist/* "$SERVER_USER"@"$SERVER_IP":"$DEPLOY_PATH"
