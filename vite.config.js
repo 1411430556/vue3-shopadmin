@@ -43,13 +43,13 @@ export default defineConfig(({ mode }) => {
         bundler: 'vite',
         editor: 'trae',
       }),
-      // vitePluginsAutoI18n({
-      //   targetLangList: ['en', 'ko', 'ja', 'ru', 'fr', 'de', 'es', 'pt', 'it', 'th'],
-      //   translator: new YoudaoTranslator({
-      //     appId: env.VITE_YOUDAO_APP_ID,
-      //     appKey: env.VITE_YOUDAO_APP_KEY,
-      //   }),
-      // }),
+      vitePluginsAutoI18n({
+        targetLangList: ['en', 'ko', 'ja', 'ru', 'fr', 'de', 'es', 'pt', 'it', 'th'],
+        translator: new YoudaoTranslator({
+          appId: env.VITE_YOUDAO_APP_ID,
+          appKey: env.VITE_YOUDAO_APP_KEY,
+        }),
+      }),
     ],
   }
 })
