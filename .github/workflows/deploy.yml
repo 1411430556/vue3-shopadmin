@@ -19,6 +19,9 @@ jobs:
         with:
           node-version: 20 # 使用你项目所需的 Node.js 版本
 
+      - name: Check the node version    
+        run: npm --version
+
       - name: Install dependencies
         run: npm install
 
