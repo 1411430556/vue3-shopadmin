@@ -1,34 +1,34 @@
-name: Deploy Vue Project
+name: 部署Vue项目
 
 on:
   push:
     branches: [ master ] # 触发分支，根据你的分支名称调整
 
-  # Allows you to run this workflow manually from the Actions tab
+  # 允许您从 “Actions” 选项卡手动运行此工作流
   workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: 检验代码
         uses: actions/checkout@v4
 
-      - name: Use Node.js
+      - name: 使用 Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20 # 使用你项目所需的 Node.js 版本
 
-      - name: Check the node version    
+      - name: 检查 Node 版本   
         run: npm --version
 
-      - name: Install dependencies
+      - name: 安装依赖关系
         run: npm install
 
-      - name: Build Vue project
+      - name: 构建 Vue 项目
         run: npm run build # 假设你的构建命令是 npm run build
 
-      - name: Deploy to server via SSH
+      - name: 通过 SSH 部署到服务器
         env:
           SERVER_IP: ${{ secrets.SERVER_IP }}
           SERVER_USER: ${{ secrets.SERVER_USER }}
