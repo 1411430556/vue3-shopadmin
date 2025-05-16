@@ -1,0 +1,322 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Vue3 Shop Admin - 前端开发模式与最佳实践
+
+本文档详细介绍电商后台管理系统的前端开发模式、最佳实践和技术应用，帮助开发者理解项目的设计思路和技术选型。
+
+## 组合式API (Composition API) 实践
+
+项目全面采用Vue 3的组合式API开发，以提高代码的可维护性和可复用性。
+
+### 常用模式
+
+在组件中采用以下模式：
+
+```javascript
+<script setup>
+// 引入必要的API
+import { ref, reactive, computed, onMounted, watch } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
+import { useStore } from 'vuex'
+
+// 引入自定义Hook
+import { useCommon } from '~/composables/useCommon'
+
+// 引入API
+import { getList, update, create, destroy } from '~/api/module'
+
+// 状态管理
+const store = useStore()
+const router = useRouter()
+const route = useRoute()
+
+// 响应式数据
+const form = reactive({})
+const loading = ref(false)
+const tableData = ref([])
+
+// 计算属性
+const title = computed(() => form.id ? '编辑' : '新增')
+
+// 生命周期钩子
+onMounted(() => {
+  getData()
+})
+
+// 方法
+const getData = () => {
+  // ...
+}
+
+// 自定义逻辑封装
+const { 
+  currentPage, 
+  total, 
+  getData, 
+  handleDelete 
+} = useCommon({
+  getList,
+  delete: destroy
+})
+</script>
+```
+
+### 自定义Hook模式
+
+项目中的自定义Hook主要位于 [src/composables](mdc:src/composables) 目录，遵循以下设计原则：
+
+1. **单一职责原则**：每个Hook只负责一个功能领域
+2. **可组合性**：多个Hook可以组合使用
+3. **内聚性**：Hook内部的函数和状态紧密相关
+
+例如通用CRUD操作Hook：[useCommon.js](mdc:src/composables/useCommon.js)
+
+```javascript
+export function useCommon({ getList, delete: deleteAction }) {
+  const loading = ref(false)
+  const list = ref([])
+  const currentPage = ref(1)
+  const total = ref(0)
+  
+  // 获取数据
+  const getData = () => {
+    loading.value = true
+    return getList(currentPage.value)
+      .then(res => {
+        // ...处理响应
+      })
+      .finally(() => {
+        loading.value = false
+      })
+  }
+  
+  // 删除数据
+  const handleDelete = (id) => {
+    // ...
+  }
+  
+  return {
+    loading,
+    list,
+    currentPage,
+    total,
+    getData,
+    handleDelete
+  }
+}
+```
+
+## 组件设计模式
+
+### 通用组件设计
+
+项目组件遵循以下设计原则：
+
+1. **高内聚低耦合**：组件内功能紧密相关，减少外部依赖
+2. **单一职责**：一个组件只做一件事
+3. **可配置性**：通过props提供灵活的配置选项
+4. **统一的事件通信**：使用emit进行父子组件通信
+
+例如表单抽屉组件：[FormDrawer.vue](mdc:src/components/FormDrawer.vue)
+
+```vue
+<template>
+  <el-drawer v-model="showDrawer" :title="title" :size="size" :destroy-on-close="destroyOnClose" @close="close">
+    <div class="formDrawer">
+      <div class="body">
+        <slot></slot>
+      </div>
+      <div class="actions">
+        <el-button type="primary" @click="submit" :loading="loading">{{ confirmText }}</el-button>
+        <el-button type="default" @click="close">取消</el-button>
+      </div>
+    </div>
+  </el-drawer>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+
+const props = defineProps({
+  title: String,
+  size: {
+    type: String,
+    default: '45%'
+  },
+  destroyOnClose: {
+    type: Boolean,
+    default: false
+  },
+  confirmText: {
+    type: String,
+    default: '提交'
+  }
+})
+
+const emit = defineEmits(['submit'])
+
+// 状态
+const showDrawer = ref(false)
+const loading = ref(false)
+
+// 方法
+const open = () => {
+  showDrawer.value = true
+}
+
+const close = () => {
+  showDrawer.value = false
+}
+
+const submit = () => {
+  emit('submit')
+}
+
+// 向父组件暴露方法
+defineExpose({
+  open,
+  close,
+  showLoading: () => loading.value = true,
+  hideLoading: () => loading.value = false
+})
+</script>
+```
+
+### 组件通信模式
+
+项目中采用多种组件通信方式：
+
+1. **Props & Emits**：父子组件基本通信
+2. **Provide & Inject**：跨层级组件通信
+3. **Vuex**：全局状态管理
+4. **事件总线**：跨组件事件通信（使用mitt库）
+
+## 路由组织与懒加载
+
+路由配置位于 [src/router/index.js](mdc:src/router/index.js)，采用以下策略：
+
+1. **模块化路由**：按功能模块组织路由
+2. **路由懒加载**：优化首屏加载时间
+
+```javascript
+// 路由懒加载示例
+const routes = [
+  {
+    path: '/login',
+    component: () => import('~/pages/Login.vue'),
+    meta: {
+      title: '登录页'
+    }
+  }
+]
+```
+
+## 状态管理最佳实践
+
+Vuex状态管理位于 [src/store/index.js](mdc:src/store/index.js)，采用以下最佳实践：
+
+1. **状态分类**：用户状态、应用状态等分类管理
+2. **getters计算**：使用getters处理派生状态
+3. **action异步操作**：所有异步操作封装在action中
+
+```javascript
+const store = createStore({
+  state() {
+    return {
+      // 用户信息
+      user: {},
+      // 侧边栏宽度
+      asideWidth: '250px'
+    }
+  },
+  mutations: {
+    // 设置用户信息
+    SET_USERINFO(state, user) {
+      state.user = user
+    },
+    // 设置侧边栏宽度
+    SET_ASIDEWIDTH(state) {
+      state.asideWidth = state.asideWidth === '250px' ? '64px' : '250px'
+    }
+  },
+  actions: {
+    // 获取用户信息
+    getInfo({commit}) {
+      return new Promise((resolve, reject) => {
+        getinfo().then(res => {
+          commit('SET_USERINFO', res)
+          resolve(res)
+        }).catch(err => reject(err))
+      })
+    }
+  }
+})
+```
+
+## UI组件库使用
+
+项目使用Element Plus组件库，并通过以下方式优化：
+
+1. **按需引入**：使用unplugin-vue-components实现自动导入
+2. **主题定制**：自定义组件样式和主题
+3. **组件封装**：在Element Plus基础上封装业务组件
+
+## CSS最佳实践
+
+项目使用WindiCSS进行样式管理，采用以下最佳实践：
+
+1. **原子化CSS**：使用预定义的工具类快速构建UI
+2. **响应式设计**：使用WindiCSS的响应式前缀
+3. **主题变量**：使用CSS变量实现主题切换
+
+```html
+<!-- WindiCSS原子类示例 -->
+<div class="flex items-center justify-between p-4 md:p-6 bg-white dark:bg-gray-800">
+  <h2 class="text-xl font-bold text-gray-800 dark:text-white">标题</h2>
+  <el-button type="primary">按钮</el-button>
+</div>
+```
+
+## 数据请求与处理
+
+使用Axios进行数据请求，位于 [src/axios.js](mdc:src/axios.js)，采用以下最佳实践：
+
+1. **统一配置**：基础URL、超时、拦截器等统一配置
+2. **请求/响应拦截**：统一处理认证、错误等
+3. **模块化API**：按功能模块组织API请求
+4. **响应处理**：统一的响应数据格式处理
+
+```javascript
+// 请求拦截器
+axios.interceptors.request.use(
+  config => {
+    // 添加token
+    const token = getToken()
+    if (token) {
+      config.headers['token'] = token
+    }
+    return config
+  },
+  error => {
+    return Promise.reject(error)
+  }
+)
+
+// 响应拦截器
+axios.interceptors.response.use(
+  response => {
+    // 处理响应数据
+    return response.data.data
+  },
+  error => {
+    // 统一错误处理
+    const msg = error.response.data.msg || '请求失败'
+    toast(msg, 'error')
+    return Promise.reject(error)
+  }
+)
+```
+

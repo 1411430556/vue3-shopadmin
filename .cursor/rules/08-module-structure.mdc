@@ -1,0 +1,173 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Vue3 Shop Admin - 核心业务模块结构
+
+本文档详细介绍电商后台管理系统的核心业务模块结构，帮助开发者理解各模块功能和实现。
+
+## 商品管理模块
+
+商品管理是电商系统的核心功能，该模块位于 [src/pages/goods](mdc:src/pages/goods) 目录：
+
+```
+goods/
+├── components/           # 商品相关组件
+│   ├── SkuCard.vue       # SKU卡片组件
+│   ├── SkuCardItem.vue   # SKU卡片项组件
+│   └── SkuTable.vue      # SKU表格组件
+├── list.vue              # 商品列表页面
+├── content.vue           # 商品内容编辑
+├── skus.vue              # 商品规格管理
+└── banners.vue           # 商品轮播图
+```
+
+### 商品列表页面
+
+[goods/list.vue](mdc:src/pages/goods/list.vue) 实现商品的增删改查功能：
+
+- 商品搜索与筛选
+- 商品状态切换（上架/下架）
+- 商品添加、编辑、删除
+- 商品分页显示
+
+### 商品规格管理
+
+商品规格（SKU）管理功能通过以下组件实现：
+
+- [components/SkuCard.vue](mdc:src/pages/goods/components/SkuCard.vue) - SKU规格卡片
+- [components/SkuCardItem.vue](mdc:src/pages/goods/components/SkuCardItem.vue) - SKU规格值项
+- [components/SkuTable.vue](mdc:src/pages/goods/components/SkuTable.vue) - SKU规格表格
+
+该功能允许商家设置商品的多种规格组合，如颜色、尺寸等。
+
+## 订单管理模块
+
+订单管理模块位于 [src/pages/order](mdc:src/pages/order) 目录，实现订单的查询、处理和统计功能：
+
+```
+order/
+└── list.vue              # 订单列表页面
+```
+
+订单列表页面功能包括：
+
+- 订单搜索与筛选
+- 订单状态查看与更新
+- 订单发货管理
+- 订单统计数据
+
+## 用户管理模块
+
+用户管理模块位于 [src/pages/user](mdc:src/pages/user) 目录，实现用户的管理功能：
+
+```
+user/
+└── list.vue              # 用户列表页面
+```
+
+用户管理功能包括：
+
+- 用户信息查看
+- 用户状态管理
+- 用户数据统计
+
+## 权限管理模块
+
+权限管理由三个子模块组成：
+
+1. **管理员管理**：[src/pages/manager](mdc:src/pages/manager)
+   ```
+   manager/
+   └── list.vue           # 管理员列表
+   ```
+
+2. **角色管理**：[src/pages/role](mdc:src/pages/role)
+   ```
+   role/
+   └── list.vue           # 角色列表
+   ```
+
+3. **权限菜单**：[src/pages/access](mdc:src/pages/access)
+   ```
+   access/
+   └── list.vue           # 权限菜单列表
+   ```
+
+权限管理实现了RBAC（基于角色的访问控制）模型：
+
+- 管理员关联角色
+- 角色关联权限
+- 权限控制菜单和按钮
+
+## 营销管理模块
+
+营销管理包括优惠券和分销两部分：
+
+1. **优惠券管理**：[src/pages/coupon](mdc:src/pages/coupon)
+   ```
+   coupon/
+   └── list.vue           # 优惠券列表
+   ```
+
+2. **分销管理**：[src/pages/distribution](mdc:src/pages/distribution)
+   ```
+   distribution/
+   ├── index.vue          # 分销员管理
+   └── setting.vue        # 分销设置
+   ```
+
+## 系统设置模块
+
+系统设置模块位于 [src/pages/setting](mdc:src/pages/setting) 目录，提供各种系统配置功能：
+
+```
+setting/
+├── base.vue              # 基础设置
+├── buy.vue               # 支付设置
+└── ship.vue              # 物流设置
+```
+
+设置模块允许管理员配置：
+
+- 商城基础信息（名称、Logo等）
+- 支付方式（微信支付、支付宝等）
+- 物流配送方式与费用
+
+## 内容管理模块
+
+内容管理包括商品评价和公告管理：
+
+1. **评价管理**：[src/pages/comment](mdc:src/pages/comment)
+   ```
+   comment/
+   └── list.vue           # 评价列表
+   ```
+
+2. **公告管理**：[src/pages/notice](mdc:src/pages/notice)
+   ```
+   notice/
+   └── list.vue           # 公告列表
+   ```
+
+## 图片管理模块
+
+图片管理模块位于 [src/pages/image](mdc:src/pages/image) 目录，提供图片上传和管理功能：
+
+```
+image/
+└── list.vue              # 图片列表
+```
+
+图片管理使用了两个核心组件：
+
+- [ImageAside.vue](mdc:src/components/ImageAside.vue) - 图片分类侧边栏
+- [ImageMain.vue](mdc:src/components/ImageMain.vue) - 图片主区域
+
+该模块允许用户：
+
+- 创建图片分类
+- 上传和管理图片
+- 在其他模块中选择和使用图片
+
