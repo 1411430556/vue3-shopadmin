@@ -1,0 +1,214 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Vue3 Shop Admin - 组件模式与最佳实践
+
+该项目采用Vue 3组合式API (Composition API)开发，结合Element Plus组件库，形成了一套统一的组件开发模式。
+
+## 组件目录结构
+
+- [src/components](mdc:src/components) - 通用组件
+- [src/pages](mdc:src/pages) - 页面组件，按功能模块组织
+
+## 基本组件模式
+
+项目组件采用以下模式：
+
+```vue
+<template>
+  <!-- 使用Element Plus组件 -->
+  <el-card shadow="never" class="border-0">
+    <!-- 头部搜索和操作区 -->
+    <div class="flex items-center justify-between mb-4">
+      <el-button type="primary" @click="handleCreate">新增</el-button>
+      <el-tooltip effect="dark" content="刷新数据" placement="top">
+        <el-button text @click="getData">
+          <el-icon><Refresh /></el-icon>
+        </el-button>
+      </el-tooltip>
+    </div>
+
+    <!-- 数据表格 -->
+    <el-table :data="tableData" stripe style="width: 100%" v-loading="loading">
+      <!-- 表格列 -->
+      <el-table-column prop="column1" label="列1" />
+      <el-table-column prop="column2" label="列2" />
+      
+      <!-- 操作列 -->
+      <el-table-column label="操作" width="180" align="center">
+        <template #default="scope">
+          <el-button type="primary" size="small" @click="handleEdit(scope.row)">
+            修改
+          </el-button>
+          <el-popconfirm title="是否要删除该记录?" @confirm="handleDelete(scope.row.id)">
+            <template #reference>
+              <el-button type="danger" size="small">删除</el-button>
+            </template>
+          </el-popconfirm>
+        </template>
+      </el-table-column>
+    </el-table>
+
+    <!-- 分页 -->
+    <div class="flex items-center justify-center mt-5">
+      <el-pagination background layout="prev, pager, next" 
+                     :total="total" :current-page="currentPage"
+                     @current-change="handlePageChange" />
+    </div>
+
+    <!-- 表单对话框 -->
+    <FormDrawer ref="formDrawerRef" :title="drawerTitle" @submit="handleSubmit">
+      <el-form :model="form" :rules="rules" ref="formRef">
+        <!-- 表单项 -->
+      </el-form>
+    </FormDrawer>
+  </el-card>
+</template>
+
+<script setup>
+// 导入组合式API
+import { ref, reactive, computed, onMounted } from 'vue'
+// 导入自定义Hook
+import { useCommon } from '~/composables/useCommon'
+// 导入API方法
+import { getList, create, update, destroy } from '~/api/module'
+
+// 使用通用CRUD操作
+const { 
+  loading, 
+  currentPage,
+  total,
+  getData,
+  handleDelete
+} = useCommon({
+  getList,
+  delete: destroy
+})
+
+// 表单相关
+const formDrawerRef = ref(null)
+const formRef = ref(null)
+const form = reactive({})
+const rules = {}
+const drawerTitle = computed(() => form.id ? '修改' : '新增')
+
+// 新增操作
+const handleCreate = () => {
+  form.id = 0
+  formDrawerRef.value.open()
+}
+
+// 编辑操作
+const handleEdit = (row) => {
+  Object.assign(form, row)
+  formDrawerRef.value.open()
+}
+
+// 提交表单
+const handleSubmit = () => {
+  formRef.value.validate(valid => {
+    if (!valid) return
+    
+    formDrawerRef.value.showLoading()
+    
+    const action = form.id ? update(form.id, form) : create(form)
+    action.then(() => {
+      getData()
+      formDrawerRef.value.close()
+    }).finally(() => {
+      formDrawerRef.value.hideLoading()
+    })
+  })
+}
+
+// 初始化
+onMounted(() => {
+  getData()
+})
+</script>
+```
+
+## 组件自动导入
+
+项目使用 `unplugin-vue-components` 和 `unplugin-auto-import` 实现组件和API的自动导入：
+
+```javascript
+// vite.config.js
+plugins: [
+  AutoImport({
+    resolvers: [ElementPlusResolver()],
+  }),
+  Components({
+    resolvers: [ElementPlusResolver()],
+  }),
+]
+```
+
+## 组件间通信模式
+
+1. **Props 和 Emits**: 父子组件通信
+2. **Provide/Inject**: 跨层级组件通信
+3. **Vuex**: 全局状态管理
+
+## 通用组合式API (Custom Hooks)
+
+项目封装了多个通用组合式API，例如：
+
+- `useCommon`: 通用的CRUD操作逻辑
+- `useTabList`: 标签页管理逻辑
+- `useSku`: 商品规格管理逻辑
+
+示例 - useCommon:
+
+```javascript
+export function useCommon({
+  getList,
+  delete: deleteAction,
+  updateStatus,
+  dataCallback
+}) {
+  const loading = ref(false)
+  const list = ref([])
+  const currentPage = ref(1)
+  const total = ref(0)
+  
+  // 获取数据
+  const getData = () => {
+    loading.value = true
+    return getList(currentPage.value)
+      .then(res => {
+        total.value = res.totalCount
+        list.value = dataCallback ? dataCallback(res.list) : res.list
+        return res
+      })
+      .finally(() => {
+        loading.value = false
+      })
+  }
+  
+  // 删除
+  const handleDelete = (id) => {
+    loading.value = true
+    return deleteAction(id)
+      .then(() => {
+        toast('删除成功')
+        getData()
+      })
+      .finally(() => {
+        loading.value = false
+      })
+  }
+  
+  return {
+    loading,
+    list,
+    currentPage,
+    total,
+    getData,
+    handleDelete
+  }
+}
+```
+

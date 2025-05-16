@@ -1,0 +1,99 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Vue3 Shop Admin - API管理
+
+项目使用Axios进行API请求管理，接口按功能模块组织。
+
+## API请求配置
+
+API请求的核心配置在 [src/axios.js](mdc:src/axios.js) 中实现，包括：
+
+- 创建Axios实例
+- 请求拦截器（添加Token等）
+- 响应拦截器（处理错误等）
+- 统一响应数据处理
+
+## API模块化组织
+
+API按功能模块组织在 [src/api](mdc:src/api) 目录下：
+
+- [goods.js](mdc:src/api/goods.js) - 商品管理API
+- [order.js](mdc:src/api/order.js) - 订单管理API
+- [user.js](mdc:src/api/user.js) - 用户管理API
+- [manager.js](mdc:src/api/manager.js) - 管理员API
+- [index.js](mdc:src/api/index.js) - 首页和通用API
+
+每个模块按RESTful API规范组织，例如商品管理API的部分代码：
+
+```javascript
+// 商品管理相关API
+import axios from '~/axios'
+
+// 获取商品列表
+export function getGoodsList(page, query = {}) {
+  let q = {}
+  for (const key in query) {
+    if (query[key]) {
+      q[key] = query[key]
+    }
+  }
+  return axios.get(`/admin/goods/${page}`, {
+    params: q
+  })
+}
+
+// 添加商品
+export function createGoods(data) {
+  return axios.post('/admin/goods', data)
+}
+
+// 修改商品
+export function updateGoods(id, data) {
+  return axios.post('/admin/goods/' + id, data)
+}
+
+// 删除商品
+export function deleteGoods(ids) {
+  ids = !Array.isArray(ids) ? [ids] : ids
+  return axios.post('/admin/goods/delete_all', { ids })
+}
+```
+
+## API使用方式
+
+在组件中使用API的一般方式：
+
+```javascript
+import { getGoodsList, deleteGoods } from '~/api/goods'
+
+// 使用组合式API风格调用接口
+const { 
+  loading, 
+  data, 
+  getData 
+} = useCommon({
+  getList: getGoodsList,
+  delete: deleteGoods,
+  // ...其他操作
+})
+```
+
+## 后端代理配置
+
+开发环境的API请求代理配置在 [vite.config.js](mdc:vite.config.js) 中：
+
+```javascript
+server: {
+  proxy: {
+    '/api': {
+      target: 'http://ceshi13.dishait.cn',
+      changeOrigin: true,
+      rewrite: path => path.replace(/^\/api/, ''),
+    },
+  },
+},
+```
+

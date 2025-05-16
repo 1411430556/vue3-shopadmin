@@ -1,0 +1,119 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Vue3 Shop Admin - 状态管理
+
+项目使用Vuex 4进行全局状态管理，主要管理用户信息、权限数据和应用状态。
+
+## Vuex目录结构
+
+Vuex状态管理相关文件位于 [src/store](mdc:src/store) 目录：
+
+- index.js - Store的主入口
+- mutations.js - 所有状态修改方法
+- getters.js - 状态计算属性
+- actions.js - 异步操作
+
+## 主要状态模块
+
+### 用户信息与权限
+
+存储用户登录信息、权限数据、菜单等：
+
+```javascript
+const state = {
+  // 用户信息
+  user: {},
+  // 用户权限菜单
+  menus: [],
+  // 用户权限列表
+  ruleNames: []
+}
+
+// 获取用户信息
+export function getInfo({ commit }) {
+  return new Promise((resolve, reject) => {
+    getinfo().then(res => {
+      commit('SET_USERINFO', res)
+      commit('SET_MENUS', res.menus)
+      commit('SET_RULENAMES', res.ruleNames)
+      resolve(res)
+    }).catch(err => reject(err))
+  })
+}
+```
+
+### 应用状态管理
+
+管理全局加载状态、侧边栏状态等：
+
+```javascript
+const state = {
+  // 侧边栏是否折叠
+  asideWidth: '250px',
+  // 标签导航列表
+  tabList: []
+}
+
+// 设置侧边栏折叠状态
+export const mutations = {
+  SET_ASIDEWIDTH(state) {
+    state.asideWidth = state.asideWidth === '250px' ? '64px' : '250px'
+  },
+  // 添加标签导航
+  ADD_TAB(state, tab) {
+    let noTab = state.tabList.findIndex(item => item.path === tab.path) === -1
+    if (noTab) {
+      state.tabList.push(tab)
+    }
+  }
+}
+```
+
+## 状态的使用
+
+在组件中使用Vuex状态的方式：
+
+```javascript
+import { computed } from 'vue'
+import { useStore } from 'vuex'
+
+export default {
+  setup() {
+    const store = useStore()
+    
+    // 读取状态
+    const user = computed(() => store.state.user)
+    const asideWidth = computed(() => store.state.asideWidth)
+    
+    // 提交变更
+    const toggleAside = () => {
+      store.commit('SET_ASIDEWIDTH')
+    }
+    
+    // 分发Actions
+    const getUserInfo = () => {
+      store.dispatch('getInfo')
+    }
+    
+    return {
+      user,
+      asideWidth,
+      toggleAside,
+      getUserInfo
+    }
+  }
+}
+```
+
+## 与组合式API的结合
+
+项目大量使用组合式API (Composition API)风格的代码，结合Vuex使用：
+
+- [src/composables/useCommon.js](mdc:src/composables/useCommon.js) - 通用CRUD操作
+- [src/composables/useTabList.js](mdc:src/composables/useTabList.js) - 标签页管理
+- [src/composables/useManager.js](mdc:src/composables/useManager.js) - 管理员相关操作
+- [src/composables/useSku.js](mdc:src/composables/useSku.js) - 商品规格操作
+

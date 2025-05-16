@@ -1,0 +1,92 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Vue3 Shop Admin - 认证与权限系统
+
+该项目实现了基于 Token 的认证系统和 RBAC（基于角色的访问控制）权限管理机制。
+
+## 认证系统
+
+认证相关功能在 [src/composables/auth.js](mdc:src/composables/auth.js) 中实现，使用 Cookie 存储 Token：
+
+```javascript
+import { useCookies } from '@vueuse/integrations/useCookies'
+
+const TokenKey = 'admin-token'
+const cookie = useCookies()
+
+// 获取token
+export function getToken() {
+  return cookie.get(TokenKey)
+}
+
+// 设置token
+export function setToken(token) {
+  return cookie.set(TokenKey, token)
+}
+
+// 清除token
+export function removeToken() {
+  return cookie.remove(TokenKey)
+}
+```
+
+## 登录流程
+
+登录页面在 [src/pages/Login.vue](mdc:src/pages/Login.vue) 中实现。登录流程：
+
+1. 用户输入用户名和密码
+2. 调用登录API获取 Token
+3. 存储 Token 到 Cookie
+4. 跳转到后台首页
+
+## 权限控制
+
+权限控制在 [src/permission.js](mdc:src/permission.js) 中统一管理：
+
+```javascript
+// 全局前置守卫
+router.beforeEach(async (to, from, next) => {
+  const token = getToken()
+  // 没有登录，强制跳转回登录页
+  if (!token && to.path !== '/login') {
+    toast('请先登录！', 'error')
+    return next({ path: '/login' })
+  }
+  
+  // 获取用户信息和权限
+  if (token && !hasGetInfo) {
+    let { menus } = await store.dispatch('getInfo')
+    hasGetInfo = true
+    // 动态添加路由
+    hasNewRoutes = addRoutes(menus)
+  }
+})
+```
+
+## 按钮级权限控制
+
+项目使用自定义指令实现按钮级权限控制，在 [src/directives/permission.js](mdc:src/directives/permission.js) 中实现。
+
+基本用法：
+
+```html
+<!-- 只有具有 'create' 权限的用户才能看到此按钮 -->
+<el-button v-permission="'create'">新增</el-button>
+```
+
+## 角色与权限管理
+
+系统通过以下模块实现完整的权限管理：
+
+- 管理员管理：[src/pages/manager](mdc:src/pages/manager)
+- 角色管理：[src/pages/role](mdc:src/pages/role)
+- 权限菜单管理：[src/pages/access](mdc:src/pages/access)
+
+权限数据结构包括：
+- `menus`：用户有权访问的菜单
+- `ruleNames`：用户具有的操作权限列表
+
+

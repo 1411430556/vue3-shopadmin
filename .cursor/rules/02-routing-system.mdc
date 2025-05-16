@@ -1,0 +1,106 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Vue3 Shop Admin - 路由系统
+
+该项目使用Vue Router实现路由管理，特点是动态路由生成和权限控制。
+
+## 路由配置
+
+主要路由定义文件：[src/router/index.js](mdc:src/router/index.js)
+
+路由系统分为两部分：
+- 默认路由：所有用户共享的路由，如登录页
+- 动态路由：根据用户权限动态添加的路由
+
+```javascript
+// 默认路由，所有用户共享
+const routes = [
+  {
+    path: '/',
+    name: 'admin',
+    component: Admin,
+  },
+  {
+    path: '/login',
+    component: Login,
+    meta: {
+      title: '请登录',
+    },
+  }
+]
+
+// 动态路由，用于匹配菜单动态添加路由
+const asyncRoutes = [
+  {
+    path: '/',
+    name: '/',
+    component: Index,
+    meta: {
+      title: '后台首页',
+    },
+  },
+  // 其他动态路由...
+]
+```
+
+## 路由权限控制
+
+权限控制在 [src/permission.js](mdc:src/permission.js) 中实现。主要功能：
+
+1. 全局前置守卫检查用户是否登录
+2. 获取用户信息和权限菜单
+3. 动态添加路由
+
+```javascript
+// 全局前置守卫
+router.beforeEach(async (to, from, next) => {
+  // 显示全屏 loading
+  showFullLoading()
+  const token = getToken()
+  //没有登录，强制跳转回登录页
+  if (!token && to.path !== '/login') {
+    toast('请先登录！', 'error')
+    return next({ path: '/login' })
+  }
+  
+  // 动态添加路由
+  if (token && !hasGetInfo) {
+    let { menus } = await store.dispatch('getInfo')
+    hasGetInfo = true
+    // 动态添加路由
+    hasNewRoutes = addRoutes(menus)
+  }
+  hasNewRoutes ? next(to.fullPath) : next()
+})
+```
+
+## 动态添加路由方法
+
+路由系统的核心特性是根据用户权限动态生成路由，实现在 `addRoutes` 函数中：
+
+```javascript
+// 动态添加路由的方法
+export function addRoutes(menus) {
+  // 是否有新路由
+  let hasNewRoutes = false
+  const findAndAddRoutesByMenus = (arr) => {
+    arr.forEach(e => {
+      let item = asyncRoutes.find(o => o.path == e.frontpath)
+      if (item && !router.hasRoute(item.path)) {
+        router.addRoute('admin', item)
+        hasNewRoutes = true
+      }
+      if (e.child && e.child.length > 0) {
+        findAndAddRoutesByMenus(e.child)
+      }
+    })
+  }
+
+  findAndAddRoutesByMenus(menus)
+  return hasNewRoutes
+}
+```
+

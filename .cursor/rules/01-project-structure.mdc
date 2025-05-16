@@ -1,0 +1,50 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Vue3 Shop Admin - 项目结构
+
+本电商后台管理系统基于Vue 3 + Element Plus开发，下面是主要目录结构和关键文件：
+
+## 核心入口文件
+
+- [main.js](mdc:src/main.js) - 应用入口，初始化Vue应用并注册全局组件和插件
+- [App.vue](mdc:src/App.vue) - 根组件
+- [permission.js](mdc:src/permission.js) - 权限控制
+- [axios.js](mdc:src/axios.js) - Axios配置和请求拦截器
+
+## 目录结构
+
+### 页面与布局
+
+- [src/pages](mdc:src/pages) - 所有页面组件
+- [src/layouts](mdc:src/layouts) - 布局组件
+  - [Admin.vue](mdc:src/layouts/Admin.vue) - 后台管理布局
+
+### 功能模块
+
+- [src/api](mdc:src/api) - API接口
+- [src/router](mdc:src/router) - 路由配置
+- [src/store](mdc:src/store) - Vuex状态管理
+- [src/composables](mdc:src/composables) - 组合式API
+- [src/directives](mdc:src/directives) - 自定义指令
+- [src/components](mdc:src/components) - 公共组件
+
+### 配置文件
+
+- [vite.config.js](mdc:vite.config.js) - Vite配置
+- [package.json](mdc:package.json) - 项目依赖配置
+
+## 技术栈概览
+
+此项目使用:
+- Vue 3.2.47
+- Element Plus 2.2.11
+- Vue Router 4.1.6
+- Vuex 4.0.2
+- Vite 4.3.9
+- WindiCSS 3.5.6
+- ECharts 5.4.2
+- TinyMCE 6.4.2
+
