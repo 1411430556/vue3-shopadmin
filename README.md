@@ -1,15 +1,18 @@
+<div align="center">
+
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&random=false&width=435&lines=%E5%9F%BA%E4%BA%8Evue3%2Belement-ui%E7%9A%84%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%F0%9F%92%BB;%E8%A7%89%E5%BE%97%E4%B8%8D%E9%94%99%E7%9A%84%E8%AF%9D%E5%8F%AF%E4%BB%A5%E7%82%B9%E4%B8%AAstar%E2%AD%90;Thank+you%EF%BC%81%F0%9F%92%95)](https://git.io/typing-svg)
 
 [![Security Status](https://www.murphysec.com/platform3/v31/badge/1671852797116628992.svg)](https://www.murphysec.com/console/report/1671848506901479424/1671852797116628992)
 
 # Vue3 Shop Admin - 电商后台管理系统
 
-![Vue](https://img.shields.io/badge/Vue-3.2.47-brightgreen.svg)
-![Element Plus](https://img.shields.io/badge/Element_Plus-2.2.11-blue.svg)
-![Vite](https://img.shields.io/badge/Vite-4.3.9-purple.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+[![GitHub Repo stars](https://img.shields.io/github/stars/1411430556/vue3-shopadmin?style=social)](https://github.com/1411430556/vue3-shopadmin/stargazers) ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/1411430556/vue3-shopadmin)
+
+![Vue](https://img.shields.io/badge/Vue-3.2.47-brightgreen.svg) ![Element Plus](https://img.shields.io/badge/Element_Plus-2.2.11-blue.svg) ![Vite](https://img.shields.io/badge/Vite-4.3.9-purple.svg) ![License](https://img.shields.io/badge/License-MIT-yellow.svg) ![Build](https://img.shields.io/badge/Build-Passing-brightgreen.svg) ![Node.js](https://img.shields.io/badge/Node.js-18.16.0-green.svg) ![WindiCSS](https://img.shields.io/badge/WindiCSS-3.5.6-blue.svg)
 
 基于 Vue3 + Element Plus 的现代化电商后台管理系统，提供完整的商品管理、订单管理、用户管理等功能，助力电商运营高效管理。
+
+</div>
 
 ## 📚 技术栈
 
@@ -29,43 +32,50 @@
 ## 🚀 功能特性
 
 ### 🛒 商品管理
+
 - 商品列表、添加、编辑、删除
 - 商品分类管理
 - 商品规格(SKU)管理
 - 商品图片管理
 
 ### 🧑‍💼 用户管理
+
 - 用户列表查看
 - 会员等级设置
 - 用户数据统计
 
 ### 📦 订单管理
+
 - 订单列表与详情
 - 订单状态更新
 - 物流信息跟踪
 
 ### 💰 营销管理
+
 - 优惠券创建与发放
 - 分销系统设置
 - 分销员管理
 
 ### 📢 内容管理
+
 - 公告发布与管理
 - 用户评价管理
 
 ### ⚙️ 系统设置
+
 - 基础配置
 - 支付设置
 - 物流设置
 
 ### 👮 权限管理
+
 - 管理员账户管理
 - 角色权限设置
 - 菜单权限分配
 
 ## 🔍 系统截图
 
-*(可根据实际项目添加系统截图)*
+_(可根据实际项目添加系统截图)_
 
 ## 📁 项目结构
 
@@ -158,23 +168,23 @@ npm run build
 npm run preview
 ```
 
-## 📊 API接口说明
+## 📊 API 接口说明
 
-系统使用RESTful API规范，主要包括以下模块接口：
+系统使用 RESTful API 规范，主要包括以下模块接口：
 
 - 用户认证接口: 登录、登出、获取用户信息
-- 商品管理接口: 商品CRUD、分类管理、规格管理
+- 商品管理接口: 商品 CRUD、分类管理、规格管理
 - 订单管理接口: 订单查询、订单状态更新、发货管理
 - 营销管理接口: 优惠券管理、分销设置
 - 系统管理接口: 角色权限管理、系统配置管理
 
-API基础地址：`http://ceshi13.dishait.cn`（开发环境下自动代理）
+API 基础地址：`http://ceshi13.dishait.cn`（开发环境下自动代理）
 
 ## 🛠️ 开发相关
 
 ### 权限系统
 
-项目实现了基于RBAC的权限控制系统：
+项目实现了基于 RBAC 的权限控制系统：
 
 1. 基于角色的权限控制
 2. 动态菜单路由生成
@@ -183,7 +193,7 @@ API基础地址：`http://ceshi13.dishait.cn`（开发环境下自动代理）
 
 ### 组件自动导入
 
-使用 `unplugin-vue-components` 和 `unplugin-auto-import` 实现组件和API的自动导入，提高开发效率：
+使用 `unplugin-vue-components` 和 `unplugin-auto-import` 实现组件和 API 的自动导入，提高开发效率：
 
 ```javascript
 // vite.config.js
@@ -199,18 +209,21 @@ plugins: [
 
 ### 主要依赖
 
-- **UI组件**:
-  - `element-plus`: Element Plus UI组件库
-  - `@element-plus/icons-vue`: Element Plus图标库
+- **UI 组件**:
+
+  - `element-plus`: Element Plus UI 组件库
+  - `@element-plus/icons-vue`: Element Plus 图标库
 
 - **功能增强**:
-  - `@vueuse/core`: Vue Composition API工具集
-  - `@vueuse/integrations`: VueUse集成工具
-  - `@tinymce/tinymce-vue`: TinyMCE富文本编辑器Vue组件
+
+  - `@vueuse/core`: Vue Composition API 工具集
+  - `@vueuse/integrations`: VueUse 集成工具
+  - `@tinymce/tinymce-vue`: TinyMCE 富文本编辑器 Vue 组件
 
 - **数据处理**:
-  - `axios`: HTTP客户端
-  - `universal-cookie`: Cookie处理库
+
+  - `axios`: HTTP 客户端
+  - `universal-cookie`: Cookie 处理库
   - `moment`: 日期时间处理
 
 - **视觉效果**:
@@ -220,12 +233,12 @@ plugins: [
 
 ### 开发工具
 
-- `@vitejs/plugin-vue`: Vite Vue插件
+- `@vitejs/plugin-vue`: Vite Vue 插件
 - `code-inspector-plugin`: 代码检查插件
-- `unplugin-auto-import`: 自动导入API
+- `unplugin-auto-import`: 自动导入 API
 - `unplugin-vue-components`: 组件自动导入
-- `vite-plugin-windicss`: WindiCSS支持
-- `windicss`: 原子化CSS框架
+- `vite-plugin-windicss`: WindiCSS 支持
+- `windicss`: 原子化 CSS 框架
 
 ## 🔐 安全
 
@@ -253,4 +266,4 @@ plugins: [
 
 ---
 
-如有问题或建议，欢迎提Issue或PR！
+如有问题或建议，欢迎提 Issue 或 PR！
