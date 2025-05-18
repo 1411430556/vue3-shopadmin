@@ -86,11 +86,11 @@ const onSubmit = () => {
       <el-popover
         placement="top"
         :width="200"
-        trigger="click"
+        trigger="hover"
         content="账号：admin 密码：admin"
       >
         <template #reference>
-          <el-tag class="mb-3 cursor-pointer">点我</el-tag>
+          <el-tag class="mb-3 cursor-default">鼠标放上来</el-tag>
         </template>
       </el-popover>
       <el-form

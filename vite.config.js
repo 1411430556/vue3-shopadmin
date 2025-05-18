@@ -37,7 +37,7 @@ export default defineConfig({
     }),
     CodeInspectorPlugin({
       bundler: 'vite',
-      editor: 'trae',
+      editor: 'cursor',
     })
   ],
 })
