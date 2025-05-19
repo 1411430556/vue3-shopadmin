@@ -246,7 +246,7 @@ plugins: [
 
 ## 📈 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=1411430556/vue3-shopadmin&type=Date)](https://star-history.com/#1411430556/vue3-shopadmin&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=1411430556/vue3-shopadmin&type=Date)](https://www.star-history.com/#1411430556/vue3-shopadmin&Date)
 
 ## 🤝 贡献指南
 
