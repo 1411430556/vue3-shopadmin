@@ -1,6 +1,6 @@
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&random=false&width=435&lines=%E5%9F%BA%E4%BA%8Evue3%2Belement-ui%E7%9A%84%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%F0%9F%92%BB;%E8%A7%89%E5%BE%97%E4%B8%8D%E9%94%99%E7%9A%84%E8%AF%9D%E5%8F%AF%E4%BB%A5%E7%82%B9%E4%B8%AAstar%E2%AD%90;Thank+you%EF%BC%81%F0%9F%92%95)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&random=false&width=435&lines=%E5%9F%BA%E4%BA%8Evue3%2Belement-plus%E7%9A%84%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%F0%9F%92%BB;%E8%A7%89%E5%BE%97%E4%B8%8D%E9%94%99%E7%9A%84%E8%AF%9D%E5%8F%AF%E4%BB%A5%E7%82%B9%E4%B8%AAstar%E2%AD%90;Thank+you%EF%BC%81%F0%9F%92%95)](https://git.io/typing-svg)
 
 [![Security Status](https://www.murphysec.com/platform3/v31/badge/1671852797116628992.svg)](https://www.murphysec.com/console/report/1671848506901479424/1671852797116628992)
 
@@ -8,7 +8,7 @@
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/1411430556/vue3-shopadmin?style=social)](https://github.com/1411430556/vue3-shopadmin/stargazers) ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/1411430556/vue3-shopadmin)
 
-![Vue](https://img.shields.io/badge/Vue-3.2.47-brightgreen.svg) ![Element Plus](https://img.shields.io/badge/Element_Plus-2.2.11-blue.svg) ![Vite](https://img.shields.io/badge/Vite-4.3.9-purple.svg) ![License](https://img.shields.io/badge/License-MIT-yellow.svg) ![Build](https://img.shields.io/badge/Build-Passing-brightgreen.svg) ![Node.js](https://img.shields.io/badge/Node.js-18.16.0-green.svg) ![WindiCSS](https://img.shields.io/badge/WindiCSS-3.5.6-blue.svg)
+![Vue](https://img.shields.io/badge/Vue-3.2.47-brightgreen.svg) ![Element Plus](https://img.shields.io/badge/Element_Plus-2.2.11-blue.svg) ![Vite](https://img.shields.io/badge/Vite-4.3.9-purple.svg) ![License](https://img.shields.io/badge/License-MIT-yellow.svg) ![Build](https://img.shields.io/badge/Build-Passing-brightgreen.svg) ![Node.js](https://img.shields.io/badge/Node.js-18.16.0-green.svg) ![WindiCSS](https://img.shields.io/badge/WindiCSS-3.5.6-blue.svg) ![Canvas Confetti](https://img.shields.io/badge/Canvas_Confetti-1.9.3-orange.svg)
 
 基于 Vue3 + Element Plus 的现代化电商后台管理系统，提供完整的商品管理、订单管理、用户管理等功能，助力电商运营高效管理。
 
@@ -26,13 +26,17 @@
 - **Vue Router 4.1.6** - 路由管理
 
 ### 工具库
-- **Axios** - HTTP 客户端
+- **Axios 1.4.0** - HTTP 客户端
 - **ECharts 5.4.2** - 数据可视化图表库
 - **TinyMCE 6.4.2** - 富文本编辑器
 - **WindiCSS 3.5.6** - 原子化 CSS 框架
 - **Moment.js 2.29.4** - 日期处理
 - **GSAP 3.11.5** - 动画库
 - **NProgress 0.2.0** - 进度条
+- **@vueuse/core 10.1.2** - Vue 组合式 API 工具集
+- **@vueuse/integrations 10.1.2** - Vue 集成工具
+- **canvas-confetti 1.9.3** - 粒子动画效果
+- **universal-cookie 4.0.4** - Cookie 管理
 
 ## 🚀 功能特性
 
@@ -43,6 +47,8 @@
 - 商品图片管理
 - 商品上下架控制
 - 商品库存管理
+- 商品批量操作
+- 商品导入导出
 
 ### 🧑‍💼 用户管理
 - 用户列表查看与搜索
@@ -50,6 +56,9 @@
 - 用户数据统计与分析
 - 用户行为追踪
 - 用户标签管理
+- 用户积分管理
+- 用户黑名单管理
+- 用户反馈处理
 
 ### 📦 订单管理
 - 订单列表与详情
@@ -57,6 +66,9 @@
 - 物流信息跟踪
 - 订单导出功能
 - 订单退款处理
+- 订单评价管理
+- 订单统计报表
+- 订单批量操作
 
 ### 💰 营销管理
 - 优惠券创建与发放
@@ -64,6 +76,9 @@
 - 分销员管理
 - 促销活动管理
 - 积分商城设置
+- 秒杀活动管理
+- 拼团活动管理
+- 满减活动管理
 
 ### 📢 内容管理
 - 公告发布与管理
@@ -71,6 +86,9 @@
 - 文章管理
 - 轮播图管理
 - 帮助中心
+- 商品问答管理
+- 商品推荐管理
+- 专题活动管理
 
 ### ⚙️ 系统设置
 - 基础配置
@@ -78,6 +96,9 @@
 - 物流设置
 - 短信配置
 - 邮件配置
+- 存储配置
+- 安全设置
+- 日志管理
 
 ### 👮 权限管理
 - 管理员账户管理
@@ -85,6 +106,9 @@
 - 菜单权限分配
 - 操作日志记录
 - 登录日志查看
+- 数据权限控制
+- 接口权限控制
+- 按钮权限控制
 
 ## 📁 项目结构
 
