@@ -66,9 +66,6 @@ export function useLogout() {
   // 退出登录的逻辑
   function handleLogout() {
     showModal('是否退出登录？').then(res => {
-      // 播放烟花动画
-      playConfettiAnimation()
-
       logOut().finally(() => {
         // 调用 store 状态管理里的 logout 函数移除 cookie 里的 token,清除当前用户状态 vuex
         store.dispatch('logout')
@@ -76,6 +73,8 @@ export function useLogout() {
         router.push('/login')
         // 提示退出登录成功
         toast('已退出登录')
+        // 播放烟花动画
+        playConfettiAnimation()
       })
     })
   }
