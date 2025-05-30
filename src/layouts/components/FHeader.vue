@@ -26,77 +26,6 @@
         break
     }
   }
-
-  /* // 刷新逻辑
-  const handleRefresh = () => location.reload()
-
-  // 切换语言(排除下列文字的翻译)
-  const Chinese = $$t('中文')
-  const English = $$t('English')
-  const Japanese = $$t('日本語')
-  const Korean = $$t('한국어')
-  const Russian = $$t('Русский язык')
-  const French = $$t('Français')
-  const German = $$t('Deutsch')
-  const Spanish = $$t('Español')
-  const Portuguese = $$t('Português')
-  const Italian = $$t('Italiano')
-  const Thai = $$t('ภาษาไทย')
-
-  const changeLanguageChinese = () => {
-    localStorage.setItem('lang', 'zh')
-    handleRefresh()
-  }
-
-  const changeLanguageEnglish = () => {
-    localStorage.setItem('lang', 'en')
-    handleRefresh()
-  }
-
-  const changeLanguageJapanese = () => {
-    localStorage.setItem('lang', 'ja')
-    handleRefresh()
-  }
-
-  const changeLanguageKorean = () => {
-    localStorage.setItem('lang', 'ko')
-    handleRefresh()
-  }
-
-  const changeLanguageRussian = () => {
-    localStorage.setItem('lang', 'ru')
-    handleRefresh()
-  }
-
-  const changeLanguageFrench = () => {
-    localStorage.setItem('lang', 'fr')
-    handleRefresh()
-  }
-
-  const changeLanguageGerman = () => {
-    localStorage.setItem('lang', 'de')
-    handleRefresh()
-  }
-
-  const changeLanguageSpanish = () => {
-    localStorage.setItem('lang', 'es')
-    handleRefresh()
-  }
-
-  const changeLanguagePortuguese = () => {
-    localStorage.setItem('lang', 'pt')
-    handleRefresh()
-  }
-
-  const changeLanguageItalian = () => {
-    localStorage.setItem('lang', 'it')
-    handleRefresh()
-  }
-
-  const changeLanguageThai = () => {
-    localStorage.setItem('lang', 'th')
-    handleRefresh()
-  } */
 </script>
 
 <template>
@@ -125,32 +54,6 @@
         <Refresh />
       </el-icon>
     </el-tooltip>
-
-    <!-- 语言切换 -->
-    <!-- <el-dropdown>
-      <span class="el-dropdown-link">
-        切换语言
-        <el-icon class="el-icon--right">
-          <arrow-down />
-        </el-icon>
-      </span>
-      <template #dropdown>
-        <el-dropdown-menu>
-          <el-dropdown-item @click="changeLanguageChinese()">{{ Chinese }}</el-dropdown-item>
-          <el-dropdown-item @click="changeLanguageEnglish()">{{ English }}</el-dropdown-item>
-          <el-dropdown-item @click="changeLanguageJapanese()">{{ Japanese }}</el-dropdown-item>
-          <el-dropdown-item @click="changeLanguageKorean()">{{ Korean }}</el-dropdown-item>
-          <el-dropdown-item @click="changeLanguageRussian()">{{ Russian }}</el-dropdown-item>
-          <el-dropdown-item @click="changeLanguageFrench()">{{ French }}</el-dropdown-item>
-          <el-dropdown-item @click="changeLanguageGerman()">{{ German }}</el-dropdown-item>
-          <el-dropdown-item @click="changeLanguageSpanish()">{{ Spanish }}</el-dropdown-item>
-          <el-dropdown-item @click="changeLanguagePortuguese()">{{ Portuguese }}</el-dropdown-item>
-          <el-dropdown-item @click="changeLanguageItalian()">{{ Italian }}</el-dropdown-item>
-          <el-dropdown-item @click="changeLanguageThai()">{{ Thai }}</el-dropdown-item>
-        </el-dropdown-menu>
-      </template>
-    </el-dropdown> -->
-
     <!--右侧-->
     <div class="ml-auto flex items-center">
       <el-tooltip effect="dark" content="全屏切换" placement="bottom">
