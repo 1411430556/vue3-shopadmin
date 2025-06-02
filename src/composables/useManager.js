@@ -5,6 +5,7 @@ import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
 import { useConfetti } from './useConfetti.js'
 
+// #region 修改密码
 export function useRepassword() {
   const router = useRouter()
   const store = useStore()
@@ -16,7 +17,6 @@ export function useRepassword() {
     password: '',
     repassword: '',
   })
-
   //表单验证规则
   const rules = reactive({
     oldpassword: [{ required: true, message: '旧密码不能为空', trigger: 'blur' }],
@@ -57,7 +57,7 @@ export function useRepassword() {
     openRePasswordForm,
   }
 }
-
+// #endregion
 export function useLogout() {
   const router = useRouter()
   const store = useStore()

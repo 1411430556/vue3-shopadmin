@@ -1,5 +1,5 @@
 import confetti from 'canvas-confetti'
-
+// #region 烟花动画
 export function useConfetti() {
   // 播放烟花动画
   function playConfettiAnimation() {
@@ -37,3 +37,4 @@ export function useConfetti() {
     playConfettiAnimation,
   }
 }
+// #endregion
