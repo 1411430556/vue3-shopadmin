@@ -4,6 +4,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import { CodeInspectorPlugin } from 'code-inspector-plugin'
+import { qrcode } from 'vite-plugin-qrcode'
 // windicss插件配置
 import WindiCSS from 'vite-plugin-windicss'
 import path from 'path'
@@ -17,7 +18,7 @@ export default defineConfig({
     },
   },
   server: {
-    // host: '0.0.0.0',
+    host: '0.0.0.0',
     proxy: {
       '/api': {
         target: 'http://ceshi13.dishait.cn',
@@ -29,6 +30,7 @@ export default defineConfig({
   plugins: [
     vue(),
     WindiCSS(),
+    qrcode(),
     AutoImport({
       resolvers: [ElementPlusResolver()],
     }),
@@ -38,6 +40,6 @@ export default defineConfig({
     CodeInspectorPlugin({
       bundler: 'vite',
       editor: 'cursor',
-    })
+    }),
   ],
 })
