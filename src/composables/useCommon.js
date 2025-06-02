@@ -56,6 +56,11 @@ export function useInitTable(opt = {}) {
 
   // 修改状态
   const handleStatusChange = (status, row) => {
+    /**
+     * 修改状态
+     * @param {number} status - 状态值，0表示关闭，1表示开启
+     * @param {Object} row - 当前行数据
+     */
     // status 是开关的状态 0关 1开
     row.statusLoading = true
     opt
@@ -95,6 +100,10 @@ export function useInitTable(opt = {}) {
 
   // 批量修改状态
   const handleMultiStatusChange = status => {
+    /**
+     * 批量修改状态
+     * @param {number} status - 状态值，0表示关闭，1表示开启
+     */
     loading.value = true
     opt
       .updateStatus(multiSelectionIDs.value, status)
