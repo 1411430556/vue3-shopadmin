@@ -57,6 +57,10 @@ export function useTabList () {
 
 // 删除标签的方法
   const removeTab = (targetName) => {
+    /**
+     * 删除标签
+     * @param {string} targetName - 目标标签的路径
+     */
     let tabs = tabList.value
     let a = activeTab.value
     // targetName 是鼠标点的那个 tab 的路径，如 /goods/list
