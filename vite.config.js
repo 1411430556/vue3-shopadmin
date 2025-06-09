@@ -14,6 +14,10 @@ export default defineConfig({
   resolve: {
     alias: {
       // 设置 src 别名
+      // 这里配置了路径别名，将 '~' 符号映射到项目的 src 目录
+      // 这样在导入文件时，可以使用 '~/components/xxx' 代替 '../../../components/xxx'
+      // 使得导入路径更加简洁清晰，避免了复杂的相对路径，例如：
+      // 在 src/components/Button.vue 中，可以使用 '~/components/Button.vue' 代替 '../../../components/Button.vue'
       '~': path.resolve(__dirname, 'src'),
     },
   },

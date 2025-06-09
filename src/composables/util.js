@@ -1,7 +1,15 @@
-// import { ElNotification, ElMessageBox } from 'element-plus'
 import nprogress from 'nprogress'
 
 // 消息提示 ElNotification 的封装
+/**
+ * 消息提示函数，封装了 Element Plus 的 ElNotification 组件
+ * @param {string} message - 要显示的消息内容
+ * @param {string} type - 消息类型，可选值：success、warning、info、error，默认为 success
+ * @param {boolean} dangerouslyUseHTMLString - 是否将 message 属性作为 HTML 片段处理，默认为 true
+ *
+ * 该函数会显示一个消息通知，持续时间为 3 秒钟
+ * 注意：ElNotification 来自 Element Plus UI 库，在这个项目中通过 Vite 插件自动导入，用于显示通知消息
+ */
 export function toast(message, type = 'success', dangerouslyUseHTMLString = true) {
   ElNotification({
     message,
