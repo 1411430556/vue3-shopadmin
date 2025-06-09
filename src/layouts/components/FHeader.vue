@@ -26,6 +26,9 @@
         break
     }
   }
+
+  // 刷新页面
+  const handleRefresh = () => location.reload()
 </script>
 
 <template>
@@ -86,7 +89,7 @@
   <!-- 修改密码 -->
   <FormDrawer ref="formDrawerRef" title="修改密码" destroyOnClose @submit="onSubmit">
     <el-form
-      @keyup.enter.native="onSubmit"
+      @keyup.enter="onSubmit"
       ref="formRef"
       :rules="rules"
       :model="form"
