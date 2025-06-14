@@ -1,7 +1,7 @@
 {
   "name": "shop-admin",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
-    "code-inspector-plugin": "^0.20.10",
+    "code-inspector-plugin": "^0.20.12",
     "unplugin-auto-import": "^0.15.3",
     "unplugin-vue-components": "^0.24.1",
     "vite": "4.3.9",

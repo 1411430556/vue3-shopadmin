@@ -1,15 +1,18 @@
 name: Deploy
 
 on:
+  # 恢复push触发器，但添加过滤条件
   push:
     branches: [ master ] # 触发分支，根据你的分支名称调整
-
-  # 允许您从 “Actions” 选项卡手动运行此工作流
+    
+  # 允许您从 "Actions" 选项卡手动运行此工作流
   workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # 只有当提交消息包含[deploy]标记时才执行部署
+    if: contains(github.event.head_commit.message, '[deploy]')
     steps:
       - name: 检验代码
         uses: actions/checkout@v4
