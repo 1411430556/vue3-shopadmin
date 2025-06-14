@@ -2,16 +2,18 @@
   import { useFullscreen } from '@vueuse/core'
   import FormDrawer from '~/components/FormDrawer.vue'
   import { useRepassword, useLogout } from '~/composables/useManager.js'
+  // import { useConfetti } from '~/composables/useConfetti.js'
+  // import { onMounted } from 'vue'
 
   /*
    * 这里面很多逻辑都在 ~/composables/useManager.js 里面
    *  */
 
-  // isFullscreen 是否全屏状态  toggle 切换全屏与退出全屏
+  // isFullscreen 是否全屏状态 toggle 切换全屏与退出全屏
   const { isFullscreen, toggle } = useFullscreen()
   // 解构出来
   const { formDrawerRef, form, rules, formRef, onSubmit, openRePasswordForm } = useRepassword()
-
+  // const { playConfettiAnimation } = useConfetti()
   // 退出登录
   const { handleLogout } = useLogout()
 
@@ -28,7 +30,21 @@
   }
 
   // 刷新页面
-  const handleRefresh = () => location.reload()
+  const handleRefresh = () => {
+    // 设置刷新标记
+    // sessionStorage.setItem('needConfetti', 'true')
+    location.reload()
+  }
+  
+  // 组件挂载时检查是否需要播放烟花
+  // onMounted(() => {
+  //   if (sessionStorage.getItem('needConfetti') === 'true') {
+  //     // 播放烟花动画
+  //     // playConfettiAnimation()
+  //     // 清除标记
+  //     sessionStorage.removeItem('needConfetti')
+  //   }
+  // })
 </script>
 
 <template>

@@ -3,6 +3,9 @@ import { router, addRoutes } from '~/router'
 import { getToken } from '~/composables/auth.js'
 import { showFullLoading, hideFullLoading, toast } from '~/composables/util.js'
 import store from '~/store/index.js'
+import { useConfetti } from '~/composables/useConfetti.js'
+
+const { playConfettiAnimation } = useConfetti()
 
 // 全局前置守卫
 let hasGetInfo = false   // 处理点击一次菜单就会获取两次 getInfo 的问题
@@ -34,8 +37,13 @@ router.beforeEach(async (to, from, next) => {
 })
 
 // 全局后置守卫
-router.afterEach((to) => {
+router.afterEach((to, from) => {
   document.title = to.meta.title + '-商城后台管理系统'
   // 关闭全屏 loading
   hideFullLoading()
+  
+  // 只在页面刷新时触发烟花动画（页面刷新时from.name为null）
+  if (!from.name) {
+    playConfettiAnimation()
+  }
 })
