@@ -22,8 +22,19 @@ jobs:
         with:
           node-version: 20 # 使用你项目所需的 Node.js 版本
 
-      - name: 安装 pnpm
-        run: npm install -g pnpm
+      - name: 使用官方 Action
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+          run_install: false
+
+      - name: 启用 pnpm 缓存
+        uses: actions/cache@v3
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
 
       - name: 检查 pnpm 版本   
         run: pnpm --version
