@@ -209,22 +209,22 @@ cd vue3-shopadmin
 
 2. 安装依赖
 ```bash
-npm install
+pnpm install
 ```
 
 3. 启动开发服务器
 ```bash
-npm run dev
+pnpm dev
 ```
 
 4. 构建生产版本
 ```bash
-npm run build
+pnpm build
 ```
 
 5. 预览生产构建
 ```bash
-npm run preview
+pnpm preview
 ```
 
 ## 📊 API 接口说明
