@@ -22,14 +22,17 @@ jobs:
         with:
           node-version: 20 # 使用你项目所需的 Node.js 版本
 
-      - name: 检查 Node 版本   
-        run: npm --version
+      - name: 安装 pnpm
+        run: npm install -g pnpm
+
+      - name: 检查 pnpm 版本   
+        run: pnpm --version
 
       - name: 安装依赖关系
-        run: npm install
+        run: pnpm install
 
       - name: 构建 Vue 项目
-        run: npm run build # 假设你的构建命令是 npm run build
+        run: pnpm run build # 使用 pnpm 构建项目
 
       - name: 通过 SSH 部署到服务器
         env:
