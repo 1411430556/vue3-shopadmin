@@ -58,5 +58,5 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           echo -e "Host *\n\tStrictHostKeyChecking no" > ~/.ssh/config
 
-          # 上传构建文件到服务器（使用 scp，可替换为 rsync）
-          scp -r ./dist/* "$SERVER_USER"@"$SERVER_IP":"$DEPLOY_PATH"
+          # 使用rsync传输文件（替换scp的核心部分）
+          rsync -avz --delete ./dist/ "$SERVER_USER@$SERVER_IP:$DEPLOY_PATH/"
