@@ -253,7 +253,13 @@ API 基础地址：`http://ceshi13.dishait.cn`（开发环境下自动代理）
 
 ## 📈 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=1411430556/vue3-shopadmin&type=Date)](https://www.star-history.com/#1411430556/vue3-shopadmin&Date)
+<a href="https://www.star-history.com/#1411430556/vue3-shopadmin&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=1411430556/vue3-shopadmin&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=1411430556/vue3-shopadmin&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=1411430556/vue3-shopadmin&type=Date" />
+ </picture>
+</a>
 
 ## 🤝 贡献指南
 
