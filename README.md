@@ -255,11 +255,11 @@ API 基础地址：`http://ceshi13.dishait.cn`（开发环境下自动代理）
 
 ## 📈 Star History
 
-<a href="https://www.star-history.com/#1411430556/vue3-shopadmin&Date">
+<a href="https://www.star-history.com/?repos=1411430556%2Fvue3-shopadmin&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=1411430556/vue3-shopadmin&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=1411430556/vue3-shopadmin&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=1411430556/vue3-shopadmin&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=1411430556/vue3-shopadmin&type=date&theme=dark&legend=top-left&sealed_token=unwt0aSEypcSM6kKE1DBhUDQzoQ0TpXcx6DAsATvc0zxWDaHH9PcQO-LERpufFonbVoNBXYcKKtp04b_fHGhRBk3OjQRGOInF1RjVsYYyjyEnammX1dxPA" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=1411430556/vue3-shopadmin&type=date&legend=top-left&sealed_token=unwt0aSEypcSM6kKE1DBhUDQzoQ0TpXcx6DAsATvc0zxWDaHH9PcQO-LERpufFonbVoNBXYcKKtp04b_fHGhRBk3OjQRGOInF1RjVsYYyjyEnammX1dxPA" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=1411430556/vue3-shopadmin&type=date&legend=top-left&sealed_token=unwt0aSEypcSM6kKE1DBhUDQzoQ0TpXcx6DAsATvc0zxWDaHH9PcQO-LERpufFonbVoNBXYcKKtp04b_fHGhRBk3OjQRGOInF1RjVsYYyjyEnammX1dxPA" />
  </picture>
 </a>
 
